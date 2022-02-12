@@ -20,7 +20,7 @@ void decompress(string::iterator& it, int y, int x, int size){
     }
 }
 
-void reverse(string::iterator& it){
+string reverse(string::iterator& it){
     char head = *it;
 
     ++it;
