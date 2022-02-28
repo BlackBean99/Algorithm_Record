@@ -22,11 +22,6 @@ function getCombination(
 // [1, 2, 3, 4] 에서 3개를 선택.
 const combination = getCombination([1, 2, 3, 4], 3); 
 
-// 지금까지 고른거 말고 다른걸 더 고를때, + 무게를 초과하지 않을때, 가장 최대의 절박도 합 return
-int pack(capacity ,item){
-
-    return SumJ;
-}
 
 
 // 여행 짐싸기 문제를 해결하는 동적 계획법 알고리즘
@@ -64,4 +59,19 @@ void reconstruct(int capacity, int item, vector<string>& picked){
         picked.push_back(name[item]);
         reconstruct(capacity - volume[item], item + 1, picked);
     }
+
+
+int pack(int capacity, int item){
+    // 기저사례
+    if(item == n)
+    // 메모이제이션
+    int& ret = cache[capacity][item];
+    if(ret != -1)
+        return 0;
+    // 선택하지 않을때
+    return pack(capacity, item + 1);
+    // 선택
+    if(capacity >= volume[item])
+        ret = max(ret, pack(capacity - volume[item], item + 1) + need[item])
+    return ret;
 }
