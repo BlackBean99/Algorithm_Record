@@ -58,5 +58,4 @@ void generator3(int n, int m, string s){
 string kth(int n, int m, string s){
     n=0인경우는 나머지 부분은 전부 o일수밖에 없다.
     if(n==0) return string(m,"o");
-
 }
