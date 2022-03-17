@@ -21,6 +21,11 @@ int getMinIndexInRange(int data[], int n, int begin, int end){
 }
 
 
+// 0번부터 n번까지 최솟값을 찾아 위치를 바꾼다.
+// 1번부터 n번까지 최솟값을 찾아 위치를 바꾼다.
+// ...
+// n-1번부터 n번까지 최솟값을 찾아 위치를 바꾼다.
+// 일련의 과정을 통해 정렬한다.
 void selectionSort(int data[], int n){
     for(int i =0; i < n; i++){
         // 주어진 범위내에서  가장 작은 원소를 찾는다.
@@ -29,9 +34,8 @@ void selectionSort(int data[], int n){
         data[i] = data[minIndex];
         data[minIndex] = temp;
     }
-      // 마지막 숫자는 자동으로 정렬되기 때문에 (숫자 개수-1) 만큼 반복한다.
-
 }
+
 int main(){
     int n;
     int* data;

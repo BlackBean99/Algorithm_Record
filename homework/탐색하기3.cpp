@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// 평균값과 현재 index의 값의 차이중 가장 작은 값을 찾아 최신화한다.
+// 비교후 가장 작은 index를 반환한다.
 int findIndex(int data[], int n){
     int ret;
     int index = 0;
