@@ -30,6 +30,7 @@ void selectionSort(int data[], int n){
     for(int i =0; i < n; i++){
         // 주어진 범위내에서  가장 작은 원소를 찾는다.
         int minIndex = getMinIndexInRange(data, n,i,n);
+        // 작은 원소와 현재 데이터의 순서를 바꾼다.
         int temp = data[i];
         data[i] = data[minIndex];
         data[minIndex] = temp;

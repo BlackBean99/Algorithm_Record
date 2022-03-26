@@ -32,9 +32,12 @@ int main(){
     int month;
     
     scanf("%d", &n);
+    // height : 키 데이터
+    // month : 도토리의 출생월 배열
     height = new int[n];
     month = new int[n];
 
+    // 데이터 입력받기 
     for(int i =0;i<n;i++){
         scanf("%d",&height[i]);
     }

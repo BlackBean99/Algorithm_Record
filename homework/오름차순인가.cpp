@@ -26,6 +26,7 @@ int main(){
     scanf("%d", &n);
     data = new int[n];
 
+    // 데이터를 하나씩 입력받는다.
     for(int i =0;i<n;i++){
         scanf("%d",&data[i]);
     }
