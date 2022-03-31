@@ -4,14 +4,11 @@
 
 using namespace std;
 
-// 중복을 제외한 숫자의 종류의 수를 계산하는 함수
-// @param data 
-// @param name 원본 배열의 크기
-// @return n 숫자의 종류의 수
 class MyString{
     private:
-        char *characters;
-        int length;
+    
+        char *characters; // 단어
+        int length; // 단어의 길이
 
     public:
         MyString(const char * str){
@@ -22,6 +19,7 @@ class MyString{
             }
         }
         MyString(const string & original){
+            // 입력받은 개체를 현재 개체에 대입한다. 
             this->length = original.length();
             this->characters = new char[this->length];
             for(int i = 0;i<this->length;i++){
@@ -38,8 +36,19 @@ class MyString{
         */
         bool operator < (const MyString & o) const{
             int n = min(this->length,o.length);
-            // 채워넣어~~
-            
+            for(int i = 0; i< n;i++){
+                if(this->characters[i] < o.characters[i]){
+                    return true;
+                } else if(this->characters[i] > o.characters[i]){
+                    return false;
+                }
+            }
+            // algorithm algo 
+            if(this->length < o.length){
+                return true;
+            } else{
+                return false;
+            }
         }
         /*
         @param o 비교할 문자열 ( 오른쪽 항 )
@@ -48,7 +57,19 @@ class MyString{
         */
         bool operator > (const MyString & o) const{
             int n = min(this->length,o.length);
-            // 채워넣어~~
+            for(int i = 0; i< n;i++){
+                if(this->characters[i] < o.characters[i]){
+                    return false;
+                } else if(this->characters[i] > o.characters[i]){
+                    return true;
+                }
+            }
+            // algorithm algo 
+            if(this->length > o.length){
+                return true;
+            } else{
+                return false;
+            }
         }
 /*
         @param o 비교할 문자열 ( 오른쪽 항 )
@@ -56,15 +77,21 @@ class MyString{
         @return false else
         */
         bool operator == (const MyString & o) const{
-            int n = min(this->length,o.length);
-            // 채워넣어~~
+            if(this->characters[i] != o.characters[i]){
+                return false;
+            for(int i=0;i<this->length;i++){
+                if(this->characters[i] != o.characters[i]){
+                    return false;
+                }
+            }
+            return true;
         }
-}
+};
 
 int main(){
     string s1;
     string s2;
-    cin >> s1 >> s2;
+    cin >> s1 >> s2; // scnaf  대신 
 
     MyString mys1(s1);
     MyString mys2(s2);
