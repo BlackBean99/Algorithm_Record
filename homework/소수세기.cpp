@@ -30,6 +30,7 @@ public:
             } 
             // 이때 num 은 소수다.
             // 그러므로 num의 모든 배수는 소수가 아니라고 체크한다. 
+            //  100만의 제곱까지 해야하므로 타입은 long long
             for(long long) mul = (long long) num*num; mul<=maximumValue; mul+=num){
                 int index = (int) mul;
                 isPrime[index] = false;
@@ -38,15 +39,16 @@ public:
     }
 };
 
-    vector<int> getAllPrimeNumbers(int from, int to, const Sieve& sieve){
-        vector<int> primes;
-        for(int num = from; num <= to; num++){
-            if(sieve.isPrimeNumber(num)){
-                primes.push_back(num);
-            }
+vector<int> getAllPrimeNumbers(int from, int to, const Sieve& sieve){
+    vector<int> primes;
+    for(int num = from; num <= to; num++){
+        if(sieve.isPrimeNumber(num)){
+            primes.push_back(num);
         }
-    return primes;
     }
+return primes;
+}
+
 void process(int caseIndex, const Sieve& sieve){
     int L,R;
     scanf("%d%d", &L, &R);
@@ -58,6 +60,7 @@ void process(int caseIndex, const Sieve& sieve){
 }
 
 int main(){
+    // 전처리
     const int MAX_VALUE = 1000000;
     Sieve sieve = Sieve(MAX_VALUE);
 
