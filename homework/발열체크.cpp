@@ -18,31 +18,39 @@ using namespace std;
 
 int main(){
     // 실행시작 시간 측정
+    int count = 0;
+    int index=1;
+    int start,end;
+    int N,m;
+ 
+    
+
+    scanf("%d\n",&N);
+    scanf("%d\n",&m);
+    int tm[m];
+
+    for(int i = 0; i< m;++i){
+        scanf("%d",&tm[i]);
+    }
     start = clock();
 
+    // index를 하나씩 올리면서 체크한다.
+    while(count != N){
+        for(int i = 0; i < m; ++i){
+            if(index % tm[i] == 0){
+                count+=1;
+            }
+        }
+        index+=1;
+    }
+    printf("%d\n",index-1);
 
 
 
-
-
-
-    
     // 실행 종료 시간 측정 
     end = clock();
     // 총 실행시간 계산
-    result = (double)(end-start);
+    float result = (double)(end-start);
     printf("실행시간 : %f",result);
     return 0;
 }
-6 ( 검사자 수)
-2 ( 측정기 수 )
-7 10 ( 각 측정기 측정시간 )
-먼저  
-
-21 초에 (5개 사용 가능)
-AAAAAAACCCCCCCEEEEEEE
-BBBBBBBBBBDDDDDDDDDD
-A 인덱스 추가, B 인덱스 추가 , C  ... E인덱스 추가/
-
-21로 나눈 몫 = 21의 배수 - B가 빠진 인덱스
-20
