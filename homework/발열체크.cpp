@@ -2,55 +2,88 @@
 #include<string>
 #include<iostream>
 #include<time.h>
+#include<vector>
 
 using namespace std;
 
-
-// 발열 측정을 기다리는 학생수 N, 발열 측정기의 수m, 
-// 각 측정기가 한 명을 발열 측정하는데 걸리는 시간 Time
-// 모든 사람이 발열 측정을 받는데 걸리는 시간의 최솟값을 구하는 프로그램
-
-// 입력조건 첫번째줄 N, 두번째 줄 발열 측정기의수 m, 세번째 줄에 각 발열 측정기가 측정하는데 걸리는 Time 들이 주어진다.
-
-// 출력조건 첫ㅂ너째 줄에 발열체크에 걸리는 시간의 최솟값을 출력한다.
-// 두번째 줄에 입력받은 이후부터 점수 출력까지 걸린 실행시간을 초 단위로 출력한다.
+bool checkMatching(string target, string word, int tp, int wp) {
+     // tp: 현재 target의 몇번째 문자를 검사
+    // wp: 현재 word의 몇번째 문자를 검사
+    while (tp<target.size()&&wp<word.size()&&(target[tp]=='*'||target[tp]==word[wp])) {
+        // *일 때
+        // 문자가 서로 같을 때
+        // 아직 target과 word 둘 다 끝까지 안봤을 때
+        tp++; wp++;
+    }
+    if (tp == target.size())
+        return wp == word.size();
+    return false;
+}
 
 
 int main(){
-    // 실행시작 시간 측정
-    int count = 0;
-    int index=1;
-    int start,end;
     int N,m;
- 
+    int count = 0;
+    int start,end;
     
-
+    // 이용자 수 N , 이용자 ID인 id 데이터를 입력을 받는다.
     scanf("%d\n",&N);
-    scanf("%d\n",&m);
-    int tm[m];
-
-    for(int i = 0; i< m;++i){
-        scanf("%d",&tm[i]);
+    string id[N];
+    for(int i = 0; i< N;i++){
+        cin >> id[i];
     }
+    // 제재 대상자 수 m , 제재 대상자 ID인 k 데이터를 입력을 받는다.
+    scanf("%d\n",&m);
+    vector<string> k;
+    for(int i = 0; i< m;i++){
+        cin >> k[i];
+    }
+    // 가능한 모든 경우의 단어를 담은 2차원 벡터
+    vector<vector<string>> ret;
+    // 각 단어에 매칭되는 여러 단어를 담은 1차원 벡터
+    vector<string> ret_vector;
+
+    // 실행시작 시간 측정
     start = clock();
 
-    // index를 하나씩 올리면서 체크한다.
-    while(count != N){
-        for(int i = 0; i < m; ++i){
-            if(index % tm[i] == 0){
-                count+=1;
+    // M개의 문자열을 하나씩 선택해서
+    for(int i=0; i < m ; i++){
+        // N개의 문자열중 매칭되는 ID를 검색해서 vector에 담는다.
+        for(int j = 0 ; j < N;j++){
+            if (checkMatching(k[i], id[j], 0, 0)) // 매칭되면
+                ret_vector.push_back(id[j]);
+        }
+        ret.push_back(ret_vector);
+    }
+
+    // 카운트 세기
+    int cnt_tmp = 1;
+
+    for(int i=0; i < m-1 ; i++){
+        if(ret[i].size() == ret[i+1].size()){
+            for(int j = 0 ; j < ret[j].size();j++){
+                for(int k = 0 ; k < ret[j].size();k++){
+                    if(ret[j][k] == ret[j][k+1]){
+                        continue;
+                    }
+                    else{
+                        count++;
+                        }
+                }
             }
         }
-        index+=1;
+        else{
+            cnt_tmp *= count;
+            continue;
+        }
     }
-    printf("%d\n",index-1);
-
+    printf("%d", count);
 
 
     // 실행 종료 시간 측정 
     end = clock();
     // 총 실행시간 계산
-    float result = (double)(end-start);
-    printf("실행시간 : %f",result);
+    int result = (end-start);
+    printf("실행시간 : %d",result);
     return 0;
 }

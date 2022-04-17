@@ -1,55 +1,51 @@
-#include<stdio.h>
-#include<string>
-#include<iostream>
-#include<time.h>
+#include <cstdio>
+#include <vector>
 
 using namespace std;
 
+// 자연수 N 을 구성하는 모든 소인수를 반환하는 함수
+// @param N
 
-// 발열 측정을 기다리는 학생수 N, 발열 측정기의 수m, 
-// 각 측정기가 한 명을 발열 측정하는데 걸리는 시간 Time
-// 모든 사람이 발열 측정을 받는데 걸리는 시간의 최솟값을 구하는 프로그램
+vector<long long> factorize(long n){
 
-// 입력조건 첫번째줄 N, 두번째 줄 발열 측정기의수 m, 세번째 줄에 각 발열 측정기가 측정하는데 걸리는 Time 들이 주어진다.
-
-// 출력조건 첫ㅂ너째 줄에 발열체크에 걸리는 시간의 최솟값을 출력한다.
-// 두번째 줄에 입력받은 이후부터 점수 출력까지 걸린 실행시간을 초 단위로 출력한다.
-
-
-int main(){
-    // 실행시작 시간 측정
-    int count = 0;
-    int index=1;
-    int start,end;
-    int N,m;
- 
-    
-
-    scanf("%d\n",&N);
-    scanf("%d\n",&m);
-    int tm[m];
-
-    for(int i = 0; i< m;++i){
-        scanf("%d",&tm[i]);
-    }
-    start = clock();
-
-    // index를 하나씩 올리면서 체크한다.
-    while(count == N){
-        for(int i = 0; i < m; ++i){
-            if(index % tm[i] == 0){
-                count++;
-                printf("%d\n",count);
-            }
+    vector<long long> factors;
+    // 루트 n까지값만 조사하면 된다.
+    for(int i=2; i*i<n; i++){
+        // i가 약수인지 확인
+        while(n % i ==0){
+            // 약수로 추가
+            factors.push_back(i);
+        // n값을 나눈 값으로 갱신
+            n = n/i;
         }
-        index++;
     }
-    printf("최종결과%d\n",index);
+    if(n > 1){
+        // 소인수를 찾지못한다면 소수다.
+        factors.push_back(n);
+    }
+    return factors;
+}
 
-    // 실행 종료 시간 측정 
-    end = clock();
-    // 총 실행시간 계산
-    float result = (double)(end-start);
-    printf("실행시간 : %f",result);
-    return 0;
+void process(int caseIndex){
+    long long n;
+    scanaf("%lld", &n);
+
+    vector<long long> factors = factorize(n);
+
+    printf("#%d:\n",caseIndex);
+    for(int i =0;i<factors.size();++i){
+        if(i > 0){
+            printf(" ");
+        }
+        printf("%lld",factors[i]);
+    }
+    printf("\n");
+}
+int main(){
+    int caseSize;
+    scanf("%d", &caseSize);
+
+    for(int caseIndex = 1; caseIndex <= caseSize;++caseIndex){
+        process(caseIndex);
+    }
 }

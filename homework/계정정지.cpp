@@ -41,6 +41,18 @@ bool check_overlap(vector<int> compare_arr){
     return false;    
 }
 
+bool check_overlap(vector<int> compare_arr){
+    for(int i = 0 ; i < answer.size(); i++){
+        for(int j=0; j < answer[i].size(); j++){
+            if(answer[i][j] != compare_arr[j]){
+                return true;
+            }
+        }
+    }
+    return false;    
+}
+
+
 // 벡터의 모든 단어와 한 단어를 중복을 확인하는 함수
 bool cur_overlap(vector<int> compare_arr, int tmp) {
     for(int k = 0; k < compare_arr.size(); k++) {
