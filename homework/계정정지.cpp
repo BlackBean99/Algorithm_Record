@@ -45,7 +45,7 @@ bool check_overlap(vector<int> compare_arr){
     for(int i = 0 ; i < answer.size(); i++){
         for(int j=0; j < answer[i].size(); j++){
             if(answer[i][j] != compare_arr[j]){
-                return true;
+               
             }
         }
     }
