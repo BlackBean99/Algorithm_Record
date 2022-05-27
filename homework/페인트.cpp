@@ -1,3 +1,4 @@
+
 #include <cstdio>
 
 const int MAX_SEAT_NUMBER = 1000;
