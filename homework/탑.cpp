@@ -6,7 +6,7 @@
 
 using namespace std;
 
-vector<int> findTargetTowers(int arr[], int N){
+vector<int> findTargetTowers(int arr[]){
     vector<int> answer;
     // 첫번째 원소는 무조건 0이어야 한다.
     answer.push_back(0);
@@ -25,6 +25,7 @@ vector<int> findTargetTowers(int arr[], int N){
             }
         }
     }
+
     return answer;
 }
 
