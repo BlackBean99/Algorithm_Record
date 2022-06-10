@@ -13,7 +13,7 @@ m 찾고자 하는 달
 **/
 
 // return month[k] == m 인 가장 큰 height[k]
-int getMaximumHeight(int height[], int month[], int m){
+int getMaximumHeight(int height[], int month[],int n ,int m){
     int max = 0;
     // 도토리의 수만큼 순회한다.
     for(int i=0;i<n;i++){
@@ -23,13 +23,16 @@ int getMaximumHeight(int height[], int month[], int m){
                 max = height[i];
         }
     }
+    if(max == 0){
+        max = -1;
+    }
     return max;
 }
 
 int main(){
     int n,m;
-    int height;
-    int month;
+    int* height;
+    int* month;
     
     scanf("%d", &n);
     // height : 키 데이터

@@ -3,16 +3,16 @@
 #include<iostream>
 
 using namespace std;
+const int MAX_LENGTH = 100;
 
 class MyString{
     private:
     
         char *characters; // 단어
         int length; // 단어의 길이
-
     public:
         MyString(const char * str){
-            this->length = strnlen(str,MAX_LENGTH);
+            this->length = strlen(str,MAX_LENGTH);
             this->characters = new char[this->length];
             for(int i=0;i<this->length;i++){
                 this->characters[i] = str[i];
@@ -57,6 +57,7 @@ class MyString{
         */
         bool operator > (const MyString & o) const{
             int n = min(this->length,o.length);
+            // 작은 문자열 만큼만 비교한다.
             for(int i = 0; i< n;i++){
                 if(this->characters[i] < o.characters[i]){
                     return false;
@@ -96,7 +97,7 @@ int main(){
     MyString mys1(s1);
     MyString mys2(s2);
 
-    if(mts1 < mys2){
+    if(mys1 < mys2){
         printf("-1");
     }
     else if(mys1 > mys2){
