@@ -22,12 +22,14 @@ void solve(int data[], int n, int p, int q){
             sumWeight += data[i];
             if(sumWeight > q){
                 printf("NO");
+                count--;
+                sumWeight -= data[i];
                 return;
             }
         }
     }
     printf("%d %d \n",count, sumWeight);
-    printf("YES");
+    printf("YES\n");
     return;
 }
 
