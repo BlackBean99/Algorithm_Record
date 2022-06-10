@@ -18,7 +18,6 @@ bool isPrime(int N){
         return true;
     }
     return false;
-
 }
 
 void testcase(int caseIndex){
@@ -38,12 +37,10 @@ void testcase(int caseIndex){
 
 int main(){
     int caseSize;
-    
     scanf("%d", &caseSize);
     // 데이터를 하나씩 입력받는다.
     for(int caseIndex =1;caseIndex<caseSize+1;caseIndex+=1){
         testcase(caseIndex);    
     }
-
-    return 0;
+    return 1;
 }

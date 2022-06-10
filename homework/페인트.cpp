@@ -28,6 +28,7 @@ void fillFrequencyTable(int data[], int n, int table[]){
     for(int i = 0 ; i < MAX_COLOR_NUMBER;i++){
         table[i] = 0;
     }
+    // 값을 인덱스로 채워넣어 빈도수를 계산한다.
     for(int i = 0; i < n ; i++){
         int color = data[i];
         table[color]++;
@@ -58,15 +59,35 @@ void solve(int n, int m, const Painting *paintings){
     int minColor = seats[0];
     int maxColor = seats[0];
 
-    for int(color = 0; color < MAX_COLOR_NUMBER; color++){
+    for(int color = 0; color < MAX_COLOR_NUMBER; color++){
         if(table[color] == 0) //한번도 등장하지 않은 색깔
             continue;
+        if(table[minColor] > table[color]){
+            minColor = color;
+        }
+        if(table[maxColor] < table[color]){
+            maxColor = color;
+        }
     }
+    printf("%d\n", maxColor);
+    printf("%d\n", minColor);
+}
 
-    if(table[minColor > table[color]]){
-        minColor = color;
+
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    Painting* paintings = new Painting[n];
+    for(int i = 0; i <m ; i++){
+        scanf("%d", &paintings[i].left);
+        scanf("%d", &paintings[i].right);
+        scanf("%d", &paintings[i].color);
+        //  좌석의 번호는 1번부터 시작되므로, 0 ~(n-1) 범위로 맞추기 위하여 1씩 빼준다.
+        paintings[i].left -=1;
+        paintings[i].right -=1;
     }
-    if(table[maxColor] < table[color]){
-        maxColor = color;
-    }
+    solve(n,m,paintings);
+
+    return 0;
 }
