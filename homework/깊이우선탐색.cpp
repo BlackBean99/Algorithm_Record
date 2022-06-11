@@ -32,7 +32,7 @@ int main(void){
         cin >> v1 >> v2;
         //  대칭행렬이기 때문에 v2, v1    v1,v2 모두 1로 채워야한다.
         maps[v1][v2] = maps[v2][v1] = 1;
-        vosted[v1] = visted[v2] = 1;
+        visted[v1] = visted[v2] = 1;
     }
     dfs(1);
     return 1;
