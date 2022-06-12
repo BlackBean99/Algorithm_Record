@@ -15,79 +15,36 @@
 // 13
 // 20 7 23 19 10 13 8
 // 일곱 난쟁이의 키를 오름차순으로 출력한다. 일곱 난쟁이를 찾을 수 없는 경우는 없다.
-#include <vector>
-#include<iostream>
-
+#include <iostream>
+#include <algorithm>
 using namespace std;
+ 
 
-
-int getSum(vector<int> arr){
-    int sum = 0;
-    for(int i = 0 ; i < arr.size();i++){
-        sum += arr[i];
-    }
-    return sum;
-}
-
-
-// 조합 구현하기 r개를 선택하기
-vector<int> get_permutation(vector<int> arr, vector<int> out, vector<bool> visted, int depth, int r){
-    // 기저 사례 ( 다 뽑았을 때 ) -> 종료조건
-    if(depth==r){        
-        if(getSum(out)==100){
-            for(int i = 0 ; i < r; i++){
-                printf("%d",out[i]);
-            }
-                cout << endl;
-        }
-            return out;
-    }
-// depth는 현재 채우고 있는 out 의 인덱스.
-    for(int i = 0 ; i < arr.size(); i++){
-        // 방문하지 않은 원소라면
-        if(!visted[i]){
-            visted[i] = true;
-            out[depth] = arr[i];
-            get_permutation(arr, out, visted, depth+1, r);
-            visted[i]  = false;
+void printAll(int arr[],int i, int j){
+    for (int z = 0; z < 9;z++){
+        if(z != i  && z != j){ // 2명 빼고 출력
+            cout << arr[z] << '\n';
         }
     }
 }
-
-
-
-// vector<int> findAnswer(vector<int> list){
-//     int sum = 0;
-//     vector<int> answerList;
-//     do{
-//         for(int i = 0; i< list.size();i++){
-//             sum+= list[i];
-//         }
-//         if(sum == 100){
-//             return 
-//         }
-//     }while(next_permutation(list.begin(),list.end()));
-// }
-
+// 전체 합에서 2개의 값을 빼서 100이랑 비교.
+// 7개의 합으로 접근하면 어렵다!
 int main(){
-    vector<int> slaveList;
-    vector<int> out;
-    vector<bool> visted;
-
-    for(int i = 0; i<9;i++){
-        visted.push_back(false);
+    int tall[10];
+    int sum = 0;
+    for (int i = 0; i < 9;i++){
+        cin >> tall[i];
+        sum += tall[i]; // 전체 합
     }
-    for(int i = 0; i<7;i++){
-        out.push_back(0);
+    sort(tall, tall + 9); // 미리 정렬
+    for (int i = 0; i < 8; i++){
+        for (int j = i + 1; j < 9;j++){
+            if(sum-(tall[i]+tall[j]) == 100){ 
+                // 2명을 뺀 값의 합이 100이 되면
+                printAll(tall,i,j);
+                return 0;
+            }   
+        }
     }
-
-    for(int i = 0 ; i < 9; i++){
-        int slave;
-        cin >> slave;
-        slaveList.push_back(slave);
-    }
-
-    get_permutation(slaveList, out, visted, 0,7);
-
-    return 1;
-}
+    return 0;
+} //8 min
