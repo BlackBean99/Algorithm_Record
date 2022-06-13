@@ -63,20 +63,20 @@ class Point2D{
                     if(area < answer)
                         continue;
 
-                        //  pa -> pb 방향의 x,y 좌표에 대한 거리를 구한다.
-                        int dx = pb.x - pa.x;
-                        int dy = pb.y - pa.y;
+                    //  pa -> pb 방향의 x,y 좌표에 대한 거리를 구한다.
+                    int dx = pb.x - pa.x;
+                    int dy = pb.y - pa.y;
 
-                        // 벡터 <dx,dy> 를 90 도 회전시키면 <- 요,ㅇㅌ> rk 
-                        // pa 와 pb에 벡터 <-dy,dx>를 각각 더해 정사각형을 구성하는 두 점
-                        // pd, pc를 계산할 수 있따.
-                        Point2D pd(pa.x - dy,pa.y + dx);
-                        Point2D pc(pb.x - dy, pb.y + dx);
+                    // 벡터 <dx,dy> 를 90 도 회전시키면 <-dy,dx> 가 
+                    // pa 와 pb에 벡터 <-dy,dx>를 각각 더해 정사각형을 구성하는 두 점
+                    // pd, pc를 계산할 수 있따.
+                    Point2D pd(pa.x - dy,pa.y + dx);
+                    Point2D pc(pb.x - dy, pb.y + dx);
 
-                        // pd, pc와 결정적이므로 이 점이 pSet에 존재하는 점인지 검사하면 된다.
-                        if(pSet.count(pc)>0 && pSet.count(pd)>0){
-                            answer = max(answer, area);
-                        }
+                    // pd, pc와 결정적이므로 이 점이 pSet에 존재하는 점인지 검사하면 된다.
+                    if(pSet.count(pc)>0 && pSet.count(pd)>0){
+                        answer = max(answer, area);
+                    }
                 }
             }
             return answer;

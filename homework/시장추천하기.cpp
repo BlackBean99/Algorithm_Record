@@ -1,5 +1,24 @@
-#include <stdio.h>
+/**
+    입력
+    입력받을 문자열 수 N
+    입력받을 문자 N개
+5
+DO
+DO
+HI
+HI
+BYE
+    출력
+최다 득표자 수 표수
+최다 득표수 오름차순 이름.
+2
+DO HI
+
+
+*/
+
 #include <iostream>
+#include <stdio.h>
 #include <map>
 
 using namespace std;
