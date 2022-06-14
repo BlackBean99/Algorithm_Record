@@ -1,13 +1,12 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
-
 
 using namespace std;
 
 void printAll(vector<int> arr){
-    for(int i = 0 ; i < arr.size();i++){
-        cout << arr[i] << endl;
+    int arrSize = arr.size();
+    for(int i = 0 ; i < arrSize; i++){
+        cout << arr[i] << '\n';
     }
 }
 
@@ -31,6 +30,10 @@ void process(int n){
 }
 // 소인수를 오름차순으로 출력한다.
 int main(){
+    // cin 같이 입출력 함수를 하나만 사용시 오버헤드를 줄여주는 꿀 코드
+    ios::sync_with_stdio(false);
+    // 넹 찾아볼게여. 버퍼 비워주는거 ㅇㅋㅇㅋ 찾아볼게여
+    cin.tie(NULL);
     int n;
     cin >> n;
     process(n);

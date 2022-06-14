@@ -33,10 +33,10 @@ vector<int> getTicketNumbers(int n, int m, const vector<int> &ids){
     vector<int> tickets;
     TicketTable table = TicketTable(n);
     for(int i=0; i<tickets.size(); i++){
-    int userId = ids[i];
-    int ticketIndex = table.findEmptyIndexByUserId(userId);
-    ticket.push_back(ticketIndex);
-    table.setUsed(ticketIndexx, true);
+        int userId = ids[i];
+        int ticketIndex = table.findEmptyIndexByUserId(userId);
+        ticket.push_back(ticketIndex);
+        table.setUsed(ticketIndexx, true);
     }
     return tickets;
 }
