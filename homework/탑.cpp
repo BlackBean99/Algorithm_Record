@@ -7,7 +7,7 @@
 using namespace std;
 
 vector<int> findTargetTowers(int arr[]){
-    vector<int> answer;
+    stack<int> answer;
     // 첫번째 원소는 무조건 0이어야 한다.
     answer.push_back(0);
 
