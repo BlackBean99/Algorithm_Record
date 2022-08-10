@@ -18,6 +18,8 @@ void func(int a, int b, int n){
 }
 
 int main(void){
+    ios::sync_with_stdio(0);
+    cin.tie(0);    
     int n;
     cin >> n;
     cout << (1<<n) -1 << '\n';
