@@ -16,7 +16,6 @@ int z(int n, int r, int c){
     if(r >= half & c < half) return 2*half*half + z(n-1,r - half,c); 
     // 4번 케이스
     if(r >= half & c >= half) return 3*half*half + z(n-1,r-half,c-half); 
-
 }
 
 
