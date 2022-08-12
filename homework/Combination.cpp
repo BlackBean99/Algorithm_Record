@@ -3,7 +3,7 @@ void get_permutation(int[] arr, int[] out, boolean[] visited, int depth, int r){
     // 기저 사례 ( 다 뽑았을 때 ) -> 종료조건
     if(depth==r){
         for(int i = 0 ; i < r; i++){
-            printf("%d",out[i]);    
+            printf("%d",out[i]);
         }
             return;
     }
@@ -11,7 +11,7 @@ void get_permutation(int[] arr, int[] out, boolean[] visited, int depth, int r){
     for(int i = 0 ; i < arr.size(); i++){
         // 방문하지 않은 원소라면
         if(!visted[i]){
-            visted[i] = treu;
+            visted[i] = true;
             out[depth] = arr[i];
             get_permutation(arr, out, visted, depth+1, r);
             visted[i]  = false;
