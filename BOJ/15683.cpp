@@ -39,13 +39,14 @@ int main(void) {
       if(board1[i][j] == 0) mn++;
     }
   }
-  // 1 << (2*cctv.size())는 4의 cctv.size()승을 의미.
+  // 1 << (4*cctv.size())는 4의 cctv.size()승을 의미.
   for(int tmp = 0; tmp < (1<<(2*cctv.size())); tmp++){ // tmp를 4진법으로 뒀을 때 각 자리수를 cctv의 방향으로 생각할 것이다.
     for(int i = 0; i < n; i++)
       for(int j = 0; j < m; j++)
         board2[i][j] = board1[i][j];
     int brute = tmp;    
     for(int i = 0; i < cctv.size(); i++){
+        // tmp 를 4진법으로 해체
       int dir = brute % 4;
       brute /= 4;
       int x = cctv[i].X;
