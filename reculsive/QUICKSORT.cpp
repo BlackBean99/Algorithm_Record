@@ -15,6 +15,7 @@ void quickSort(int st, int en){
     int ridx = en-1;
 
     while(1){
+        // 배열의 
         while(lidx <= ridx && arr[lidx] <= pivot) lidx++;
         while(lidx <= ridx && arr[ridx] > pivot) ridx--;
         if(lidx > ridx) break;
