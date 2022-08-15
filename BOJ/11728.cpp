@@ -3,9 +3,9 @@
 using namespace std;
 
 int n, m;
-int a[5];
-int b[5];
-int c[12];
+int a[100000];
+int b[100000];
+int c[200000];
 
 int main(void){
     ios::sync_with_stdio(false);
@@ -24,6 +24,8 @@ int main(void){
         else if(a[aidx] <= b[bidx]) c[i] = a[aidx++];
         else c[i] = b[bidx++];
     }
-   for(int i =0; i<m+n; i++)
-        cout << c[i] << " "; 
+   for(int i =0; i<m+n; i++){
+        cout << c[i] << ' '; 
+        if(i == m+n-1) cout << c[i];
+    }
 }
