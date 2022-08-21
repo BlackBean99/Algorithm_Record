@@ -4,6 +4,7 @@ using namespace std;
 
 int n, m;
 int arr[105][105];
+
 const int INF = 0x3f3f3f3f;
 
 int main(void){
@@ -18,6 +19,7 @@ int main(void){
         int a, b, cost;
         cin >> a >> b >> cost;
         arr[a][b] = min(cost, arr[a][b]);
+        nxt[a][b] = b;
     }
     for(int i = 1; i <= n;i++) arr[i][i] = 0;
         
