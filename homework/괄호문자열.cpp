@@ -74,6 +74,7 @@ void process(int caseIndex){
     }
     else{
         cout << "YES" << endl;
+        cout << endl;
     }
 }
 
