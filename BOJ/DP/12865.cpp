@@ -27,5 +27,5 @@ int main()
 	}
 
 	cout << DP[N][K];
-
+	cout << DP[N][3];
 }
