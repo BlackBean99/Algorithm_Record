@@ -61,5 +61,7 @@ public class Main_2315 {
     public static void main(String[] args) throws IOException {
         init();
         System.out.println(solve(m, m, 0));
+        System.out.println("히힛");
+
     }
 }
