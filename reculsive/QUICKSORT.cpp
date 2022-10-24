@@ -25,6 +25,23 @@ void quickSort(int st, int en){
     quickSort(st,ridx);
     quickSort(ridx+1,en);
 }
+
+void quickSort(int st, int en){
+    if(en <= st + 1) return;
+    int pivot = arr[st];
+    int lidx = st + 1;
+    int ridx = en -1;
+
+    while(1){
+        while(lidx <= ridx && arr[lidx] <= pivot) lidx++;
+        while(lidx <= ridx && arr[ridx] > pivot) ridx--;
+        if(lidx >= ridx) break;
+        swap(arr[lidx], arr[ridx]);
+    }
+    swap(arr[st], arr[ridx]);
+    quickSort(st, ridx);
+    quickSort(ridx + 1, en);
+}
 int main(void){
     ios::sync_with_stdio(false);
     cin.tie(0);

@@ -20,6 +20,7 @@ void merge(int st, int en){
         arr[i] = tmp[i];
 }
 
+
 // a[st:en]을 정렬하고 싶다.
     void merge_sort(int st, int en){
     if(en == st+1) return; // 리스트의 길이가 1인 경우
@@ -28,7 +29,6 @@ void merge(int st, int en){
     merge_sort(mid+1, en); // arr[mid:en]을 정렬한다.
     merge(st, en); // arr[st:mid]와 arr[mid:en]을 합친다.
     }
-
 
 int main(void){
     ios::sync_with_stdio(false);
