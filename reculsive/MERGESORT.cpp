@@ -30,6 +30,26 @@ void merge(int st, int en){
     merge(st, en); // arr[st:mid]와 arr[mid:en]을 합친다.
     }
 
+    void merge(int st, int en){
+        int mid = (st + en) / 2;
+        int lidx = st;
+        int ridx = mid + 1;
+        for (int i = st; i < en; i++){
+            if(ridx == en) tmp[i] = arr[lidx++];
+            else if(lidx == mid) tmp[i] = arr[ridx++];
+            else if()
+        }
+    }
+
+
+    void merge_sort(int st, int en){
+        if(en == st +1) return;
+        int mid = (st + en)/2;
+        merge_sort(st,mid);
+        merge_sor(mid+1,en);
+        merge(st,en);
+    }
+
 int main(void){
     ios::sync_with_stdio(false);
     cin.tie(0);

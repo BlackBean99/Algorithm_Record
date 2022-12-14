@@ -19,7 +19,7 @@ const int MAX = 10000000 + 1;
 // length[i]  = X 나 Y를 i번 치환한 후의 길이
 int length[51];
 void precalc(){
-    length[0] = 1;
+    length[0] = 1;d
     for(int i = 1; i <= 50; ++i)
         length[i] = min(MAX, length[i-1]*2 + 2)
 }
