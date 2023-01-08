@@ -2,7 +2,7 @@
 
 using namespace std;
 
- 
+
 // 계단은 한계단 아님 두계단씩 오를 수 있다.
 //  연속의 3계단을 모두 밟아서는 안된다.
 // 마지막 도착 계단은 무조건 밟아야 한다.
@@ -10,6 +10,9 @@ int D[305][3];
 int n;
 int score[305];
 int main(void){
+    cin.tie(0);
+
+
     // ios::sync_with_stdio(false);
     // cin.tie(0);
     // for(int i = 0; i<=n; i++){
