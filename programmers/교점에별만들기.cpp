@@ -5,10 +5,10 @@
 using namespace std;
 
 
-vector<string> solution(vector<vector<int>> line) {
+vector<string> solution(vector<vector<int> > line) {
     vector<string> answer;
 
-    vector<vector<long long>> result;
+    vector<vector<long long> > result;
 
     long long minX=10000000001;
     long long minY=10000000001;
