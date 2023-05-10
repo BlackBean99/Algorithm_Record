@@ -10,6 +10,7 @@ dp = [10001] * 10000
 
 # 0 부터 m포함해서
 dp[0] = 0
+
 for i in range(n):
     for j in range(array[i],m+1):
         if dp[j- array[i]] != 10001:
