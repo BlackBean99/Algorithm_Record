@@ -1,4 +1,4 @@
-n,m,c = map(int,input().split())
+n,m,c = map(int, input().split())
 # 2차원 리스트 초기화
 INF = int(1e9)
 graph = [[INF] * (n+1) for _ in range(n+1)]
@@ -11,7 +11,7 @@ for a in range(n + 1):
             graph[b][a] = 0
 
 for _ in range(m):
-    x,y,z = map(int,input().split())
+    x, y, z = map(int,input().split())
     graph[x][y] = z
 
 for k in range(1,n+1):
