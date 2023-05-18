@@ -8,8 +8,8 @@ graph = [[] for i in range(v+1)]
 time = [0] * (v+1)
 
 cost = [0] * (v+1)
-for i in range(1,v+1):
-    data = list(map(int,input().split()))
+for i in range(1, v+1):
+    data = list(map(int, input().split()))
     time[i] = data[0]
     for x in data[1:-1]:
         indegree[i] += 1
@@ -26,7 +26,7 @@ def topology_sort():
     #   큐가 빌때까지
     while(q):
         now = q.popleft()
-        # 지금 원소에서 인접한 노드들의 indegree -1
+        # 서 인접한 노드들의 indegree -1
         for i in graph[now]:
             result[i] = max(result[i], result[now] + time[i])
             indegree[i] -= 1
