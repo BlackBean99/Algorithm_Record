@@ -1,8 +1,6 @@
 n = int(input())
 array = list(map(int,input().split()))
 
-
-
 array.sort()
 #  총 그룹의 수
 result = 0
