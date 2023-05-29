@@ -1,59 +1,79 @@
-#14502_연구소_bfs_gold5
+from itertools import combinations
 
-from collections import deque
-import copy
-import sys
-input = sys.stdin.readline
+n = int(input())
+board = [] # 복도 정보
+teachers = [] # 모든 선생님 위치 정보
+spaces = [] # 빈공간 위치 정보
 
-d = [[-1,0],[1,0],[0,-1],[0,1]]
+for i in range(n):
+    board.append(list(input().split()))
+    for j in range(n):
+        if board[i][j] == 'T':
+            teachers.append((i, j))
+        if board[i][j] == 'X':
+            spaces.append((i, j))
 
-def bfs():
-    queue = deque()
-    #queue에 2의 위치 전부 append
-    test_map = copy.deepcopy(lab_map)
-    for i in range(n):
-        for k in range(m):
-            if test_map[i][k] == 2:
-                queue.append((i,k))
+def watch(x,y,direction):
+    if direction == 0:
+        # 왼쪽으로 감시
+        while y >= 0:
+            # 학생이 있는 경우
+            if board[i][j] == 'S':
+                return True
+            if board[i][j] == 'O':
+                return False
+            y += 1
+    #   오른쪽 방향으로 감시
+    if direction == 1:
+        while y < n:
+            # 학생이 있는 경우
+            if board[i][j] == 'S':
+                return True
+            if board[i][j] == 'O':
+                return False
+            x -= 1
+    # 위쪽 방향으로 감시
+    if direction == 2:
+        while x >= 0:
+            # 학생이 있는 경우
+            if board[i][j] == 'S':
+                return True
+            if board[i][j] == 'O':
+                return False
+            x -= 1
+            # 아래쪽으로 감시
+    if direction == 3:
+        while x < n:
+            # 학생이 있는 경우
+            if board[i][j] == 'S':
+                return True
+            if board[i][j] == 'O':
+                return False
+            x += 1
+    return False
 
-    while queue:
-        r,c = queue.popleft()
-
+def process():
+    for x,y in teachers:
         for i in range(4):
-            dr = r+d[i][0]
-            dc = c+d[i][1]
+            if watch(x,y,i):
+                return True
+    return False
 
-            if (0<=dr<n) and (0<=dc<m):
-                if test_map[dr][dc] == 0:
-                    test_map[dr][dc] =2
-                    queue.append((dr,dc))
+find  = False
 
-    global result
-    count = 0
-    for i in range(n):
-        for k in range(m):
-            if test_map[i][k] == 0:
-                count +=1
+# 빈공간에 3개 골라서
+for data in combinations(spaces, 3):
+    # O 표시하고
+    for x, y in data:
+        board[x][y] = 'O'
+    if not process():
+        # 원하는 경우를 발견했을 경우
+        find = True
+        break
+    for x,y in data:
+        board[x][y] = 'X'
 
-    result = max(result, count)
-
-
-def make_wall(count):
-    if count == 3:
-        bfs()
-        return
-    for i in range(n):
-        for k in range(m):
-            if lab_map[i][k] == 0:
-                lab_map[i][k] = 1
-                make_wall(count+1)
-                lab_map[i][k] = 0
-
-
-n, m = map(int,input().split())
-lab_map = [list(map(int,input().split())) for _ in range(n)]
-
-result = 0
-make_wall(0)
-
-print(result)
+if find:
+    print("YES")
+else:
+    print("NO")
