@@ -55,6 +55,7 @@ def process():
                 return True
         # 모든 방향을 다 뒤져보면
         return False
+    find = False
     for data in combinations(spaces, 3):
         # 재귀전 행동
         for x,y in data:
