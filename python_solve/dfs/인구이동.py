@@ -1,54 +1,54 @@
+import sys
+
+input = sys.stdin.readline
 from collections import deque
 
-n,l,r = map(int,input().split())
-
 graph = []
-for i in range(n):
-    graph.append(list(map(int,input().split())))
+n, l, r = map(int, input().split())
+for _ in range(n):
+    graph.append(list(map(int, input().split())))
 
-# 두개의 나라를 합쳐서
-# 합친 수 / 연합 개수 로 변경
-dx = [1,0,-1,0]
-dy = [0,1,0,-1]
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
 
-result = 0
 
-def process(x,y,index):
-    # (x,y)의 위치와 연결된 연합 정보를 담는 리스트
-    united = []
-    united.append((x,y))
-
+def bfs(a, b):
     q = deque()
-    q.append((x,y))
-    union[x][y] = index
-    summary = graph[x][y] # 현재 연합의 번호 할당
-    count = 1 # 현재 연합의 국가 수
+    temp = []
+    q.append((a, b))
+    temp.append((a, b))
     while q:
-        x,y = q.popleft()
+        x, y = q.popleft()
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if 0 <= nx and nx < n and 0 <= ny and ny < n and union[nx][ny] == -1:
-                if 1<= abs(graph[nx][ny] - graph[x][y]) <= r:
-                    q.append((nx,ny))
-                    union[nx][ny]  = index
-                    summary += graph[nx][ny]
-                    count += 1
-                    united.append((nx,ny))
-    for i, j in united:
-        graph[i][j] = summary // count
-    return count
+            if 0 <= nx < n and 0 <= ny < n and visited[nx][ny] == 0:
+                # 국경선을 공유하는 두 나라의 인구 차이가 L명 이상, R명 이하라면, 두 나라가 공유하는 국경선을 오늘 하루 동안 연다.
+                if l <= abs(graph[nx][ny] - graph[x][y]) <= r:
+                    visited[nx][ny] = 1
+                    q.append((nx, ny))
+                    temp.append((nx, ny))
+    return temp
 
-total_count = 0
-
-while True:
-    union = [[-1] * n for _ in range(n)]
-    index = 0
+ㅁㄴㅇㅁㄴㅇㅁㄴㄹasdasd
+result = 0
+while 1:
+    visited = [[0] * (n + 1) for _ in range(n + 1)]
+    flag = 0
     for i in range(n):
         for j in range(n):
-            if union[i][j] == -1:
-                process(i,j,index)
-                index += 1
-    if index == n*n:
+            if visited[i][j] == 0:
+                visited[i][j] = 1
+                country = bfs(i, j)
+                # 위의 조건에 의해 열어야하는 국경선이 모두 열렸다면, 인구 이동을 시작한다.
+                if len(country) > 1:
+                    flag = 1
+                    # 연합을 이루고 있는 각 칸의 인구수는 (연합의 인구수) / (연합을 이루고 있는 칸의 개수)가 된다. 편의상 소수점은 버린다.
+                    number = sum([graph[x][y] for x, y in country]) // len(country)
+                    for x, y in country:
+                        graph[x][y] = number
+    # 연합을 해체하고, 모든 국경선을 닫는다.
+    if flag == 0:
         break
-    total_count += 1
+    result += 1
+print(result)
