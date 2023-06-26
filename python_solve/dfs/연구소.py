@@ -72,7 +72,7 @@ for data in combinations(spaces, 3):
         break
     for x,y in data:
         board[x][y] = 'X'
-
+            nx =
 if find:
     print("YES")
 else:

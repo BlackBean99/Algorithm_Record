@@ -30,7 +30,6 @@ def bfs(a, b):
                     temp.append((nx, ny))
     return temp
 
-ㅁㄴㅇㅁㄴㅇㅁㄴㄹasdasd
 result = 0
 while 1:
     visited = [[0] * (n + 1) for _ in range(n + 1)]
