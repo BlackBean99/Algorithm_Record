@@ -78,5 +78,7 @@ for x, y in graph_R:
     area_no += bfs(x, y, 'R')
 area_no += area_B
 
+
+
 print(area_yes, end=' ')
 print(area_no)
