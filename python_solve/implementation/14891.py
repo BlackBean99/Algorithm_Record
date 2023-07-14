@@ -3,9 +3,7 @@ from collections import deque
 input = sys.stdin.readline
 t = [deque(list(map(int,input().rstrip()))) for _ in range(4)]
 
-     
-     
-# ✨ 톱니 돌리기 
+         
 k = int(input())
 for _ in range(k): 
 	r = [] # ✨ 처음 톱니 상태 저장
@@ -16,6 +14,7 @@ for _ in range(k):
     # 왼쪽으로 돌리기
 	if n != 0 :
 		for i in range(n,0,-1):
+            #오른쪽 바퀴의 왼쪽 부분 != 왼쪽 바퀴의 왼쪽 부분
 			if r[i][0] != r[i-1][1]:
 				if (n-(i-1))%2 == 0:
 					t[i-1].rotate(d)
@@ -26,7 +25,9 @@ for _ in range(k):
                 
 	if n != 3:
 		for i in range(n,3):
+            #왼쪽 바퀴의 오른쪽 부분 != 오른쪽 바퀴의 왼쪽 부분
 			if r[i][1] != r[i+1][0]:
+    
 				if (n-(i+1))%2 == 0:
 					t[i+1].rotate(d)
 				elif (n-(i+1))%2 != 0:
@@ -35,7 +36,6 @@ for _ in range(k):
 				break
 	t[n].rotate(d)
     
-# ✨ 출력
 res = 0
 if t[0][0] == 1:
 	res+=1
