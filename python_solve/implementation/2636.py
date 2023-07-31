@@ -1,5 +1,4 @@
 from collections import deque
-# m = 세로, n = 가로
 n, m = map(int, input().split())
 cheeze = []
 cnt = 0
@@ -14,7 +13,7 @@ dy = [0,1,0,-1]
 
 def bfs():
     q = deque([(0, 0)])
-    melt = deque([])
+    melted = deque([])
     while q:
         x, y = q.popleft()
         for i in range(4):
@@ -22,13 +21,17 @@ def bfs():
             ny = y + dy[i]
             if 0 <= nx < n and 0 <= ny < m and not visited[nx][ny]:
                 visited[nx][ny] = 1
-                if cheeze[nx][ny] == 0:  # 공기면 계속 탐색하기 위해 큐에 넣음
+                # 공기면?
+                if cheeze[nx][ny] == 0: 
                     q.append((nx, ny))
-                elif cheeze[nx][ny] == 1:  # 치즈면 한 번에 녹이기 위해 melt에 넣음
-                    melt.append((nx, ny))
-    for x, y in melt:
-        cheeze[x][y] = 0  # 공기와 닿은 치즈를 한 번에 녹임
-    return len(melt)  # 녹인 치즈 갯수 리턴  
+                # 치즈면 한 번에 녹이기 위해 melt에 넣음
+                elif cheeze[nx][ny] == 1:
+                    melted.append((nx, ny))
+    # 치즈 녹이기
+    for x, y in melted:
+        cheeze[x][y] = 0 
+    # 현재 녹인 개수
+    return len(melted)  
                     
 while True:
     visited = [[0] * m for _ in range(n)]
