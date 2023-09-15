@@ -52,3 +52,4 @@ for i in range(n):  # 연산자와 피연산자를 나누어 저장
         op.append(expr[i])
 solve(0, num, op)
 print(result)
+ 
