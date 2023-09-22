@@ -1,11 +1,0 @@
-
-W
-java:S1854"5Remove this useless assignment to local variable "x".(¯È®êùÿÿÿÿ8‹»ÿ­ˆ1
-W
-java:S1854"5Remove this useless assignment to local variable "m".(›ï‘úÿÿÿÿ8‹»ÿ­ˆ1
-H
-java:S1481"&Remove this unused "m" local variable.(›ï‘úÿÿÿÿ8»ÿ­ˆ1
-H
-java:S1481"&Remove this unused "x" local variable.(¯È®êùÿÿÿÿ8»ÿ­ˆ1
-Z	java:S1060"9Replace this use of System.out or System.err by a logger.(´‹¹öşÿÿÿÿ8»ÿ­ˆ1
-Z	java:S1065"9Replace this use of System.out or System.err by a logger.(¡ò†şÿÿÿÿ8»ÿ­ˆ1
