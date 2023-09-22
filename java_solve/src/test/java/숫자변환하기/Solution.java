@@ -1,6 +1,5 @@
-package 시소짝꿍;
+package 숫자변환하기;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,13 +26,29 @@ import java.util.Map;
  */
 class Solution {
     public static void main(String[] args) {
-        int[] weights1 = new int[]{100, 180, 360, 100, 270};
-        long answer1 = 4L;
-        long result1 = new Solution().solution(weights1);
+        int x1 = 10;
+        int y1 = 40;
+        int n1 = 5;
+        int answer1 = 2;
+        int result1 = new Solution().solution(x1, y1, n1);
         PRINT_RESULT(1, result1, answer1);
+
+        int x2 = 10;
+        int y2 = 40;
+        int n2 = 30;
+        int answer2 = 1;
+        int result2 = new Solution().solution(x2, y2, n2);
+        PRINT_RESULT(2, result2, answer2);
+
+        int x3 = 2;
+        int y3 = 5;
+        int n3 = 4;
+        int answer3 = -1;
+        int result3 = new Solution().solution(x3, y3, n3);
+        PRINT_RESULT(3, result3, answer3);
     }
 
-    public static void PRINT_RESULT(int index, long result, long answer) {
+    public static void PRINT_RESULT(int index, int result, int answer) {
         boolean correct = result == answer;
         StringBuilder sb = new StringBuilder();
         sb.append("\n\n테스트 케이스 ").append(index).append(": ");
@@ -44,30 +59,23 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
-    public long solution(int[] weights) {
-        long answer = 0;
-        Arrays.sort(weights);
-        Map<Double, Integer> map = new HashMap<>();
-        // 100, 180, 360, 100, 270
-        // 100, 100, 180, 270, 360
-        // 1,2,3,4 미터간 구분이 있다. 1미터인 경우 같은 케이스
-        // 1미터인 경우 2미터인 애와 비슷할 수 있다.
-        // 2미터인 경우 3,4미터인 경우와 같을 수 있다.
-        // 3미터인 경우, 2미터인 경우와 같을 수 있다.
-        // 4미터인 경우 고려하지 않는다.
-        // 더 작은 경우만 고려한다.
-
-        for(int i : weights){
-            double a = i * 1.0;
-            double b = (i * 2.0)/3.0;
-            double c = (i * 1.0)/2.0;
-            double d = (i * 3.0)/4.0;
-            if(map.containsKey(a)) answer += map.get(a);
-            if(map.containsKey(b)) answer += map.get(b);
-            if(map.containsKey(c)) answer += map.get(c);
-            if(map.containsKey(d)) answer += map.get(d);
-            map.put((i*1.0), map.getOrDefault((i*1.0),0) +1);
+    public int solution(int x, int y, int n) {
+        int[] dp = new int[y+1];
+        for(int i =x; i < y+1; i++){
+            if(i != x && dp[i] == 0){
+                dp[i] = -1;
+                continue;
+            }
+            if (i * 2 <= y){
+                dp[i*2] = (dp[i*2] == 0) ? dp[i] + 1 : Math.min(dp[i] + 1 , dp[i*2]);
+            }
+            if( i*3 <= y){
+                dp[i*3] = (dp[i*3] == 0) ? dp[i] + 1 : Math.min(dp[i] + 1 , dp[i*2]);
+            }
+            if( i+n <= y){
+                dp[i + n] = (dp[i+n] == 0) ? dp[i] + 1 : Math.min(dp[i] + 1, dp[i+n]);
+            }
         }
-        return answer;
+        return dp[y];
     }
 }
