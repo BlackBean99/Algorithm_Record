@@ -1,9 +1,4 @@
-package 뒤에있는큰수찾기;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+package 마법의엘리베이터;
 
 /**
  * main, PRINT_RESULT 는 테스트 케이스 실행 및 결과 확인을 위한 함수입니다.
@@ -28,44 +23,49 @@ import java.util.Stack;
  */
 class Solution {
     public static void main(String[] args) {
-        int[] numbers1 = new int[]{2, 3, 3, 5};
-        int[] answer1 = new int[]{3, 5, 5, -1};
-        int[] result1 = new Solution().solution(numbers1);
+        int storey1 = 16;
+        int answer1 = 6;
+        int result1 = new Solution().solution(storey1);
         PRINT_RESULT(1, result1, answer1);
 
-        int[] numbers2 = new int[]{9, 1, 5, 3, 6, 2};
-        int[] answer2 = new int[]{-1, 5, 6, 6, -1, -1};
-        int[] result2 = new Solution().solution(numbers2);
+        int storey2 = 2554;
+        int answer2 = 16;
+        int result2 = new Solution().solution(storey2);
         PRINT_RESULT(2, result2, answer2);
     }
 
-    public static void PRINT_RESULT(int index, int[] result, int[] answer) {
-        boolean correct = Arrays.equals(result, answer);
+    public static void PRINT_RESULT(int index, int result, int answer) {
+        boolean correct = result == answer;
         StringBuilder sb = new StringBuilder();
         sb.append("\n\n테스트 케이스 ").append(index).append(": ");
         sb.append(correct ? "정답" : "오답").append("\n");
-        sb.append("\t- 실행 결과: \t").append(Arrays.toString(result)).append("\n");
-        sb.append("\t- 기댓값: \t").append(Arrays.toString(answer)).append("\n");
+        sb.append("\t- 실행 결과: \t").append(result).append("\n");
+        sb.append("\t- 기댓값: \t").append(answer).append("\n");
         if (correct) System.out.println(sb);
         else throw new RuntimeException(sb.toString());
     }
 
-    public int[] solution(int[] numbers) {
-        int[] answer = new int[numbers.length];
-        Stack<Integer> stack = new Stack<>();
-        for(int i = numbers.length-1 ; i >= 0; i--){
-            while(!stack.isEmpty()){
-                if(stack.peek() > numbers[i]) {
-                    answer[i] = stack.peek();
-                    break;
-                }else{
-                    stack.pop();
-                }
+    public int solution(int storey) {
+        String tmp = Integer.toString(storey);
+        int[] arr = new int[tmp.length()];
+        for(int i = 0; i < tmp.length(); i++){
+            arr[i] = tmp.charAt(i) - '0';
+        }
+        int answer = 0;
+
+        for(int i=arr.length-1; i>=0; i--){
+            if(arr[i] > 5){
+                answer += 10 - arr[i];
+                if(i == 0) answer++;
+                else arr[i-1]++;
             }
-            if(stack.isEmpty()){
-                answer[i] = -1;
+            else if(arr[i]==5 && i > 0 && arr[i-1] >= 5){
+                arr[i-1]++;
+                answer += 5;
             }
-            stack.push(numbers[i]);
+            else{
+                answer += arr[i];
+            }
         }
         return answer;
     }

@@ -1,8 +1,6 @@
 package 뒤에있는큰수찾기;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 /**
@@ -26,16 +24,16 @@ import java.util.Stack;
  *
  * GitHub: https://github.com/azqazq195/programmers_helper
  */
-class Solution {
+class Solution_Reverse {
     public static void main(String[] args) {
         int[] numbers1 = new int[]{2, 3, 3, 5};
         int[] answer1 = new int[]{3, 5, 5, -1};
-        int[] result1 = new Solution().solution(numbers1);
+        int[] result1 = new Solution_Reverse().solution(numbers1);
         PRINT_RESULT(1, result1, answer1);
 
         int[] numbers2 = new int[]{9, 1, 5, 3, 6, 2};
         int[] answer2 = new int[]{-1, 5, 6, 6, -1, -1};
-        int[] result2 = new Solution().solution(numbers2);
+        int[] result2 = new Solution_Reverse().solution(numbers2);
         PRINT_RESULT(2, result2, answer2);
     }
 
@@ -53,19 +51,17 @@ class Solution {
     public int[] solution(int[] numbers) {
         int[] answer = new int[numbers.length];
         Stack<Integer> stack = new Stack<>();
-        for(int i = numbers.length-1 ; i >= 0; i--){
-            while(!stack.isEmpty()){
-                if(stack.peek() > numbers[i]) {
-                    answer[i] = stack.peek();
-                    break;
-                }else{
-                    stack.pop();
-                }
+        // 첫번째 인덱스 push
+        stack.push(0);
+
+        for (int i = 1; i < numbers.length; i++) {
+            while(!stack.isEmpty() && numbers[stack.peek()] < numbers[i]) {
+                answer[stack.pop()] = numbers[i];
             }
-            if(stack.isEmpty()){
-                answer[i] = -1;
-            }
-            stack.push(numbers[i]);
+            stack.push(i);
+        }
+        while(!stack.isEmpty()){
+            answer[stack.pop()] = -1;
         }
         return answer;
     }
