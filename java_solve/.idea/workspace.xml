@@ -33,32 +33,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "/Users/blackbean/PycharmProjects/algorighm/Algorithm_Record/java_solve/src/test/java",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.moseoh.programmers_helper.settings.ui.LanguageConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/blackbean/PycharmProjects/algorighm/Algorithm_Record/java_solve/src/test/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.moseoh.programmers_helper.settings.ui.LanguageConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="뒤에있는큰수찾기" />
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.호텔대실.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="과제진행하기.Solution" />
       <module name="java_solve.test" />
@@ -72,12 +72,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="뒤에있는큰수찾기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="뒤에있는큰수찾기.Solution" />
+    <configuration name="호텔대실.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="호텔대실.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="뒤에있는큰수찾기.*" />
+          <option name="PATTERN" value="호텔대실.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,11 +126,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.호텔대실.Solution" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.src.test.java.과제진행하기.Solution" />
-        <item itemvalue="Application.광물캐기.Solution" />
-        <item itemvalue="Application.마법의엘리베이터.Solution" />
-        <item itemvalue="Application.뒤에있는큰수찾기.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +143,8 @@
       <workItem from="1685807652148" duration="4922000" />
       <workItem from="1685929745243" duration="34000" />
       <workItem from="1695371775137" duration="242000" />
-      <workItem from="1695372680331" duration="33278000" />
+      <workItem from="1695372680331" duration="37269000" />
+      <workItem from="1695468830621" duration="85000" />
     </task>
     <servers />
   </component>
