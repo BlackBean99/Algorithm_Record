@@ -58,20 +58,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.마법의엘리베이터.Solution">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dfs.Main" />
-      <module name="java_solve.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dfs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.광물캐기.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="숫자변환하기.Solution" />
       <module name="java_solve.test" />
@@ -124,13 +111,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="광물캐기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="광물캐기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="광물캐기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.광물캐기.Solution" />
         <item itemvalue="Application.마법의엘리베이터.Solution" />
         <item itemvalue="Application.뒤에있는큰수찾기.Solution" />
         <item itemvalue="Application.Solution_Queue" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +145,7 @@
       <workItem from="1685807652148" duration="4922000" />
       <workItem from="1685929745243" duration="34000" />
       <workItem from="1695371775137" duration="242000" />
-      <workItem from="1695372680331" duration="18659000" />
+      <workItem from="1695372680331" duration="25200000" />
     </task>
     <servers />
   </component>
