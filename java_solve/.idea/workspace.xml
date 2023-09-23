@@ -58,26 +58,13 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.광물캐기.Solution">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="숫자변환하기.Solution" />
+      <option name="MAIN_CLASS_NAME" value="과제진행하기.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="숫자변환하기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution_Queue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="숫자변환하기.Solution_Queue" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자변환하기.*" />
+          <option name="PATTERN" value="과제진행하기.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,13 +111,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="src.test.java.과제진행하기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.test.java.과제진행하기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.test.java.과제진행하기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.src.test.java.과제진행하기.Solution" />
         <item itemvalue="Application.광물캐기.Solution" />
         <item itemvalue="Application.마법의엘리베이터.Solution" />
         <item itemvalue="Application.뒤에있는큰수찾기.Solution" />
-        <item itemvalue="Application.Solution_Queue" />
-        <item itemvalue="Application.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +145,7 @@
       <workItem from="1685807652148" duration="4922000" />
       <workItem from="1685929745243" duration="34000" />
       <workItem from="1695371775137" duration="242000" />
-      <workItem from="1695372680331" duration="25200000" />
+      <workItem from="1695372680331" duration="33278000" />
     </task>
     <servers />
   </component>
