@@ -3,6 +3,9 @@
 /out/*
 /.idea
 /idea/*
+.idea/*
+.idea/sonarlint
+.idea/sonarlint/**
 /AlJava/idea
 /AIJava/idea/**
 /python_solve/*/.cph
