@@ -9,6 +9,12 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.build/
+.build/idea/
+.build/idea/sonarlint/**
+.build/idea/sonarlint
+
+
 *.iws
 *.iml
 *.ipr
