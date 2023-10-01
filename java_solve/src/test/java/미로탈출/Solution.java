@@ -53,6 +53,7 @@ class Solution {
                         0 <= ny && ny < maps[0].length()) {
                     if (maps[nx].charAt(ny) == 'O') {
                         q.offer(new Point(nx, ny));
+                        count++;
                     }
                 }
             }

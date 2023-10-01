@@ -31,67 +31,76 @@ class Solution {
         if (correct) System.out.println(sb);
         else throw new RuntimeException(sb.toString());
     }
-
-
-    static class Point {
-        int x;
-        int y;
-
-        public Point(int x, int y) {
+    class Pos {
+        int x, y;
+        int level;
+        Pos(int x, int y, int level) {
             this.x = x;
             this.y = y;
+            this.level = level;
         }
     }
+        static char[][] map;
+        static boolean[][] visited;
+        static int[] dx = {-1,0,1,0};
+        static int[] dy = {0,1,0,-1};
 
-    static char[][] map;
-    static boolean[][] visited;
-    static int[] dx = {-1, 1, 0, 0};
-    static int[] dy = {0, 0, -1, 1};
-    public static List<Integer> solution(String[] maps){
-        List<Integer> answer = new ArrayList<>();
-        map = new char[maps.length][maps[0].length()];
-        visited = new boolean[map.length][map[0].length];
-        for(int i=0;i<maps.length;i++){
-            map[i] = maps[i].toCharArray();
-        }
-
-        for(int i=0;i<map.length;i++){
-            for(int j=0;j<map[i].length;j++){
-                if(!visited[i][j] && map[i][j] != 'X'){
-                    answer.add(bfs(i, j));
-                }
+    public int bfs(int startX, int startY, int H, int W, int endX, int endY) {
+        Queue<Pos> q = new LinkedList<>();
+        q.add(new Pos(startX, startY,0));
+        visited[startX][startY] = true;
+        while (!q.isEmpty()) {
+            Pos now = q.poll();
+            int x = now.x;
+            int y = now.y;
+            int level = now.level;
+            // 종료조건
+            if (x == endX && y == endY) {
+                return level;
             }
-        }
-
-        if(answer.size() == 0){
-            answer.add(-1);
-        }
-        Collections.sort(answer);
-        return answer;
-    }
-
-    public static int bfs(int x, int y){
-        int sum = 0;
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{x, y});
-        visited[x][y] = true;
-
-        while(!q.isEmpty()){
-            int[] cur = q.poll();
-            int cx = cur[0];
-            int cy = cur[1];
-            sum += map[cx][cy]-'0';
-            for(int i=0;i<4;i++){
-                int nx = cx+dx[i];
-                int ny = cy+dy[i];
-                if(nx < 0 || ny < 0 || nx >= map.length || ny >= map[0].length)
+            for (int i = 0; i < 4; i++) {
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                if(nx < 0 || nx >= H || ny < 0 || ny >= W)
                     continue;
-                if(!visited[nx][ny] && map[nx][ny] != 'X'){
+                if (visited[nx][ny] && map[nx][ny] != 'X') {
+                    q.add(new Pos(nx,ny,level + 1));
                     visited[nx][ny] = true;
-                    q.offer(new int[]{nx, ny});
                 }
             }
         }
-        return sum;
+        return -1;
     }
+        public int solution(String[] maps) {
+            int answer = 0;
+            map = new char[maps.length][maps[0].length()];
+            visited = new boolean[map.length][map[0].length];
+            Pos startPos = null;
+            Pos leverPos = null;
+            Pos endPos = null;
+            for(int i = 0; i < maps.length; i++) {
+                for(int j = 0; j < maps[i].length(); j++) {
+                    if(maps[i].charAt(j) == 'S')
+                        startPos = new Pos(i, j, 0);
+                    if(maps[i].charAt(j) == 'L')
+                        leverPos = new Pos(i, j, 0);
+                    if(maps[i].charAt(j) == 'E')
+                        endPos = new Pos(i, j, 0);
+                    map[i][j] = maps[i].charAt(j);
+                }
+            }
+            answer = bfs(startPos.x, startPos.y, maps.length, maps[0].length(), leverPos.x, leverPos.y);
+            if(answer > -1)
+            {
+                visited = new boolean[map.length][map[0].length];
+
+                int temp = bfs(leverPos.x, leverPos.y, maps.length, maps[0].length(), endPos.x, endPos.y);
+                if(temp == -1)
+                    answer = -1;
+                else
+                    answer += temp;
+            }
+            return answer;
+        }
 }
+
