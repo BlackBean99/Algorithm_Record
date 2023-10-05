@@ -9,17 +9,17 @@ import java.util.List;
 import java.util.Queue;
 
 class Solution {
-    public static void main(String[] args) {
-        String[] maps1 = new String[]{"X591X", "X1X5X", "X231X", "1XXX1"};
-        int[] answer1 = new int[]{1, 1, 27};
-        int[] result1 = new Solution().solution(maps1);
-        PRINT_RESULT(1, result1, answer1);
-
-        String[] maps2 = new String[]{"XXX", "XXX", "XXX"};
-        int[] answer2 = new int[]{-1};
-        int[] result2 = new Solution().solution(maps2);
-        PRINT_RESULT(2, result2, answer2);
-    }
+//    public static void main(String[] args) {
+//        String[] maps1 = new String[]{"X591X", "X1X5X", "X231X", "1XXX1"};
+//        int[] answer1 = new int[]{1, 1, 27};
+//        int[] result1 = new Solution().solution(maps1);
+//        PRINT_RESULT(1, result1, answer1);
+//
+//        String[] maps2 = new String[]{"XXX", "XXX", "XXX"};
+//        int[] answer2 = new int[]{-1};
+//        int[] result2 = new Solution().solution(maps2);
+//        PRINT_RESULT(2, result2, answer2);
+//    }
 
     public static void PRINT_RESULT(int index, int[] result, int[] answer) {
         boolean correct = Arrays.equals(result, answer);

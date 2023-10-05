@@ -27,3 +27,8 @@ X
 +src/test/java/무인도여행/Solution.java,6/0/603bdccb0a9c27eaa214a20dc4fdb40cdb8ff06b
 d
 4src/test/java/거리두기확인하기/Solution.java,4/d/4d2af53364f5f180f6b88322974977fe64198e55
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+X
+(src/test/java/모음사전/Solution.java,9/9/99c54b93ac5786ec682c7c8689f57cb23e0d8400
