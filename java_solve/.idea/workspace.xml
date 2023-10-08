@@ -58,7 +58,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.테이블해시함수.Solution">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="과제진행하기.Solution" />
       <module name="java_solve.test" />
@@ -178,7 +178,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.테이블해시함수.Solution" />
         <item itemvalue="Application.호텔대실.Solution" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.src.test.java.과제진행하기.Solution" />
@@ -203,6 +202,7 @@
       <workItem from="1695996932848" duration="23135000" />
       <workItem from="1696139118764" duration="4273000" />
       <workItem from="1696496629905" duration="2354000" />
+      <workItem from="1696660628516" duration="602000" />
     </task>
     <servers />
   </component>
