@@ -1,5 +1,11 @@
 package 롤케이크자르기;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 class Solution {
     public static void main(String[] args) {
         int[] topping1 = new int[]{1, 2, 1, 3, 1, 4, 1, 2};
@@ -25,7 +31,28 @@ class Solution {
     }
 
     public int solution(int[] topping) {
-        int answer = -1;
+        int answer = 0;
+        Map<Integer, Integer> a = new HashMap<>();
+        Set<Integer> set = new HashSet<>();
+
+        for(int t : topping) {
+            if(a.containsKey(t)) {
+                a.put(t, a.get(t)+1);
+            } else {
+                a.put(t, 1);
+            }
+        }
+
+        for(int t : topping) {
+            a.put(t, a.get(t)-1);
+            set.add(t);
+            if(a.get(t)==0) {
+                a.remove(t);
+            }
+            if(a.size()==set.size()) {
+                answer++;
+            }
+        }
         return answer;
     }
 }
