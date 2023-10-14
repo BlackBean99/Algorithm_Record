@@ -1,5 +1,9 @@
 package 숫자카드나누기;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 class Solution {
     public static void main(String[] args) {
         int[] arrayA1 = new int[]{10, 17};
@@ -32,8 +36,62 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
+    public List<Integer> getDividedNumber(int[] array) {
+//        최대 공약수를 찾으면 된다.
+        int max = 0;
+        for (int i = 0; i < array.length; i++) {
+            max = Math.max(max, array[i]);
+        }
+        List<Integer> dividedNumbers = new LinkedList<>();
+        for(int i = 2; i < max+1; i++){
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] % i == 0) {
+                    count++;
+                }
+            }
+            if(count == array.length) dividedNumbers.add(i);
+        }
+        return dividedNumbers;
+    }
     public int solution(int[] arrayA, int[] arrayB) {
         int answer = 0;
+        List<Integer> listA = getDividedNumber(Arrays.stream(arrayA).distinct().toArray());
+        List<Integer> listB = getDividedNumber(Arrays.stream(arrayB).distinct().toArray());
+
+        for(int i=listA.size()-1;i>=0;i--) {
+            int a = listA.get(i);
+
+            Boolean check = true;
+            for(int b : arrayB) {
+                if(b%a==0) {
+                    check = false;
+                    break;
+                }
+            }
+            if(check) {
+                answer = a;
+                break;
+            }
+        }
+
+        for(int j=listB.size()-1;j>=0;j--) {
+            int b = listB.get(j);
+
+            Boolean check = true;
+            for(int a : arrayA) {
+                if(a%b==0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if(answer<b && check) {
+                answer = b;
+                break;
+            }
+        }
         return answer;
     }
+
 }
