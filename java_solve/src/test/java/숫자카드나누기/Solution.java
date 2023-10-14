@@ -36,61 +36,39 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
-    public List<Integer> getDividedNumber(int[] array) {
-//        최대 공약수를 찾으면 된다.
-        int max = 0;
-        for (int i = 0; i < array.length; i++) {
-            max = Math.max(max, array[i]);
-        }
-        List<Integer> dividedNumbers = new LinkedList<>();
-        for(int i = 2; i < max+1; i++){
-            int count = 0;
-            for (int j = 0; j < array.length; j++) {
-                if (array[j] % i == 0) {
-                    count++;
-                }
-            }
-            if(count == array.length) dividedNumbers.add(i);
-        }
-        return dividedNumbers;
+    public boolean notDivisible(int[] arr, int num){
+        for(int n : arr)
+            if(n % num == 0)
+                return false;
+        return true;
+    }
+
+    public int gcd(int a, int b){
+        if(a % b == 0)return b;
+        return gcd(b, a % b);
     }
     public int solution(int[] arrayA, int[] arrayB) {
+        // 0. 입력 및 초기화
         int answer = 0;
-        List<Integer> listA = getDividedNumber(Arrays.stream(arrayA).distinct().toArray());
-        List<Integer> listB = getDividedNumber(Arrays.stream(arrayB).distinct().toArray());
+        int gcdA = arrayA[0];
+        int gcdB = arrayB[0];
 
-        for(int i=listA.size()-1;i>=0;i--) {
-            int a = listA.get(i);
-
-            Boolean check = true;
-            for(int b : arrayB) {
-                if(b%a==0) {
-                    check = false;
-                    break;
-                }
-            }
-            if(check) {
-                answer = a;
-                break;
-            }
+        // 1. 각 배열의 최대공약수 구하기
+        for(int i =1; i< arrayA.length;i++){
+            gcdA = gcd(gcdA, arrayA[i]);
+            gcdB = gcd(gcdB, arrayB[i]);
         }
 
-        for(int j=listB.size()-1;j>=0;j--) {
-            int b = listB.get(j);
+        // 2. 서로의 배열을 나눌 수 없는지 확인
+        if(notDivisible(arrayB, gcdA))
+            if(answer < gcdA)
+                answer = gcdA;
 
-            Boolean check = true;
-            for(int a : arrayA) {
-                if(a%b==0) {
-                    check = false;
-                    break;
-                }
-            }
+        if(notDivisible(arrayA, gcdB))
+            if(answer < gcdB)
+                answer = gcdB;
 
-            if(answer<b && check) {
-                answer = b;
-                break;
-            }
-        }
+        // 3. 최댓값 반환
         return answer;
     }
 
