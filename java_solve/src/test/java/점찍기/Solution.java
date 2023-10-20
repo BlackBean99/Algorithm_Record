@@ -1,4 +1,4 @@
-package src.test.java.점찍기;
+package 점찍기;
 
 class Solution {
     public static void main(String[] args) {
