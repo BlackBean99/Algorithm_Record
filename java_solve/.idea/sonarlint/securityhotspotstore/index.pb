@@ -36,3 +36,9 @@ a
 1src/test/java/테이블해시함수/Solution.java,e/a/ea8dcfbe36289b577da4d40d4bb5aad9b46792ee
 [
 +src/test/java/디펜스게임/Solution.java,b/8/b85ea3ca6e052e69f6f39a9221b4c7782e1f04a5
+X
+(src/test/java/귤고르기/Solution.java,d/0/d03b4860ed851997e4f82b8933cc13a620e21821
+a
+1src/test/java/숫자카드나누기/Solution.java,2/1/216ddd7cb48065cfe7d9f1f35a8f5e0bdedbc22c
+a
+1src/test/java/롤케이크자르기/Solution.java,d/6/d6d531b8256087fee9b157bf031f216e3b890413
