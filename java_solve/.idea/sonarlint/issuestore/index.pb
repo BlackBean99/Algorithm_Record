@@ -42,3 +42,5 @@ a
 1src/test/java/숫자카드나누기/Solution.java,2/1/216ddd7cb48065cfe7d9f1f35a8f5e0bdedbc22c
 a
 1src/test/java/롤케이크자르기/Solution.java,d/6/d6d531b8256087fee9b157bf031f216e3b890413
+U
+%src/test/java/점찍기/Solution.java,2/a/2aad747f31566ed4c8eab599bb264cd7f36f2d2b
