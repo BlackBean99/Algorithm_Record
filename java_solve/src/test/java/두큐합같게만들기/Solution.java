@@ -1,5 +1,8 @@
 package 두큐합같게만들기;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 class Solution {
     public static void main(String[] args) {
         int[] queue11 = new int[]{3, 2, 7, 2};
@@ -33,7 +36,34 @@ class Solution {
     }
 
     public int solution(int[] queue1, int[] queue2) {
-        int answer = -2;
+        int answer = 0;
+        Queue<Integer> que1 = new LinkedList<>();
+        Queue<Integer> que2 = new LinkedList<>();
+        long total = 0;
+        long q1Sum = 0;
+        for (int i = 0; i < queue1.length; i++) {
+            total+=queue1[i];
+            total+= queue2[i];
+
+            q1Sum+=queue1[i];
+            que1.add(queue1[i]);
+            que2.add(queue2[i]);
+        }
+        long target = total/2;
+        if(total%2!=0) return -1;//만약 두큐의합이 홀수면 같게 못만듦.
+
+        while (true) {
+            if(answer>(queue1.length+queue2.length)*2) return -1;
+            if(q1Sum==target) break;
+            else if (q1Sum > target) {
+                q1Sum-=que1.peek();
+                que2.add(que1.poll());
+            }else{
+                q1Sum += que2.peek();
+                que1.add(que2.poll());
+            }
+            answer++;
+        }
         return answer;
     }
 }
