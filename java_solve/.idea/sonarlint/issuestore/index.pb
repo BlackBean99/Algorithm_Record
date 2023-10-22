@@ -44,3 +44,5 @@ a
 1src/test/java/롤케이크자르기/Solution.java,d/6/d6d531b8256087fee9b157bf031f216e3b890413
 U
 %src/test/java/점찍기/Solution.java,2/a/2aad747f31566ed4c8eab599bb264cd7f36f2d2b
+U
+%src/test/java/피로도/Solution.java,1/1/114b99efdb125c6d977b4fa33524c1b731fd2386
