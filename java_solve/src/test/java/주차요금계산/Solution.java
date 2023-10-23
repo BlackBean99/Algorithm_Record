@@ -1,5 +1,6 @@
 package 주차요금계산;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -58,13 +59,15 @@ class Solution {
         Map<String, String> map = new HashMap<>();
         Map<String, Integer> feeMap = new HashMap<>();
 
+        // 요금을 0으로 초기화
         for(int i = 0; i < records.length; i++){
             feeMap.put(records[i].split(" ")[1], 0);
         }
 
+
         for(int i = 0; i < records.length; i++){
             String[] infos = records[i].split(" ");
-
+            // 기존에 입차한 기록이 있을 경우
             if(map.containsKey(infos[1])){
                 String[] inTime = map.remove(infos[1]).split(":");
                 String[] outTime = infos[0].split(":");
@@ -74,11 +77,15 @@ class Solution {
 
                 feeMap.replace(infos[1], feeMap.get(infos[1]) + 60 * hour + minute);
 
-            }else{
+            }
+            // 처음 입차한 경우
+            else{
                 map.put(infos[1], infos[0]); // 차 번호, 시간
             }
         }
 
+
+        // 아직 입차한 차가 남아있는 경우
         for(String key : map.keySet()){
             String[] inTime = map.get(key).split(":");
 
@@ -88,10 +95,13 @@ class Solution {
             feeMap.replace(key, feeMap.get(key) + 60 * hour + minute);
         }
 
+
         List<Map.Entry<String, Integer>> list = new ArrayList(feeMap.entrySet());
         Collections.sort(list, (o1, o2) -> {
-            return Integer.parseInt(o1.getKey()) > Integer.parseInt(o2.getKey())?1 :
-                    Integer.parseInt(o1.getKey()) < Integer.parseInt(o2.getKey())?-1 : 0;
+            return Integer.compare(Integer.parseInt(o1.getKey()), Integer.parseInt(o2.getKey()));
+        });
+        Collections.sort(list, (o1,o2) -> {
+            return Integer.compare(Integer.parseInt(o1.getKey()), Integer.parseInt(o2.getKey()));
         });
 
 
