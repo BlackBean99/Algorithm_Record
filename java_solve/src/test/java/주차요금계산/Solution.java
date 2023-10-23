@@ -1,6 +1,8 @@
 package 주차요금계산;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -50,95 +52,59 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
-    public List<Integer> solution(int[] fees, String[] records) {
-        List<Integer> answer = new LinkedList<>();
-        //records
-//        ["05:34 5961 IN",
-//        "06:00 0000 IN",
-//        "06:34 0000 OUT",
-//        "07:59 5961 OUT",
-//        "07:59 0148 IN",
-//        "18:59 0000 IN",
-//        "19:09 0148 OUT",
-//        "22:59 5961 IN",
-//        "23:00 5961 OUT"]
-//        LinkedList<Record> record = new LinkedList<>();
-        int zeroTime = 60*24;
-        Map<Integer, Record> record = new HashMap<>();
-        for (String r : records) {
-            String[] s = r.split(" ");
-            String[] stringTime = s[0].split(":");
-            int time =Integer.parseInt(stringTime[0])*60 + Integer.parseInt(stringTime[1]);
+    public int[] solution(int[] fees, String[] records) {
+        int[] answer = {};
 
-            if(record.containsKey(Integer.parseInt(s[1]))){
-                Record record1 = record.get(Integer.parseInt(s[1]));
-                int start = record1.getStart();
-                record.put(Integer.parseInt(s[1]), new Record(start, time, false));
+        Map<String, String> map = new HashMap<>();
+        Map<String, Integer> feeMap = new HashMap<>();
+
+        for(int i = 0; i < records.length; i++){
+            feeMap.put(records[i].split(" ")[1], 0);
+        }
+
+        for(int i = 0; i < records.length; i++){
+            String[] infos = records[i].split(" ");
+
+            if(map.containsKey(infos[1])){
+                String[] inTime = map.remove(infos[1]).split(":");
+                String[] outTime = infos[0].split(":");
+
+                int hour = Integer.parseInt(outTime[0]) - Integer.parseInt(inTime[0]);
+                int minute = Integer.parseInt(outTime[1]) - Integer.parseInt(inTime[1]);
+
+                feeMap.replace(infos[1], feeMap.get(infos[1]) + 60 * hour + minute);
+
             }else{
-                record.put(Integer.parseInt(s[1]), new Record(time, true));
+                map.put(infos[1], infos[0]); // 차 번호, 시간
             }
         }
 
+        for(String key : map.keySet()){
+            String[] inTime = map.get(key).split(":");
 
-        Map<Integer, Record> sortedMap = new TreeMap<>(record);
-        // 차량 번호가 작은 차량 부터 삽입할거임 -> 넣어놓고 나중에 정렬할거임
-        int index = 0;
-        for (Map.Entry<Integer, Record> entry : sortedMap.entrySet()) {
+            int hour = 23 - Integer.parseInt(inTime[0]);
+            int minute = 59 -Integer.parseInt(inTime[1]);
 
-            Integer key = entry.getKey();
-            Record value = entry.getValue();
-            // 걸린 시간이 기본시간 이내라면?
-            if(zeroTime - value.getStart() < fees[0] || (!value.isIn && value.getEnd() - value.getStart() < fees[0])) {
-                answer.add(fees[1]);
-                continue;
-            }
-            // 아직 안나갔으면
-            if(value.isIn) {
-                int during = zeroTime - value.getStart();
-                // 기본요금 배수 + 올림 배수
-                int partition = during / fees[2];
-                if(during % 10 > 0) partition++;
-                answer.add(fees[3] * partition);
-            }else {
-                // 출차 기록이 있으면?
-                int during = value.end - value.start;
-                int partition = during / fees[2];
-                if(during % 10 > 0) partition++;
-                answer.add(fees[3] * partition);
+            feeMap.replace(key, feeMap.get(key) + 60 * hour + minute);
+        }
+
+        List<Map.Entry<String, Integer>> list = new ArrayList(feeMap.entrySet());
+        Collections.sort(list, (o1, o2) -> {
+            return Integer.parseInt(o1.getKey()) > Integer.parseInt(o2.getKey())?1 :
+                    Integer.parseInt(o1.getKey()) < Integer.parseInt(o2.getKey())?-1 : 0;
+        });
+
+
+        answer = new int[list.size()];
+
+        for(int i = 0; i < answer.length; i++){
+            if(list.get(i).getValue() > fees[0]){
+                answer[i] = fees[1] + (int) Math.ceil((list.get(i).getValue() - fees[0]) / (double)fees[2]) * fees[3];
+            }else{
+                answer[i] = fees[1];
             }
         }
+
         return answer;
-    }
-//        [180, 5000, 10, 600]
-//        기본시간, 기본요금, 단위 시간, 단위 요금
-            //1, 현재 시간이 기본요금 안에 끝나는 시간인가 func
-        // 5. 어떤 차량이 입차된 후에 출차된 내역이 없다면, 23:59에 출차된 것으로 간주합니다
-        // 4.초과한 시간이 단위 시간으로 나누어 떨어지지 않으면, 올림합니다.
-        // 2. 기본요금을 초과하는 시간이라면 얼마나 초과했나
-        // 3. 초과한 시간만큼 금액을 주면 얼마냐? func
-}
-class Record{
-    public Record(int start, int end, boolean isIn) {
-        this.start = start;
-        this.end = end;
-        this.isIn = isIn;
-    }
-
-    public int start;
-    public int end;
-    public boolean isIn;
-
-    public Record(int start, boolean isIn) {
-        this.start = start;
-        this.end = 0;
-        this.isIn = isIn;
-    }
-
-    public int getStart(){
-        return this.start;
-    }
-
-    public int getEnd() {
-        return this.end;
     }
 }
