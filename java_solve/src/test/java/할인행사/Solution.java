@@ -37,29 +37,26 @@ class Solution {
 
         Map<String, Integer> map = new HashMap<>();
 
-        for(int i = 0; i < want.length; i++){
+        for (int i = 0; i < want.length; i++) {
             map.put(want[i], number[i]);
         }
 
-        for(int i = 0; i < discount.length - days + 1; i++){
+        for (int i = 0; i < discount.length - days + 1; i++) {
             Map<String, Integer> dMap = new HashMap<>();
-
-            for(int j = 0; j < days; j++){
-                dMap.put(discount[i + j], dMap.getOrDefault(discount[i + j], 0) + 1);
+            for (int j = 0; j < days; j++) {
+                dMap.put(discount[i+j], dMap.getOrDefault(discount[i + j], 0) + 1);
             }
-
-            Boolean isIdentical = true;
-
-            for(String key : map.keySet()){
-                if(map.get(key) != dMap.get(key)){
-                    isIdentical = false;
+            Boolean isPossible = true;
+            for (String key :
+                    map.keySet()) {
+                if(map.get(key)!= dMap.get(key)){
+                    isPossible = false;
                     break;
                 }
             }
 
-            answer += isIdentical ? 1 : 0;
+            answer += isPossible ? 1 : 0;
         }
-
         return answer;
     }
 }
