@@ -45,9 +45,8 @@ class Solution {
             arr[wires[i][1]][wires[i][0]] = 1;
         }
 
-        int a, b;
+        int a,b;
         for (int i = 0; i < wires.length; i++) {
-
             a = wires[i][0];
             b = wires[i][1];
 
@@ -61,30 +60,25 @@ class Solution {
         return answer;
     }
 
-//        return answer;
-
-        private int bfs(int n, int start){
-            int[] visit = new int[n + 1];
-            int cnt = 1;
-
-            Queue<Integer> q = new LinkedList<>();
-            q.offer(start);
-
-            while (!q.isEmpty()) {
-                int point = q.poll();
-                visit[point] = 1;
-                for (int i = 1; i < n + 1; i++) {
-                    if (visit[i] == 1) continue;
-                    if (arr[point][i] == 1) {
-                        q.offer(i);
-                        cnt++;
-                    }
+    private int bfs(int n, int start) {
+        int[] visit = new int[n + 1];
+        int cnt = 1;
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(start);
+        while (!q.isEmpty()) {
+            int point = q.poll();
+            visit[point] = 1;
+            for (int i = 1; i < n + 1; i++) {
+                if(visit[i] == 1) continue;
+                if(arr[point][i] == 1){
+                    cnt++;
+                    visit[i] = 1;
+                    q.offer(i);
                 }
             }
-            // 하나 끊으면 cnt, n- cnt 로 나눠질 것이다.
-            // 두 차이를 구하면 n-2cnt 이다.
-            return (int) Math.abs(n - 2 * cnt);
         }
+        return Math.abs(n - 2 * cnt);
+    }
 }
 
 

@@ -58,7 +58,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.카펫.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="전력망을둘로나누기.Solution" />
       <module name="java_solve.test" />
@@ -85,103 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="무인도여행.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="무인도여행.Solution" />
+    <configuration name="카펫.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="카펫.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="무인도여행.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="점찍기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="점찍기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="점찍기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="피로도.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="타겟넘버.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="타겟넘버.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="타겟넘버.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="게임맵최단거리.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="게임맵최단거리.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="게임맵최단거리.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="네트워크.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="네트워크.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="네트워크.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="연속된부분수열의합.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="연속된부분수열의합.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="연속된부분수열의합.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="마법의엘리베이터.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="마법의엘리베이터.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="마법의엘리베이터.*" />
+          <option name="PATTERN" value="카펫.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -319,8 +228,122 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="무인도여행.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="무인도여행.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="무인도여행.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="점찍기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="점찍기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="점찍기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="피로도.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="타겟넘버.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="타겟넘버.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="타겟넘버.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="게임맵최단거리.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="게임맵최단거리.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="게임맵최단거리.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="네트워크.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="네트워크.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="네트워크.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="연속된부분수열의합.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="연속된부분수열의합.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="연속된부분수열의합.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="마법의엘리베이터.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="마법의엘리베이터.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="마법의엘리베이터.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.카펫.Solution" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.호텔대실.Solution" />
       </list>
@@ -356,12 +379,44 @@
       <workItem from="1698144785816" duration="12260000" />
       <workItem from="1698205063949" duration="10772000" />
       <workItem from="1698222977677" duration="1067000" />
-      <workItem from="1698299422494" duration="7746000" />
+      <workItem from="1698299422494" duration="12246000" />
+      <workItem from="1698391870049" duration="2569000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/카펫/Solution.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/카펫/Solution.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/카펫/Solution.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/카펫/Solution.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/카펫/Solution.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
