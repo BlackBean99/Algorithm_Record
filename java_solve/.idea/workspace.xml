@@ -93,110 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="피로도.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="롤케이크자르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="롤케이크자르기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="롤케이크자르기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="사다리타기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="사다리타기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="사다리타기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="두큐합같게만들기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="두큐합같게만들기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="두큐합같게만들기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="테이블해시함수.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="모음사전.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="모음사전.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="모음사전.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="무인도여행.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="무인도여행.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="무인도여행.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="피로도.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="점찍기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="점찍기.Solution" />
       <module name="java_solve.test" />
@@ -327,6 +223,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="피로도.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="할인행사.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="할인행사.Solution" />
       <module name="java_solve.test" />
@@ -346,6 +255,97 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="숫자카드나누기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="롤케이크자르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="롤케이크자르기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="롤케이크자르기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="사다리타기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="사다리타기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="사다리타기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="두큐합같게만들기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="두큐합같게만들기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="두큐합같게만들기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="테이블해시함수.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="모음사전.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="모음사전.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="모음사전.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="무인도여행.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="무인도여행.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="무인도여행.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="피로도.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -399,7 +399,8 @@
       <workItem from="1699714642879" duration="186000" />
       <workItem from="1699758735694" duration="3761000" />
       <workItem from="1699791778184" duration="615000" />
-      <workItem from="1699879887962" duration="614000" />
+      <workItem from="1699879887962" duration="637000" />
+      <workItem from="1699973220421" duration="23000" />
     </task>
     <servers />
   </component>
