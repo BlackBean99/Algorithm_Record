@@ -1,6 +1,8 @@
 package 순위검색;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 class Solution {
     public static void main(String[] args) {
@@ -23,7 +25,71 @@ class Solution {
     }
 
     public int[] solution(String[] info, String[] query) {
-        int[] answer = {};
+        int[] answer = new int[query.length];
+        List<Person> conditions = new LinkedList<>();
+        for (String condition : query) {
+            String[] con = condition.split(" and ");
+            String lang = con[0];
+            String job = con[1];
+            String career = con[2];
+            String[] lastCondition = con[3].split(" ");
+            String food = lastCondition[0];
+            int score;
+            if(lastCondition[1].equals("-")) {
+                score = -1;
+            } else {
+                score = Integer.parseInt(lastCondition[1]);
+            }
+            conditions.add(new Person(lang, job, career, food, score));
+        }
+
+        List<Person> peoples = new LinkedList<>();
+
+        for(String a : info) {
+            String[] apply = a.split(" ");
+            String lang = apply[0];
+            String job = apply[1];
+            String career = apply[2];
+            String food = apply[3];
+            Integer score = Integer.parseInt(apply[4]);
+            peoples.add(new Person(lang, job, career, food, score));
+        }
+
+        List<Integer> tempAnswer = new LinkedList<>();
+        for (Person condition : conditions) {
+            int successCount = 0;
+            for(Person people: peoples){
+                if(condition.lang.equals("-") || condition.lang.equals(people.lang)) {
+                    if(condition.job.equals("-") || condition.job.equals(people.job)) {
+                        if(condition.career.equals("-") || condition.career.equals(people.career)) {
+                            if(condition.food.equals("-") || condition.food.equals(people.food)) {
+                                if(condition.score == -1 || condition.score <= people.score) {
+                                    successCount++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            tempAnswer.add(successCount);
+        }
+        for (int i = 0; i < query.length; i++) {
+            answer[i] = tempAnswer.get(i);
+        }
         return answer;
+    }
+    class Person {
+        String lang;
+        String job;
+        String career;
+        String food;
+        Integer score;
+        public Person(String lang, String job, String career, String food, Integer score) {
+            this.lang = lang;
+            this.job = job;
+            this.career = career;
+            this.food = food;
+            this.score = score;
+        }
     }
 }
