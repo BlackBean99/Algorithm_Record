@@ -1,6 +1,9 @@
 package 순위검색;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,73 +26,56 @@ class Solution {
         if (correct) System.out.println(sb);
         else throw new RuntimeException(sb.toString());
     }
+    static HashMap<String, List<Integer>> map;
 
-    public int[] solution(String[] info, String[] query) {
+    public static int[] solution(String[] info, String[] query) {
         int[] answer = new int[query.length];
-        List<Person> conditions = new LinkedList<>();
-        for (String condition : query) {
-            String[] con = condition.split(" and ");
-            String lang = con[0];
-            String job = con[1];
-            String career = con[2];
-            String[] lastCondition = con[3].split(" ");
-            String food = lastCondition[0];
-            int score;
-            if(lastCondition[1].equals("-")) {
-                score = -1;
-            } else {
-                score = Integer.parseInt(lastCondition[1]);
-            }
-            conditions.add(new Person(lang, job, career, food, score));
+        map = new HashMap<String, List<Integer>>();
+
+        for (int i = 0; i < info.length; i++) {
+            String[] p = info[i].split(" ");
+            makeSentence(p, "", 0);
         }
 
-        List<Person> peoples = new LinkedList<>();
+        for (String key : map.keySet())
+            Collections.sort(map.get(key));
 
-        for(String a : info) {
-            String[] apply = a.split(" ");
-            String lang = apply[0];
-            String job = apply[1];
-            String career = apply[2];
-            String food = apply[3];
-            Integer score = Integer.parseInt(apply[4]);
-            peoples.add(new Person(lang, job, career, food, score));
-        }
-
-        List<Integer> tempAnswer = new LinkedList<>();
-        for (Person condition : conditions) {
-            int successCount = 0;
-            for(Person people: peoples){
-                if(condition.lang.equals("-") || condition.lang.equals(people.lang)) {
-                    if(condition.job.equals("-") || condition.job.equals(people.job)) {
-                        if(condition.career.equals("-") || condition.career.equals(people.career)) {
-                            if(condition.food.equals("-") || condition.food.equals(people.food)) {
-                                if(condition.score == -1 || condition.score <= people.score) {
-                                    successCount++;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            tempAnswer.add(successCount);
-        }
         for (int i = 0; i < query.length; i++) {
-            answer[i] = tempAnswer.get(i);
+            query[i] = query[i].replaceAll(" and ", "");
+            String[] q = query[i].split(" ");
+            answer[i] = map.containsKey(q[0]) ? binarySearch(q[0], Integer.parseInt(q[1])) : 0;
         }
+
         return answer;
     }
-    class Person {
-        String lang;
-        String job;
-        String career;
-        String food;
-        Integer score;
-        public Person(String lang, String job, String career, String food, Integer score) {
-            this.lang = lang;
-            this.job = job;
-            this.career = career;
-            this.food = food;
-            this.score = score;
+
+    // 이분 탐색
+    private static int binarySearch(String key, int score) {
+        List<Integer> list = map.get(key);
+        int start = 0, end = list.size() - 1;
+
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (list.get(mid) < score)
+                start = mid + 1;
+            else
+                end = mid - 1;
         }
+
+        return list.size() - start;
+    }
+
+    // info가 포함될 수 있는 문장
+    private static void makeSentence(String[] p, String str, int cnt) {
+        if (cnt == 4) {
+            if (!map.containsKey(str)) {
+                List<Integer> list = new ArrayList<Integer>();
+                map.put(str, list);
+            }
+            map.get(str).add(Integer.parseInt(p[4]));
+            return;
+        }
+        makeSentence(p, str + "-", cnt + 1);
+        makeSentence(p, str + p[cnt], cnt + 1);
     }
 }
