@@ -31,9 +31,42 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
+    public static int count = 0;
     public int[] solution(String s) {
-        int[] answer = {};
+        // 01110 -> 111
+        int[] answer = new int[2];
+        int level = 0;
 
+        /*
+        * 01110
+        * 111 -> 3(2)
+        * 11 -> 2
+        * 10 -> 1(2)
+        * 1 -> 1
+        * */
+        while(!s.equals("1")){
+            System.out.println("s = " + s);
+            s = change(s);
+            level++;
+        }
+        answer[1] = count;
+        answer[0] = level;
         return answer;
+    }
+
+    private String change(String s) {
+        for(int i = 0; i < s.length(); i++){
+            if(s.charAt(i) == '0'){
+                count++;
+            }
+        }
+        s = s.replace("0", "");
+//        System.out.println("s = " + s);
+        // 111 -> 3
+        System.out.println("before = " + s);
+        int length = s.length();
+        System.out.println("length = " + length);
+        // 3 -> 11
+        return Integer.toBinaryString(length);
     }
 }
