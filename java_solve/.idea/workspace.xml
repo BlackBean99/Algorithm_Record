@@ -66,7 +66,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.k진수에서소수개수구하기.Solution">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="순위검색.Main" />
       <module name="java_solve.test" />
@@ -412,8 +412,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="k진수에서소수개수구하기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="k진수에서소수개수구하기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="k진수에서소수개수구하기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.k진수에서소수개수구하기.Solution" />
         <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Solution" />
@@ -473,6 +487,7 @@
       <workItem from="1703228118635" duration="598000" />
       <workItem from="1703293531462" duration="598000" />
       <workItem from="1703310948468" duration="598000" />
+      <workItem from="1703853238040" duration="1209000" />
     </task>
     <servers />
   </component>
