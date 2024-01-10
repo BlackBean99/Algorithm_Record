@@ -25,6 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.18/Contents/Home/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.18/Contents/Home/lib/src.zip!/java.base/java/util/function/Consumer.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,7 +70,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.여행경로.Solution">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="순위검색.Main" />
       <module name="java_solve.test" />
@@ -87,12 +91,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="연속부분수열합의개수.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="연속부분수열합의개수.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="양궁대회.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="양궁대회.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="양궁대회.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="카펫.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="카펫.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="카펫.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="이진변환반복하기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="이진변환반복하기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="이진변환반복하기.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,12 +156,103 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="롤케이크자르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="롤케이크자르기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="롤케이크자르기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="할인행사.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="할인행사.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="할인행사.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="광물캐기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="광물캐기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="광물캐기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="귤고르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="귤고르기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="귤고르기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="피로도.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="숫자카드나누기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="숫자카드나누기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="숫자카드나누기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="테이블해시함수.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="점찍기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="점찍기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="점찍기.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -197,19 +331,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="모음사전.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="점찍기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="점찍기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="점찍기.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -308,110 +429,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="카펫.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="카펫.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="카펫.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="이진변환반복하기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="이진변환반복하기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="이진변환반복하기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="롤케이크자르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="롤케이크자르기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="롤케이크자르기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="할인행사.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="할인행사.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="할인행사.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="광물캐기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="광물캐기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="광물캐기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="귤고르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="귤고르기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="귤고르기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="피로도.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="피로도.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="피로도.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="숫자카드나누기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="숫자카드나누기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자카드나누기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="k진수에서소수개수구하기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="k진수에서소수개수구하기.Solution" />
       <module name="java_solve.test" />
@@ -427,9 +444,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.여행경로.Solution" />
-        <item itemvalue="Application.양궁대회.Solution" />
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.k진수에서소수개수구하기.Solution" />
+        <item itemvalue="Application.양궁대회.Solution" />
         <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -488,7 +505,9 @@
       <workItem from="1703293531462" duration="598000" />
       <workItem from="1703310948468" duration="598000" />
       <workItem from="1703853238040" duration="6801000" />
-      <workItem from="1703903057747" duration="11254000" />
+      <workItem from="1703903057747" duration="11511000" />
+      <workItem from="1703924051448" duration="2156000" />
+      <workItem from="1704847019818" duration="1813000" />
     </task>
     <servers />
   </component>

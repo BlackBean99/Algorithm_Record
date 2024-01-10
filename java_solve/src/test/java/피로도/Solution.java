@@ -21,23 +21,58 @@ class Solution {
     }
 
     static boolean[] visited;
+    static int answer;
     static int count = 0;
     public int solution(int k, int[][] dungeons) {
+        answer = 0;
         visited = new boolean[dungeons.length];
         dfs(0, k, dungeons);
         return count;
     }
 
-    //     전문 탐색할 때 이렇게 써보자
     private void dfs(int depth, int patigue, int[][] dungeons) {
         for (int i = 0; i < dungeons.length; i++) {
-            if (visited[i] || patigue < dungeons[i][0]) {
-                continue;
+            if (dungeons[i][0] <= patigue && !visited[i]) {
+                visited[i] = true;
+                dfs(depth + 1, patigue, dungeons);
+                visited[i] = false;
             }
-            visited[i] = true;
-            dfs(depth + 1, patigue - dungeons[i][1], dungeons);
-            visited[i] = false;
         }
-        count = Math.max(count, depth);
+        answer = Math.max(answer, depth);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        visited = new boolean[dungeons.length];
+//        dfs(0, k, dungeons);
+//        return count;
+//    }
+//
+//    //     전문 탐색할 때 이렇게 써보자
+//    private void dfs(int depth, int patigue, int[][] dungeons) {
+//        for (int i = 0; i < dungeons.length; i++) {
+//            if (visited[i] || patigue < dungeons[i][0]) {
+//                continue;
+//            }
+//            visited[i] = true;
+//            dfs(depth + 1, patigue - dungeons[i][1], dungeons);
+//            visited[i] = false;
+//        }
+//        count = Math.max(count, depth);
+//    }
 }
