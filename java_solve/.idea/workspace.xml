@@ -70,14 +70,7 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.택배상자.Solution">
-    <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
-      <module name="java_solve.test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.n2배열자르기.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="연속부분수열합의개수.Solution" />
       <module name="java_solve.test" />
@@ -91,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="양궁대회.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="양궁대회.Solution" />
+    <configuration name="택배상자.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="택배상자.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="양궁대회.*" />
+          <option name="PATTERN" value="택배상자.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="택배상자.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="택배상자.Solution" />
+    <configuration name="삼각달팽이.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="삼각달팽이.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="택배상자.*" />
+          <option name="PATTERN" value="삼각달팽이.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -442,6 +435,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="n2배열자르기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="n2배열자르기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="n2배열자르기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -453,11 +459,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.n2배열자르기.Solution" />
+        <item itemvalue="Application.삼각달팽이.Solution" />
         <item itemvalue="Application.택배상자.Solution" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.k진수에서소수개수구하기.Solution" />
-        <item itemvalue="Application.양궁대회.Solution" />
-        <item itemvalue="Application.Solution (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -516,7 +522,7 @@
       <workItem from="1703853238040" duration="6801000" />
       <workItem from="1703903057747" duration="11511000" />
       <workItem from="1703924051448" duration="2156000" />
-      <workItem from="1704847019818" duration="10499000" />
+      <workItem from="1704847019818" duration="18456000" />
     </task>
     <servers />
   </component>
