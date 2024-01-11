@@ -1,6 +1,12 @@
 package 오픈채팅방;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 class Solution {
     public static void main(String[] args) {
@@ -22,7 +28,39 @@ class Solution {
     }
 
     public String[] solution(String[] record) {
-        String[] answer = {};
-        return answer;
+        List<Document> documents = new LinkedList<>();
+        Map<String, String> userIdMap = new HashMap<>();
+
+        for (String sentence : record) {
+            String[] splitSentence = sentence.split(" ");
+            if (splitSentence[0].equals("Enter") || splitSentence[0].equals("Change")) {
+                userIdMap.put(splitSentence[1], splitSentence[2]);
+            }
+        }
+
+        for (String sentence : record) {
+            String[] split = sentence.split(" ");
+            if (split[0].equals("Enter")) {
+                String chat = userIdMap.get(split[1]) + "님이 들어왔습니다.";
+                documents.add(new Document(split[1], chat));
+            }
+            else if (split[0].equals("Leave")) {
+                String chat = userIdMap.get(split[1]) + "님이 나갔습니다.";
+                documents.add(new Document(split[1], chat));
+            }
+        }
+        return documents.stream().map(Document::getSentence).toArray(String[]::new);
+    }
+    public static class Document{
+        String uid;
+        String sentence;
+
+        public Document(String uid, String sentence) {
+            this.uid = uid;
+            this.sentence = sentence;
+        }
+        public String getSentence() {
+            return this.sentence;
+        }
     }
 }
