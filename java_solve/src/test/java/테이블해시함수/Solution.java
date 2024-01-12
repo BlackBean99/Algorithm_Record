@@ -39,16 +39,12 @@ class Solution {
 
         // 3. S_i 합 구하기
         for (int i = row_begin; i < row_end; i++) {
-
             int finalI = i + 1;
             int dataTotal = Arrays.stream(data[i])
-                    .map(j -> j % finalI)
-                    .sum();
-
-            // 4. XOR한 값 저장
-            answer = (answer ^ dataTotal);
+                .map(j -> j % finalI)
+                .sum();
+            answer = answer ^ dataTotal;
         }
-
         return answer;
     }
 }

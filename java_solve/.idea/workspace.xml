@@ -70,13 +70,13 @@
       <recent name="숫자변환하기" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.오픈채팅방.Solution">
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="연속부분수열합의개수.Solution" />
+  <component name="RunManager" selected="Application.이모티콘할인행사.Solution">
+    <configuration name="오픈채팅방.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="오픈채팅방.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="연속부분수열합의개수.*" />
+          <option name="PATTERN" value="오픈채팅방.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,12 +84,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="오픈채팅방.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="오픈채팅방.Solution" />
+    <configuration name="메뉴리뉴얼.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="메뉴리뉴얼.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="오픈채팅방.*" />
+          <option name="PATTERN" value="메뉴리뉴얼.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="테이블해시함수.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="이모티콘할인행사.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="이모티콘할인행사.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="이모티콘할인행사.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -458,9 +484,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.이모티콘할인행사.Solution" />
+        <item itemvalue="Application.테이블해시함수.Solution" />
+        <item itemvalue="Application.메뉴리뉴얼.Solution" />
         <item itemvalue="Application.오픈채팅방.Solution" />
         <item itemvalue="Application.n2배열자르기.Solution" />
-        <item itemvalue="Application.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -520,7 +548,7 @@
       <workItem from="1703903057747" duration="11511000" />
       <workItem from="1703924051448" duration="2156000" />
       <workItem from="1704847019818" duration="32523000" />
-      <workItem from="1704986316020" duration="1262000" />
+      <workItem from="1704986316020" duration="30289000" />
     </task>
     <servers />
   </component>
@@ -585,8 +613,24 @@
           <line>34</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/이모티콘할인행사/Solution.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/이모티콘할인행사/Solution.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="results.get(68)" />
+        <watch expression="results.get(0).this$0" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
