@@ -1,6 +1,8 @@
 package 우박수열정적분;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 class Solution {
     public static void main(String[] args) {
@@ -29,7 +31,54 @@ class Solution {
     }
 
     public double[] solution(int k, int[][] ranges) {
-        double[] answer = {};
+        // 1) get origin range
+        List<Integer> map = getMap(k);
+        int n = map.size() - 1;
+        double[] answer = new double[ranges.length];
+        double[] sizeMap = new double[n];
+        int[][] originRange = convertRange(ranges, n);
+
+
+        for (int i = 0; i < n; i++) {
+            sizeMap[i] = (float)(map.get(i) + map.get(i + 1)) / 2;
+        }
+
+        for (int i = 0; i < originRange.length; i++) {
+            float size = 0;
+            if(originRange[i][0] > originRange[i][1]){
+                answer[i] = -1;
+                continue;
+            }
+            for (int j = originRange[i][0]; j < originRange[i][1]; j++) {
+
+                size += sizeMap[j];
+            }
+            answer[i] = size;
+        }
         return answer;
+    }
+
+    private List<Integer> getMap(int k) {
+        int cur = k;
+        List<Integer> map = new LinkedList<>();
+        map.add(k);
+        while (cur > 1) {
+            if (cur % 2 == 0) {
+                cur /= 2;
+            } else {
+                cur = cur * 3 + 1;
+            }
+            map.add(cur);
+        }
+        return map;
+    }
+
+    private int[][] convertRange(int[][] ranges, int n) {
+        int[][] convertedRange = new int[ranges.length][ranges[0].length];
+        for (int i = 0; i < ranges.length; i++) {
+            convertedRange[i][0] = ranges[i][0];
+            convertedRange[i][1] = n + ranges[i][1];
+        }
+        return convertedRange;
     }
 }
