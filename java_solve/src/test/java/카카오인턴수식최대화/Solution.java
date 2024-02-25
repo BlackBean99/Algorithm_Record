@@ -2,9 +2,7 @@ package 카카오인턴수식최대화;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
 import java.util.stream.Collectors;
 
 class Solution {

@@ -52,6 +52,10 @@ class Solution {
 
     public int[] solution(int[] numbers) {
         int[] answer = new int[numbers.length];
+        // double to Long
+        double answerLong = 0.0;
+        Long converterd = (long) answerLong;
+
         Stack<Integer> stack = new Stack<>();
         for(int i = numbers.length-1 ; i >= 0; i--){
             while(!stack.isEmpty()){
