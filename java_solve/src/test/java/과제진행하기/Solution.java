@@ -1,28 +1,37 @@
 package 과제진행하기;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Stack;
-import org.junit.platform.commons.util.StringUtils;
 
 class Solution {
     public static void main(String[] args) {
-        String[][] plans1 = new String[][]{{"korean", "11:40", "30"}, {"english", "12:10", "20"}, {"math", "12:30", "40"}};
-        String[] answer1 = new String[]{"korean", "english", "math"};
+        String[][] plans1 =
+                new String[][] {
+                    {"korean", "11:40", "30"}, {"english", "12:10", "20"}, {"math", "12:30", "40"}
+                };
+        String[] answer1 = new String[] {"korean", "english", "math"};
         String[] result1 = new Solution().solution(plans1);
         PRINT_RESULT(1, result1, answer1);
 
-        String[][] plans2 = new String[][]{{"science", "12:40", "50"}, {"music", "12:20", "40"}, {"history", "14:00", "30"}, {"computer", "12:30", "100"}};
-        String[] answer2 = new String[]{"science", "history", "computer", "music"};
+        String[][] plans2 =
+                new String[][] {
+                    {"science", "12:40", "50"},
+                    {"music", "12:20", "40"},
+                    {"history", "14:00", "30"},
+                    {"computer", "12:30", "100"}
+                };
+        String[] answer2 = new String[] {"science", "history", "computer", "music"};
         String[] result2 = new Solution().solution(plans2);
         PRINT_RESULT(2, result2, answer2);
 
-        String[][] plans3 = new String[][]{{"aaa", "12:00", "20"}, {"bbb", "12:10", "30"}, {"ccc", "12:40", "10"}};
-        String[] answer3 = new String[]{"bbb", "ccc", "aaa"};
+        String[][] plans3 =
+                new String[][] {
+                    {"aaa", "12:00", "20"}, {"bbb", "12:10", "30"}, {"ccc", "12:40", "10"}
+                };
+        String[] answer3 = new String[] {"bbb", "ccc", "aaa"};
         String[] result3 = new Solution().solution(plans3);
         PRINT_RESULT(3, result3, answer3);
     }
@@ -38,7 +47,7 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
-    static public class TimeTable {
+    public static class TimeTable {
         private String name;
         private Integer start;
         private Integer playTime;
@@ -58,9 +67,7 @@ class Solution {
     public String[] solution(String[][] plans) {
         // 정답을 저장할 리스트
         List<String> answer = new ArrayList<>();
-        PriorityQueue<TimeTable> pq = new PriorityQueue<>(
-                ((o1, o2) -> (o1.start - o2.start))
-        );
+        PriorityQueue<TimeTable> pq = new PriorityQueue<>(((o1, o2) -> (o1.start - o2.start)));
         // TimeTable 클래스 정의
         for (String[] plan : plans) {
             int start = convertToMinute(plan[1]);
@@ -133,40 +140,41 @@ class Solution {
         return answer.toArray(new String[0]);
     }
 
-//        --------------------------------------------------------------------------------------------------ㅍ
-//
-//        List<TimeTable> timeTables = new ArrayList<>();
-//        Stack<TimeTable> stack = new Stack<>();
-//
-//        // 과제 일정을 TimeTable 객체로 변환하여 리스트에 추가
+    //
+    // --------------------------------------------------------------------------------------------------ㅍ
+    //
+    //        List<TimeTable> timeTables = new ArrayList<>();
+    //        Stack<TimeTable> stack = new Stack<>();
+    //
+    //        // 과제 일정을 TimeTable 객체로 변환하여 리스트에 추가
 
-//
-//        // 시작 시간(start)을 기준으로 내림차순 정렬
-//        timeTables.sort((o1, o2) -> o2.start - o1.start);
-//
-//        answerList.add(timeTables.get(0).name); // 초기에 시작하는 과목 추가
-//        for (int i = 0; i < timeTables.size(); i++) {
-//            TimeTable current = timeTables.get(i);
-//
-//            // 스택에 과제가 있고, 현재 과제의 시작 시간이 스택의 가장 위 과제의 종료 시간보다 빠른 경우
-//            while (!stack.isEmpty() && current.start < stack.peek().end) {
-//                // 스택의 가장 위에 있는 과제를 중단하고 스택에서 제거
-//                TimeTable stopped = stack.pop();
-//                // 중단된 과제를 이어서 진행하고, 이어서 진행한 시간을 answerList에 기록
-//                answerList.add(stopped.name);
-//                // 현재 과제의 시작 시간을 중단된 과제의 종료 시간으로 업데이트
-//                current.start = stopped.end;
-//            }
-//
-//            // 현재 과제를 완료하고 answerList에 기록 (중단된 경우는 기록하지 않음)
-//            if (current.start < current.end) {
-//                answerList.add(current.name);
-//                // 현재 과제를 중단하거나 스택에 추가
-//                stack.push(current);
-//            }
-//        }
-//        // ArrayList를 String 배열로 변환하여 반환
-//        return answerList.toArray(new String[0]);
+    //
+    //        // 시작 시간(start)을 기준으로 내림차순 정렬
+    //        timeTables.sort((o1, o2) -> o2.start - o1.start);
+    //
+    //        answerList.add(timeTables.get(0).name); // 초기에 시작하는 과목 추가
+    //        for (int i = 0; i < timeTables.size(); i++) {
+    //            TimeTable current = timeTables.get(i);
+    //
+    //            // 스택에 과제가 있고, 현재 과제의 시작 시간이 스택의 가장 위 과제의 종료 시간보다 빠른 경우
+    //            while (!stack.isEmpty() && current.start < stack.peek().end) {
+    //                // 스택의 가장 위에 있는 과제를 중단하고 스택에서 제거
+    //                TimeTable stopped = stack.pop();
+    //                // 중단된 과제를 이어서 진행하고, 이어서 진행한 시간을 answerList에 기록
+    //                answerList.add(stopped.name);
+    //                // 현재 과제의 시작 시간을 중단된 과제의 종료 시간으로 업데이트
+    //                current.start = stopped.end;
+    //            }
+    //
+    //            // 현재 과제를 완료하고 answerList에 기록 (중단된 경우는 기록하지 않음)
+    //            if (current.start < current.end) {
+    //                answerList.add(current.name);
+    //                // 현재 과제를 중단하거나 스택에 추가
+    //                stack.push(current);
+    //            }
+    //        }
+    //        // ArrayList를 String 배열로 변환하여 반환
+    //        return answerList.toArray(new String[0]);
 
     // 분 단위 시간을 "hh:mm" 형식의 문자열로 변환하는 메서드
     private String convertToTime(int minutes) {
@@ -174,7 +182,6 @@ class Solution {
         int mins = minutes % 60;
         return String.format("%02d:%02d", hours, mins);
     }
-
 
     private Integer convertToMinute(String s) {
         String[] split = s.split(":");

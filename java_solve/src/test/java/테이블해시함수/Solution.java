@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 class Solution {
     public static void main(String[] args) {
-        int[][] data1 = new int[][]{{2, 2, 6}, {1, 5, 10}, {4, 2, 9}, {3, 8, 3}};
+        int[][] data1 = new int[][] {{2, 2, 6}, {1, 5, 10}, {4, 2, 9}, {3, 8, 3}};
         int col1 = 2;
         int row_begin1 = 2;
         int row_end1 = 3;
@@ -32,17 +32,17 @@ class Solution {
 
         // 2. 정렬
         int finalCol = col;
-        Arrays.sort(data, (o1, o2) -> {
-            if (o1[finalCol] == o2[finalCol]) return o2[0] - o1[0];
-            return o1[finalCol] - o2[finalCol];
-        });
+        Arrays.sort(
+                data,
+                (o1, o2) -> {
+                    if (o1[finalCol] == o2[finalCol]) return o2[0] - o1[0];
+                    return o1[finalCol] - o2[finalCol];
+                });
 
         // 3. S_i 합 구하기
         for (int i = row_begin; i < row_end; i++) {
             int finalI = i + 1;
-            int dataTotal = Arrays.stream(data[i])
-                .map(j -> j % finalI)
-                .sum();
+            int dataTotal = Arrays.stream(data[i]).map(j -> j % finalI).sum();
             answer = answer ^ dataTotal;
         }
         return answer;

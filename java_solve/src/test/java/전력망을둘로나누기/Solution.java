@@ -6,19 +6,20 @@ import java.util.Queue;
 class Solution {
     public static void main(String[] args) {
         int n1 = 9;
-        int[][] wires1 = new int[][]{{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}};
+        int[][] wires1 =
+                new int[][] {{1, 3}, {2, 3}, {3, 4}, {4, 5}, {4, 6}, {4, 7}, {7, 8}, {7, 9}};
         int answer1 = 3;
         int result1 = new Solution().solution(n1, wires1);
         PRINT_RESULT(1, result1, answer1);
 
         int n2 = 4;
-        int[][] wires2 = new int[][]{{1, 2}, {2, 3}, {3, 4}};
+        int[][] wires2 = new int[][] {{1, 2}, {2, 3}, {3, 4}};
         int answer2 = 0;
         int result2 = new Solution().solution(n2, wires2);
         PRINT_RESULT(2, result2, answer2);
 
         int n3 = 7;
-        int[][] wires3 = new int[][]{{1, 2}, {2, 7}, {3, 7}, {3, 4}, {4, 5}, {6, 7}};
+        int[][] wires3 = new int[][] {{1, 2}, {2, 7}, {3, 7}, {3, 4}, {4, 5}, {6, 7}};
         int answer3 = 1;
         int result3 = new Solution().solution(n3, wires3);
         PRINT_RESULT(3, result3, answer3);
@@ -39,13 +40,13 @@ class Solution {
 
     public int solution(int n, int[][] wires) {
         int answer = n;
-        arr = new int[n+1][n+1];
+        arr = new int[n + 1][n + 1];
         for (int i = 0; i < wires.length; i++) {
             arr[wires[i][0]][wires[i][1]] = 1;
             arr[wires[i][1]][wires[i][0]] = 1;
         }
 
-        int a,b;
+        int a, b;
         for (int i = 0; i < wires.length; i++) {
             a = wires[i][0];
             b = wires[i][1];
@@ -69,8 +70,8 @@ class Solution {
             int point = q.poll();
             visit[point] = 1;
             for (int i = 1; i < n + 1; i++) {
-                if(visit[i] == 1) continue;
-                if(arr[point][i] == 1){
+                if (visit[i] == 1) continue;
+                if (arr[point][i] == 1) {
                     cnt++;
                     visit[i] = 1;
                     q.offer(i);
@@ -80,22 +81,3 @@ class Solution {
         return Math.abs(n - 2 * cnt);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

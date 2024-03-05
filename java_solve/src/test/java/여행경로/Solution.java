@@ -7,13 +7,16 @@ import java.util.List;
 
 class Solution {
     public static void main(String[] args) {
-        String[][] tickets1 = new String[][]{{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
-        String[] answer1 = new String[]{"ICN", "JFK", "HND", "IAD"};
+        String[][] tickets1 = new String[][] {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
+        String[] answer1 = new String[] {"ICN", "JFK", "HND", "IAD"};
         String[] result1 = new Solution().solution(tickets1);
         PRINT_RESULT(1, result1, answer1);
 
-        String[][] tickets2 = new String[][]{{"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL", "SFO"}};
-        String[] answer2 = new String[]{"ICN", "ATL", "ICN", "SFO", "ATL", "SFO"};
+        String[][] tickets2 =
+                new String[][] {
+                    {"ICN", "SFO"}, {"ICN", "ATL"}, {"SFO", "ATL"}, {"ATL", "ICN"}, {"ATL", "SFO"}
+                };
+        String[] answer2 = new String[] {"ICN", "ATL", "ICN", "SFO", "ATL", "SFO"};
         String[] result2 = new Solution().solution(tickets2);
         PRINT_RESULT(2, result2, answer2);
     }
@@ -31,12 +34,14 @@ class Solution {
 
     private static boolean[] visited;
     private static List<String> result = new ArrayList<>();
+
     public String[] solution(String[][] tickets) {
         visited = new boolean[tickets.length];
         dfs(0, "ICN", "ICN", tickets);
         Collections.sort(result);
         return result.get(0).split(" ");
     }
+
     private void dfs(int idx, String start, String route, String[][] tickets) {
         if (idx == tickets.length) {
             result.add(route);

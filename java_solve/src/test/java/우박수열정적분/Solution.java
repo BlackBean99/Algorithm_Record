@@ -7,14 +7,14 @@ import java.util.List;
 class Solution {
     public static void main(String[] args) {
         int k1 = 5;
-        int[][] ranges1 = new int[][]{{0, 0}, {0, -1}, {2, -3}, {3, -3}};
-        double[] answer1 = new double[]{33.0, 31.5, 0.0, -1.0};
+        int[][] ranges1 = new int[][] {{0, 0}, {0, -1}, {2, -3}, {3, -3}};
+        double[] answer1 = new double[] {33.0, 31.5, 0.0, -1.0};
         double[] result1 = new Solution().solution(k1, ranges1);
         PRINT_RESULT(1, result1, answer1);
 
         int k2 = 3;
-        int[][] ranges2 = new int[][]{{0, 0}, {1, -2}, {3, -3}};
-        double[] answer2 = new double[]{47.0, 36.0, 12.0};
+        int[][] ranges2 = new int[][] {{0, 0}, {1, -2}, {3, -3}};
+        double[] answer2 = new double[] {47.0, 36.0, 12.0};
         double[] result2 = new Solution().solution(k2, ranges2);
         PRINT_RESULT(2, result2, answer2);
     }
@@ -38,14 +38,13 @@ class Solution {
         double[] sizeMap = new double[n];
         int[][] originRange = convertRange(ranges, n);
 
-
         for (int i = 0; i < n; i++) {
-            sizeMap[i] = (float)(map.get(i) + map.get(i + 1)) / 2;
+            sizeMap[i] = (float) (map.get(i) + map.get(i + 1)) / 2;
         }
 
         for (int i = 0; i < originRange.length; i++) {
             float size = 0;
-            if(originRange[i][0] > originRange[i][1]){
+            if (originRange[i][0] > originRange[i][1]) {
                 answer[i] = -1;
                 continue;
             }

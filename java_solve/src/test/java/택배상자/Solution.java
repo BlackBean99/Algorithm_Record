@@ -4,12 +4,12 @@ import java.util.Stack;
 
 class Solution {
     public static void main(String[] args) {
-        int[] order1 = new int[]{4, 3, 1, 2, 5};
+        int[] order1 = new int[] {4, 3, 1, 2, 5};
         int answer1 = 2;
         int result1 = new Solution().solution(order1);
         PRINT_RESULT(1, result1, answer1);
 
-        int[] order2 = new int[]{5, 4, 3, 2, 1};
+        int[] order2 = new int[] {5, 4, 3, 2, 1};
         int answer2 = 5;
         int result2 = new Solution().solution(order2);
         PRINT_RESULT(2, result2, answer2);
@@ -39,13 +39,13 @@ class Solution {
                 currentBox++;
                 answer++;
                 op++;
-            } else{
+            } else {
                 while (!assistanceBelt.isEmpty() && order[op] == assistanceBelt.peek()) {
                     assistanceBelt.pop();
                     answer++;
                     op++;
                 }
-                if(op >= order.length || order[op] < currentBox) break;
+                if (op >= order.length || order[op] < currentBox) break;
             }
         }
         return answer;

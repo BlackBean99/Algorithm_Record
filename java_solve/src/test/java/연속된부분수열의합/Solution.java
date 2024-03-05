@@ -4,21 +4,21 @@ import java.util.Arrays;
 
 class Solution {
     public static void main(String[] args) {
-        int[] sequence1 = new int[]{1, 2, 3, 4, 5};
+        int[] sequence1 = new int[] {1, 2, 3, 4, 5};
         int k1 = 7;
-        int[] answer1 = new int[]{2, 3};
+        int[] answer1 = new int[] {2, 3};
         int[] result1 = new Solution().solution(sequence1, k1);
         PRINT_RESULT(1, result1, answer1);
 
-        int[] sequence2 = new int[]{1, 1, 1, 2, 3, 4, 5};
+        int[] sequence2 = new int[] {1, 1, 1, 2, 3, 4, 5};
         int k2 = 5;
-        int[] answer2 = new int[]{6, 6};
+        int[] answer2 = new int[] {6, 6};
         int[] result2 = new Solution().solution(sequence2, k2);
         PRINT_RESULT(2, result2, answer2);
 
-        int[] sequence3 = new int[]{2, 2, 2, 2, 2};
+        int[] sequence3 = new int[] {2, 2, 2, 2, 2};
         int k3 = 6;
-        int[] answer3 = new int[]{0, 2};
+        int[] answer3 = new int[] {0, 2};
         int[] result3 = new Solution().solution(sequence3, k3);
         PRINT_RESULT(3, result3, answer3);
     }
@@ -38,14 +38,14 @@ class Solution {
         int N = sequence.length;
         int left = 0, right = N;
         int sum = 0;
-        for(int L = 0, R = 0; L < N; L++) {
-            while(R < N && sum < k) {
+        for (int L = 0, R = 0; L < N; L++) {
+            while (R < N && sum < k) {
                 sum += sequence[R++];
             }
 
-            if(sum == k) {
+            if (sum == k) {
                 int range = R - L - 1;
-                if((right - left) > range) {
+                if ((right - left) > range) {
                     left = L;
                     right = R - 1;
                 }

@@ -40,7 +40,7 @@ public class Main {
                 }
             }
         }
-//        최단거리가 k인 도시가 없을 경우 -1 출력
+        //        최단거리가 k인 도시가 없을 경우 -1 출력
 
         boolean found = false;
         for (int i = 1; i <= n; i++) {

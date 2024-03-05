@@ -2,7 +2,7 @@ package src.test.java.혼자놀기의달인;
 
 class Solution {
     public static void main(String[] args) {
-        int[] cards1 = new int[]{8, 6, 3, 7, 2, 5, 1, 4};
+        int[] cards1 = new int[] {8, 6, 3, 7, 2, 5, 1, 4};
         int answer1 = 12;
         int result1 = new Solution().solution(cards1);
         PRINT_RESULT(1, result1, answer1);
@@ -21,7 +21,7 @@ class Solution {
 
     public int solution(int[] cards) {
         int answer = 0;
-        
+
         return answer;
     }
 }

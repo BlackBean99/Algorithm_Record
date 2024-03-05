@@ -5,7 +5,7 @@ import java.util.Set;
 
 class Solution {
     public static void main(String[] args) {
-        int[] elements1 = new int[]{7, 9, 1, 1, 4};
+        int[] elements1 = new int[] {7, 9, 1, 1, 4};
         int answer1 = 18;
         int result1 = new Solution().solution(elements1);
         PRINT_RESULT(1, result1, answer1);

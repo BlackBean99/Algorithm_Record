@@ -28,11 +28,12 @@ class Solution {
         if (correct) System.out.println(sb);
         else throw new RuntimeException(sb.toString());
     }
+
     static boolean[] check = new boolean[3];
     static List<Long> nums = new ArrayList<>();
     static List<Character> ops = new ArrayList<>();
 
-    static char[] prior = {'+','-','*'};
+    static char[] prior = {'+', '-', '*'};
     static long answer;
 
     static void dfs(int count, char[] perm) {
@@ -42,7 +43,7 @@ class Solution {
 
             for (int i = 0; i < perm.length; i++) {
                 for (int j = 0; j < copyOps.size(); j++) {
-                    if(perm[i] == copyOps.get(j)){
+                    if (perm[i] == copyOps.get(j)) {
                         Long result = calc(copyNums.remove(j), copyNums.remove(j), perm[i]);
                         copyNums.add(j, result);
                         copyOps.remove(j);
@@ -50,40 +51,46 @@ class Solution {
                     }
                 }
             }
-        answer = Math.max(answer, Math.abs(copyNums.get(0)));
+            answer = Math.max(answer, Math.abs(copyNums.get(0)));
         }
         for (int i = 0; i < 3; i++) {
-            if(check[i]) continue;
+            if (check[i]) continue;
             check[i] = true;
             perm[count] = prior[i];
             dfs(count + 1, perm);
             check[i] = false;
-
         }
     }
 
     private static Long calc(Long num1, Long num2, char op) {
         long num = 0;
         switch (op) {
-            case '+' : {
-                return num1 + num2;
-            }
-            case '-' : {
-                return num1 - num2;
-            }
-            case '*' : {
-                return num1 * num2;
-            }
+            case '+':
+                {
+                    return num1 + num2;
+                }
+            case '-':
+                {
+                    return num1 - num2;
+                }
+            case '*':
+                {
+                    return num1 * num2;
+                }
         }
         return num;
     }
 
     public long solution(String expression) {
         answer = 0;
-        nums = Arrays.stream(expression.split("[\\+\\-\\*]")).map(Long::parseLong).collect(Collectors.toList());
+        nums =
+                Arrays.stream(expression.split("[\\+\\-\\*]"))
+                        .map(Long::parseLong)
+                        .collect(Collectors.toList());
         for (int i = 0; i < expression.length(); i++) {
-            if (expression.charAt(i) == '-' || expression.charAt(i) == '+' || expression.charAt(i) == '*')
-                ops.add(expression.charAt(i));
+            if (expression.charAt(i) == '-'
+                    || expression.charAt(i) == '+'
+                    || expression.charAt(i) == '*') ops.add(expression.charAt(i));
         }
         dfs(0, new char[3]);
         return answer;

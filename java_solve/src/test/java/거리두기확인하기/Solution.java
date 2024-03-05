@@ -1,16 +1,20 @@
 package 거리두기확인하기;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
-import org.w3c.dom.html.HTMLLinkElement;
 
 class Solution {
     public static void main(String[] args) {
-        String[][] places1 = new String[][]{{"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"}, {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"}, {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"}, {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"}, {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}};
-        int[] answer1 = new int[]{1, 0, 1, 1, 1};
+        String[][] places1 =
+                new String[][] {
+                    {"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
+                    {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
+                    {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
+                    {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
+                    {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}
+                };
+        int[] answer1 = new int[] {1, 0, 1, 1, 1};
         int[] result1 = new Solution().solution(places1);
         PRINT_RESULT(1, result1, answer1);
     }
@@ -36,8 +40,7 @@ class Solution {
             for (int r = 0; r < 5 && isOk; r++) {
                 for (int c = 0; c < 5 && isOk; c++) {
                     if (p[r].charAt(c) == 'P') {
-                        if (!bfs(r, c, p))
-                            isOk = false;
+                        if (!bfs(r, c, p)) isOk = false;
                     }
                 }
             }
@@ -52,7 +55,7 @@ class Solution {
         int dy[] = {0, 1, 0, -1};
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[]{x, y});
+        queue.offer(new int[] {x, y});
         while (!queue.isEmpty()) {
             // 초기화
             int[] current = queue.poll();
@@ -64,13 +67,10 @@ class Solution {
                 int ny = current[1] + dy[i];
 
                 // 원래 자리는 검사 안한다.
-                if (nx < 0 || ny < 0 || nx >= 5 || ny >= 5 || (nx == x && ny == y))
-                    continue;
+                if (nx < 0 || ny < 0 || nx >= 5 || ny >= 5 || (nx == x && ny == y)) continue;
                 int distance = Math.abs(nx - x) + Math.abs(ny - y);
-                if (distance <= 2 && p[nx].charAt(ny) == 'P')
-                    return false;
-                else if (p[nx].charAt(ny) == 'O')
-                    queue.offer(new int[]{nx, ny});
+                if (distance <= 2 && p[nx].charAt(ny) == 'P') return false;
+                else if (p[nx].charAt(ny) == 'O') queue.offer(new int[] {nx, ny});
             }
         }
         return true;

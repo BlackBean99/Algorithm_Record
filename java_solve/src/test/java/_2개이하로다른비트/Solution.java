@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 class Solution {
     public static void main(String[] args) {
-        long[] numbers1 = new long[]{2L, 7L};
-        long[] answer1 = new long[]{3L, 11L};
+        long[] numbers1 = new long[] {2L, 7L};
+        long[] answer1 = new long[] {3L, 11L};
         long[] result1 = new Solution().solution(numbers1);
         PRINT_RESULT(1, result1, answer1);
     }
@@ -23,22 +23,22 @@ class Solution {
 
     public long[] solution(long[] numbers) {
         long[] answer = new long[numbers.length];
-        for(int i=0; i<numbers.length; i++){
+        for (int i = 0; i < numbers.length; i++) {
             long num = numbers[i];
-            if(num % 2 == 0){
+            if (num % 2 == 0) {
                 answer[i] = num + 1;
-            }else{
+            } else {
                 String s = Long.toString(numbers[i], 2);
                 int zeroIdx = s.lastIndexOf("0");
                 //
                 if (zeroIdx != -1) {
                     s = s.substring(0, zeroIdx) + "10" + s.substring(zeroIdx + 2, s.length());
-                    answer[i] = Long.parseLong(s,2);
+                    answer[i] = Long.parseLong(s, 2);
                 }
                 // 0도 섞인 경우
-                else{
+                else {
                     s = "10" + s.substring(1, s.length());
-                    answer[i] = Long.parseLong(s,2);
+                    answer[i] = Long.parseLong(s, 2);
                 }
             }
         }

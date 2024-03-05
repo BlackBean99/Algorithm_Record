@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 class Solution {
     public static void main(String[] args) {
-/*        String[] orders1 = new String[]{"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
+        /*        String[] orders1 = new String[]{"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
         int[] course1 = new int[]{2, 3, 4};
         String[] answer1 = new String[]{"AC", "ACDE", "BCFG", "CDE"};
         String[] result1 = new Solution().solution(orders1, course1);
@@ -39,6 +38,7 @@ class Solution {
         if (correct) System.out.println(sb);
         else throw new RuntimeException(sb.toString());
     }
+
     static Map<String, Integer> map;
 
     public static void combination(String str, StringBuilder sb, int index, int cnt, int n) {
@@ -48,15 +48,14 @@ class Solution {
             return;
         }
         // index부터 시작하여 조합을 구한다.
-        for (int i = index; i <str.length(); i++) {
+        for (int i = index; i < str.length(); i++) {
             sb.append(str.charAt(i));
             combination(str, sb, i + 1, cnt + 1, n);
             sb.delete(cnt, cnt + 1);
         }
     }
 
-
-        public ArrayList<String> solution(String[] orders, int[] course) {
+    public ArrayList<String> solution(String[] orders, int[] course) {
         ArrayList<String> answer = new ArrayList<>();
 
         for (int i = 0; i < orders.length; i++) {
@@ -65,19 +64,19 @@ class Solution {
             orders[i] = String.valueOf(charArr);
         }
 
-        for(int i =0;i<course.length;i++){
+        for (int i = 0; i < course.length; i++) {
             // 6. HashMap으로 조합의 수를 카운팅.
             map = new HashMap<>();
             // 7. course의 경우에 따라 구한 조합들 중 가장 많이 주문된 횟수를 저장.
             int max = Integer.MIN_VALUE;
             // 8. 각 사람들의 조합을 구하기 위해 탐색.
-            for(int j =0;j<orders.length;j++){
+            for (int j = 0; j < orders.length; j++) {
                 // 9. 조합을 구하기 위해 문자열을 조작할 StringBuilder.
                 StringBuilder sb = new StringBuilder();
                 // 10. 코스의 개수 <= 각 문자열의 길이인 경우 조합을 구한다.
-                if(course[i]<=orders[j].length())
+                if (course[i] <= orders[j].length())
                     // 11. 조합을 구하기 위한 메소드 호출
-                    combination(orders[j],sb,0,0,course[i]);
+                    combination(orders[j], sb, 0, 0, course[i]);
             }
             for (Entry<String, Integer> entry : map.entrySet()) {
                 max = Math.max(max, entry.getValue());
@@ -90,7 +89,5 @@ class Solution {
         }
         Collections.sort(answer);
         return answer;
-
-
     }
 }

@@ -5,12 +5,12 @@ import java.util.Queue;
 
 class Solution {
     public static void main(String[] args) {
-        String[] maps1 = new String[]{"SOOOL", "XXXXO", "OOOOO", "OXXXX", "OOOOE"};
+        String[] maps1 = new String[] {"SOOOL", "XXXXO", "OOOOO", "OXXXX", "OOOOE"};
         int answer1 = 16;
         int result1 = new Solution().solution(maps1);
         PRINT_RESULT(1, result1, answer1);
 
-        String[] maps2 = new String[]{"LOOXS", "OOOOX", "OOOOO", "OOOOO", "EOOOO"};
+        String[] maps2 = new String[] {"LOOXS", "OOOOX", "OOOOO", "OOOOO", "EOOOO"};
         int answer2 = -1;
         int result2 = new Solution().solution(maps2);
         PRINT_RESULT(2, result2, answer2);
@@ -27,7 +27,7 @@ class Solution {
         else throw new RuntimeException(sb.toString());
     }
 
-    static class Point{
+    static class Point {
         int x;
         int y;
 
@@ -39,18 +39,18 @@ class Solution {
 
     int[] dx = {1, 0, -1, 0};
     int[] dy = {0, 1, 0, -1};
-    public int dfs(Point start, Point end, String[] maps,int count) {
+
+    public int dfs(Point start, Point end, String[] maps, int count) {
         Queue<Point> q = new LinkedList<Point>();
         q.offer(start);
-//                if(maps[i].charAt(j) != 'O')
-//                    continue;
+        //                if(maps[i].charAt(j) != 'O')
+        //                    continue;
         while (!q.isEmpty()) {
             Point current = q.poll();
             for (int dir = 0; dir < 4; dir++) {
                 int nx = current.x + dx[dir];
                 int ny = current.x + dx[dir];
-                if (0 <= nx && nx < maps.length &&
-                        0 <= ny && ny < maps[0].length()) {
+                if (0 <= nx && nx < maps.length && 0 <= ny && ny < maps[0].length()) {
                     if (maps[nx].charAt(ny) == 'O') {
                         q.offer(new Point(nx, ny));
                         count++;
@@ -60,6 +60,7 @@ class Solution {
         }
         return count;
     }
+
     public int solution(String[] maps) {
         int answer = 0;
         int[][] distance = new int[maps.length][maps[0].length()];
@@ -71,14 +72,14 @@ class Solution {
             for (int j = 0; j < maps[0].length(); j++) {
                 if (maps[i].charAt(j) == 'S') {
                     start = new Point(i, j);
-                }else if(maps[i].charAt(j) == 'E'){
+                } else if (maps[i].charAt(j) == 'E') {
                     end = new Point(i, j);
-                }else if(maps[i].charAt(j) == 'L'){
+                } else if (maps[i].charAt(j) == 'L') {
                     lever = new Point(i, j);
                 }
             }
         }
-        int depth = dfs(start, lever,maps,0);
+        int depth = dfs(start, lever, maps, 0);
         answer = depth + dfs(lever, end, maps, depth);
         return answer;
     }

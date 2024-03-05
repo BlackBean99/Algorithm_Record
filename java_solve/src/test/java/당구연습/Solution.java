@@ -8,8 +8,8 @@ class Solution {
         int n1 = 10;
         int startX1 = 3;
         int startY1 = 7;
-        int[][] balls1 = new int[][]{{7, 7}, {2, 7}, {7, 3}};
-        int[] answer1 = new int[]{52, 37, 116};
+        int[][] balls1 = new int[][] {{7, 7}, {2, 7}, {7, 3}};
+        int[] answer1 = new int[] {52, 37, 116};
         int[] result1 = new Solution().solution(m1, n1, startX1, startY1, balls1);
         PRINT_RESULT(1, result1, answer1);
     }
@@ -28,11 +28,7 @@ class Solution {
     public int[] solution(int m, int n, int startX, int startY, int[][] balls) {
         int[] answer = {};
 
-        /**
-         * M이 가로 길이
-         * n 이 세로길이
-         *
-         * */
+        /** M이 가로 길이 n 이 세로길이 */
         return answer;
     }
 }

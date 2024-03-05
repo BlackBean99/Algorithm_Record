@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    //spotless
+    id 'com.diffplug.spotless' version '6.11.0'
 }
 
 group 'org.codingtest'
@@ -16,4 +18,16 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+spotless {
+    java {
+        target("**/*.java")
+        removeUnusedImports()
+        trimTrailingWhitespace()
+//        indentWithTabs()
+        importOrder()
+        googleJavaFormat().aosp()
+        endWithNewline()
+    }
 }

@@ -8,8 +8,18 @@ import java.util.Map;
 
 class Solution {
     public static void main(String[] args) {
-        String[] record1 = new String[]{"Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"};
-        String[] answer1 = new String[]{"Prodo님이 들어왔습니다.", "Ryan님이 들어왔습니다.", "Prodo님이 나갔습니다.", "Prodo님이 들어왔습니다."};
+        String[] record1 =
+                new String[] {
+                    "Enter uid1234 Muzi",
+                    "Enter uid4567 Prodo",
+                    "Leave uid1234",
+                    "Enter uid1234 Prodo",
+                    "Change uid4567 Ryan"
+                };
+        String[] answer1 =
+                new String[] {
+                    "Prodo님이 들어왔습니다.", "Ryan님이 들어왔습니다.", "Prodo님이 나갔습니다.", "Prodo님이 들어왔습니다."
+                };
         String[] result1 = new Solution().solution(record1);
         PRINT_RESULT(1, result1, answer1);
     }
@@ -41,15 +51,15 @@ class Solution {
             if (split[0].equals("Enter")) {
                 String chat = userIdMap.get(split[1]) + "님이 들어왔습니다.";
                 documents.add(new Document(split[1], chat));
-            }
-            else if (split[0].equals("Leave")) {
+            } else if (split[0].equals("Leave")) {
                 String chat = userIdMap.get(split[1]) + "님이 나갔습니다.";
                 documents.add(new Document(split[1], chat));
             }
         }
         return documents.stream().map(Document::getSentence).toArray(String[]::new);
     }
-    public static class Document{
+
+    public static class Document {
         String uid;
         String sentence;
 
@@ -57,6 +67,7 @@ class Solution {
             this.uid = uid;
             this.sentence = sentence;
         }
+
         public String getSentence() {
             return this.sentence;
         }

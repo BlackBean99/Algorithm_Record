@@ -38,7 +38,8 @@ class Solution {
     }
 
     static List<String> list;
-    static String [] words = {"A", "E", "I", "O", "U"};
+    static String[] words = {"A", "E", "I", "O", "U"};
+
     public int solution(String word) {
         int answer = 0;
         list = new ArrayList<>();

@@ -1,18 +1,15 @@
 package 네트워크;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
     public static void main(String[] args) {
         int n1 = 3;
-        int[][] computers1 = new int[][]{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
+        int[][] computers1 = new int[][] {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
         int answer1 = 2;
         int result1 = new Solution().solution(n1, computers1);
         PRINT_RESULT(1, result1, answer1);
 
         int n2 = 3;
-        int[][] computers2 = new int[][]{{1, 1, 0}, {1, 1, 1}, {0, 1, 1}};
+        int[][] computers2 = new int[][] {{1, 1, 0}, {1, 1, 1}, {0, 1, 1}};
         int answer2 = 1;
         int result2 = new Solution().solution(n2, computers2);
         PRINT_RESULT(2, result2, answer2);

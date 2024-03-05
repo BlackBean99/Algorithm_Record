@@ -21,10 +21,8 @@ class Solution {
         sb.append(correct ? "정답" : "오답").append("\n");
         sb.append("\t- 실행 결과: \t").append(result).append("\n");
         sb.append("\t- 기댓값: \t").append(answer).append("\n");
-        if (correct)
-            System.out.println(sb);
-        else
-            throw new RuntimeException(sb.toString());
+        if (correct) System.out.println(sb);
+        else throw new RuntimeException(sb.toString());
     }
 
     public int solution(int n) {

@@ -6,12 +6,26 @@ import java.util.Queue;
 
 class Solution {
     public static void main(String[] args) {
-        int[][] maps1 = new int[][]{{1, 0, 1, 1, 1}, {1, 0, 1, 0, 1}, {1, 0, 1, 1, 1}, {1, 1, 1, 0, 1}, {0, 0, 0, 0, 1}};
+        int[][] maps1 =
+                new int[][] {
+                    {1, 0, 1, 1, 1},
+                    {1, 0, 1, 0, 1},
+                    {1, 0, 1, 1, 1},
+                    {1, 1, 1, 0, 1},
+                    {0, 0, 0, 0, 1}
+                };
         int answer1 = 11;
         int result1 = new Solution().solution(maps1);
         PRINT_RESULT(1, result1, answer1);
 
-        int[][] maps2 = new int[][]{{1, 0, 1, 1, 1}, {1, 0, 1, 0, 1}, {1, 0, 1, 1, 1}, {1, 1, 1, 0, 0}, {0, 0, 0, 0, 1}};
+        int[][] maps2 =
+                new int[][] {
+                    {1, 0, 1, 1, 1},
+                    {1, 0, 1, 0, 1},
+                    {1, 0, 1, 1, 1},
+                    {1, 1, 1, 0, 0},
+                    {0, 0, 0, 0, 1}
+                };
         int answer2 = -1;
         int result2 = new Solution().solution(maps2);
         PRINT_RESULT(2, result2, answer2);
@@ -35,20 +49,24 @@ class Solution {
         int n = maps.length;
         int m = maps[0].length;
 
-
         int[][] visited = new int[n][m];
         visited[0][0] = 1;
 
         Queue<Point> q = new LinkedList<>();
         q.add(new Point(0, 0, 1));
 
-        while(!q.isEmpty()){
+        while (!q.isEmpty()) {
             Point current = q.poll();
-            if(current.x == m-1 && current.y == n-1) return current.distance;
+            if (current.x == m - 1 && current.y == n - 1) return current.distance;
             for (int dir = 0; dir < 4; dir++) {
                 int nextX = current.x + dx[dir];
                 int nextY = current.y + dy[dir];
-                if (0 <= nextX && nextX < m && 0 <= nextY && nextY < n && maps[nextX][nextY] == 1 && visited[nextX][nextY] == 0) {
+                if (0 <= nextX
+                        && nextX < m
+                        && 0 <= nextY
+                        && nextY < n
+                        && maps[nextX][nextY] == 1
+                        && visited[nextX][nextY] == 0) {
                     q.add(new Point(nextX, nextY, current.distance + 1));
                     visited[nextX][nextY] = 1;
                 }
@@ -57,7 +75,8 @@ class Solution {
 
         return -1;
     }
-    class Point{
+
+    class Point {
         int x;
         int y;
         int distance;
