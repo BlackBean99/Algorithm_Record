@@ -4,7 +4,230 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04daab98-47cc-4210-a5b7-6d4f5e1800cb" name="Changes" comment="" />
+    <list default="true" id="04daab98-47cc-4210-a5b7-6d4f5e1800cb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/7.4/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/build/classes/java/main/boj/MyClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/src/main/java/boj/Main_12865.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/src/main/java/boj/Main_14466.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlJava/src/main/java/boj/MyClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/12865.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/13701.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/14499.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/14500.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/15649.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/22324.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/11066.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/1149.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/11659.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/11722.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/11726.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/12852.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/12865.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/1463.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/1520.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/1520.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/15486.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/16953.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/2293.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/2579.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/5582.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/9095.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/DP/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/backtracking/1182.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/backtracking/15649.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/backtracking/15650.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/backtracking/9663.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/10026.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/14466.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/14503.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/1697.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/1697repeat.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/18460.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/1926.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/2178.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/2573.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/2606.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/4179.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/7576.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/7576repeat.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/bfs/리코챗.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/10816.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/1654.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/18870.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/1920.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/2295.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/2805.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearch/aa.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/binarySearchTree/7662.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/dijkstra/1753.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/floyd/11404.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/floyd/11780.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/floyd/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/graph/11724.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/graph/1260.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/1026.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/11047.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/1202.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/1541.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/1715.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/1931.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/2212.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/2217.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/greedy/2785.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/hash/1620.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/hash/7785.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/math/1157.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/math/11653.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/math/2960.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/minimumSpanningTree/1197.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/minimumSpanningTree/1368.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/next_permutation_example.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/priorityQueue/11286.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/queue/1158.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/recursive/1074.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/recursive/11729.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/recursive/1629.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/simulation/12100.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/simulation/12100prac.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/simulation/15683.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/simulation/15683practice.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/simulation/15686.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/sort/11652.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/sort/11728.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/sort/2309.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/sort/2749.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/sort/6549.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/topologySort/2252.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/tree/11725.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/tree/1991.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/twoPointer/1806.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOJ/twoPointer/2230.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/Combination.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/Probing.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/k.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/nohup.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/계정정지.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/괄호문자열.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/깊이우선탐색.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/너비우선탐색.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/다양성.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/데스티니.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/도토리키재기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/두 직사각형.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/등굣길.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/문자열의비교.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/발열체크.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/배열최댓값.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/배열카운트.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/버블정렬.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/병합정렬.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/분할정복합.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/불안정 지역.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/비밀번호.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/빈도수세기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/선택정렬1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/세카드.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/소수세기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/소수의판별.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/소인수분해.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/스도쿠보드.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/스도쿠연습.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/시장추천하기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/오름차순인가.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/위상정렬.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/응모.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/이미지_압축.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/이서현.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/전화번호.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/정렬.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/정사각형.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/정주행.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/조세퍼스 문제.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/중복제거하기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/최대공약수.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/최소스패닝트리.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/추첨용지.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/탐색하기1.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/탐색하기2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/탐색하기3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/탑.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/페인트.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/피보나치.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/픽셀수세기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/합구하기2.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/합구하기3.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../homework/히스토그램.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../programmers/교점에별만들기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../programmers/기사단원의 무기.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../programmers/대충만든자판.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/161.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/165.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/317.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/ASYMMETRIC.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/CLIMB.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/CLOCKSYNC.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/CLOSETPAIR.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/COUNTINGSORT.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/DRAGON.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/FANMEETING.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/FENCE.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/JLIS.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/JUMPGAME.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/KLIS.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/LIS.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/MEMORIZE.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/MERGESORT.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/MORSE.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/NUMB3RS.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/OCR.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/PACKING.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/QUANTIZATION.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/QUICKSORT.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/Selection.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/Selection.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/TILING.CPP" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/TRIANGLEPATH.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/WILDCARD.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/karatsuba.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/picnic.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/reverse_quad_tree.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../reculsive/shortestPath.cpp" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +237,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,6 +261,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.18/Contents/Home/lib/src.zip!/java.base/java/lang/ArrayIndexOutOfBoundsException.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.18/Contents/Home/lib/src.zip!/java.base/java/lang/Iterable.java" root0="SKIP_INSPECTION" />
     <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/corretto-11.0.18/Contents/Home/lib/src.zip!/java.base/java/util/function/Consumer.java" root0="SKIP_INSPECTION" />
   </component>
@@ -44,28 +280,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_directory_selection&quot;: &quot;/Users/blackbean/PycharmProjects/algorighm/Algorithm_Record/java_solve/src/test/java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "master",
+    "last_directory_selection": "/Users/blackbean/PycharmProjects/algorighm/Algorithm_Record/java_solve/src/test/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="석유시추" />
+      <recent name="후보키" />
       <recent name="점프와순간이동" />
       <recent name="뒤에있는큰수찾기" />
       <recent name="숫자변환하기" />
@@ -111,12 +350,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="메뉴리뉴얼.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="메뉴리뉴얼.Solution" />
+    <configuration name="튜플.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="튜플.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="메뉴리뉴얼.*" />
+          <option name="PATTERN" value="튜플.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +363,90 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="튜플.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="튜플.Solution" />
+    <configuration name="택배상자.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="택배상자.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="튜플.*" />
+          <option name="PATTERN" value="택배상자.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="숫자카드나누기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="숫자카드나누기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="숫자카드나누기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="모음사전.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="모음사전.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="모음사전.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="마법의엘리베이터.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="마법의엘리베이터.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="마법의엘리베이터.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="게임맵최단거리.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="게임맵최단거리.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="게임맵최단거리.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="석유시추.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="석유시추.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="석유시추.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="타겟넘버.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="타겟넘버.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="타겟넘버.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,6 +473,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="혼자놀기의달인.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="두큐합같게만들기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="두큐합같게만들기.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="두큐합같게만들기.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -195,6 +525,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="이모티콘할인행사.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="테이블해시함수.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -280,38 +623,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="디펜스게임.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="디펜스게임.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="디펜스게임.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="숫자카드나누기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="숫자카드나누기.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="숫자카드나누기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="테이블해시함수.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="디펜스게임.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="디펜스게임.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="디펜스게임.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -338,6 +668,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="귤고르기.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="메뉴리뉴얼.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="메뉴리뉴얼.Solution" />
+      <module name="java_solve.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="메뉴리뉴얼.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -384,25 +727,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="두큐합같게만들기.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="두큐합같게만들기.Solution" />
+    <configuration name="후보키.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="후보키.Solution" />
       <module name="java_solve.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="두큐합같게만들기.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="테이블해시함수.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="테이블해시함수.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="테이블해시함수.*" />
+          <option name="PATTERN" value="후보키.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -468,71 +798,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="할인행사.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="택배상자.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="택배상자.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="택배상자.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="모음사전.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="모음사전.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="모음사전.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="마법의엘리베이터.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="마법의엘리베이터.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="마법의엘리베이터.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="게임맵최단거리.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="게임맵최단거리.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="게임맵최단거리.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="타겟넘버.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="타겟넘버.Solution" />
-      <module name="java_solve.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="타겟넘버.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -616,6 +881,9 @@
       <workItem from="1709449485505" duration="884000" />
       <workItem from="1709510960297" duration="599000" />
       <workItem from="1709518906640" duration="361000" />
+      <workItem from="1709652844722" duration="14662000" />
+      <workItem from="1709741601219" duration="599000" />
+      <workItem from="1709784351436" duration="2763000" />
     </task>
     <servers />
   </component>
@@ -641,53 +909,33 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Solution.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Solution.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Solution.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Solution.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/오픈채팅방/Solution.java</url>
-          <line>45</line>
+          <line>54</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/오픈채팅방/Solution.java</url>
-          <line>46</line>
+          <line>55</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/오픈채팅방/Solution.java</url>
-          <line>49</line>
+          <line>58</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/오픈채팅방/Solution.java</url>
-          <line>34</line>
+          <line>44</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/이모티콘할인행사/Solution.java</url>
-          <line>78</line>
+          <line>89</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/이모티콘할인행사/Solution.java</url>
-          <line>55</line>
+          <line>64</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
