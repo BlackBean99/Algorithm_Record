@@ -12,3 +12,7 @@ s
 Csrc/main/java/org/algorithm/미리내_코딩테스트/Solution.java,f/2/f2fdf0f3d4139bbf1474074a936cb1579b78a3ec
 Y
 )src/main/java/org/algorithm/Solution.java,6/3/630e74b2b80910ed7b7e686956f12816176e6588
+f
+6src/main/java/org/algorithm/촌수계산/Solution.java,e/b/eba5519dc6921530762d7450600c7616d909c45b
+b
+2src/main/java/org/algorithm/촌수계산/Main.java,8/d/8d9cce2ce697d6d5d56b481a8ad5cc856c262607
