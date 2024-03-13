@@ -20,3 +20,5 @@ y
 Isrc/main/java/org/algorithm/맥주마시면서_걸어가기/Solution.java,c/c/cc725d380df7b2b4a4fb1bb0adff770aa58606e2
 u
 Esrc/main/java/org/algorithm/맥주마시면서_걸어가기/Main.java,9/1/912ee669b3f7534e12e4ffdca917018a609b2985
+e
+5src/main/java/org/algorithm/스타트링크/Main.java,7/d/7de16f46ee435afe9d93022aafd44662e05826b0
