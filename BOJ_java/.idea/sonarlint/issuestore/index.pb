@@ -16,3 +16,7 @@ f
 6src/main/java/org/algorithm/촌수계산/Solution.java,e/b/eba5519dc6921530762d7450600c7616d909c45b
 b
 2src/main/java/org/algorithm/촌수계산/Main.java,8/d/8d9cce2ce697d6d5d56b481a8ad5cc856c262607
+y
+Isrc/main/java/org/algorithm/맥주마시면서_걸어가기/Solution.java,c/c/cc725d380df7b2b4a4fb1bb0adff770aa58606e2
+u
+Esrc/main/java/org/algorithm/맥주마시면서_걸어가기/Main.java,9/1/912ee669b3f7534e12e4ffdca917018a609b2985

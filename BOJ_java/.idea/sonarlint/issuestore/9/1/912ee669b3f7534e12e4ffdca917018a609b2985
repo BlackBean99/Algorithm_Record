@@ -1,0 +1,18 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±“¥ûÿÿÿÿ8ÿŸØ¶ã1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(œû¿Ø8Ğ Ø¶ã1
+G
+java:S1197"*Move the array designators [] to the type.(ñ»Æ 8Ô Ø¶ã1
+F
+java:S1197"*Move the array designators [] to the type.(ÃĞ…8Ô Ø¶ã1
+G	java:S1068"+Replace this use of System.out by a logger.(ˆÓÈõ8Ö Ø¶ã1
+G	java:S106>"+Replace this use of System.out by a logger.(ˆÓÈõ8Ö Ø¶ã1
+G	java:S106H"+Replace this use of System.out by a logger.(ˆÓÈõ8Ö Ø¶ã1
+G	java:S106J"+Replace this use of System.out by a logger.(ºµ¼ù8Ö Ø¶ã1
+J
+java:S1125P"(Remove the unnecessary boolean literals.(ößÀıÿÿÿÿ8× Ø¶ã1
+Q
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8× Ø¶ã1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8´ºç¶ã1
