@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -26,7 +27,7 @@ public class Main {
         for (int i = 0; i < testCase; i++) {
 
             int convenientNumber = Integer.parseInt(br.readLine());
-            convinent = new int[convenientNumber][convenientNumber];
+            convinent = new int[convenientNumber+1][convenientNumber+1];
 
             StringTokenizer st = new StringTokenizer(br.readLine());
             start[0] = Integer.parseInt(st.nextToken());
@@ -42,41 +43,37 @@ public class Main {
             end[0] = Integer.parseInt(st.nextToken());
             end[1] = Integer.parseInt(st.nextToken());
 
-            // 편의점을 x좌표 기준으로 정렬. ( 오른쪽으로 갈 것이라 예상 )
-            // 1. 오른쪽
-            if(start[0] < end[0]){
-                Arrays.sort(convinent, Comparator.comparingInt(o -> o[0]));
-
-            } else{  // 2, 왼쪽
-                Arrays.sort(convinent, Comparator.comparingInt((int[] o) -> o[0]).reversed());
-            }
-
-            // 시작점에서 편의점까지 갈 수 있니?
-            if(!isArrived(start, convinent[0])){
-                System.out.println("sad");
-            }
-            // 편의점에서 편의점까지 갈 수 있니?
-            boolean isArrivedBetweenConvinent = true;
-            for (int j = 0; j < convenientNumber -1 ; j++) {
-                if (!isArrived(convinent[j], convinent[j + 1])) {
-                    System.out.println("sad");
-                    isArrivedBetweenConvinent = false;
-                }
-            }
-            if(!isArrivedBetweenConvinent){
-                continue;
-            }
-
-            // 편의점엑서 도착지까지 갈 수 있니?
-            if(!isArrived(convinent[convenientNumber-1], end)){
-                System.out.println("sad");
-            }
-            System.out.println("happy");
+            bfs(convinent, start, end);
         }
     }
 
-    private static boolean isArrived(int[] start, int[] end) {
-        int distance = Math.abs(start[1] - end[1]) + Math.abs(start[0] - end[0]);
-        return distance <= 50 * 20 ? true : false;
+    private static void bfs(int[][] convinent, int[] start, int[] end) {
+        Queue<Node> q = new LinkedList<>();
+        boolean[] visited = new boolean[convinent.length];
+        q.add(new Node(start[0], start[1]));
+        while (!q.isEmpty()) {
+            Node now = q.poll();
+            if (Math.abs(now.i - end[0]) + Math.abs(now.j - end[1]) <= 1000) {
+                System.out.println("happy");
+                return;
+            }
+            for (int i = 0; i < convinent.length; i++) {
+                Node next = new Node(convinent[i][0], convinent[i][1]);
+                if (Math.abs(now.i - next.i) + Math.abs(now.j - next.j) <= 1000) {
+                    visited[i] = true;
+                    q.add(new Node(next.i, next.j));
+                }
+            }
+        }
+        System.out.println("sad");
+    }
+
+}
+class Node {
+    int i, j;
+
+    public Node(int i, int j) {
+        this.i = i;
+        this.j = j;
     }
 }
