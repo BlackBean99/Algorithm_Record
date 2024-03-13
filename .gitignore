@@ -1,8 +1,10 @@
 /tok.txt
 /out
 /out/*
-/.idea
-/idea/*
+**/.idea
+**/.idea/*
+**/.gradle
+**/build
 .idea/*
 .idea/sonarlint
 .idea/sonarlint/**
