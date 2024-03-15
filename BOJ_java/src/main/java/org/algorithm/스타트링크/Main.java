@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-    static int F,S,G,U,D;
+    static int F, S, G, U, D;
     static int answer = -1;
     static int[] visited;
 
@@ -22,8 +22,9 @@ public class Main {
         U = Integer.parseInt(st.nextToken());
         D = Integer.parseInt(st.nextToken());
         visited = new int[F + 1];
-        dfs(S,G);
+        dfs(S, G);
     }
+
     private static void dfs(int start, int end) {
         Queue<Integer> q = new LinkedList<>();
         q.add(start);
@@ -31,14 +32,14 @@ public class Main {
 
         while (!q.isEmpty()) {
             Integer current = q.poll();
-            if(current == end){
+            if (current == end) {
                 System.out.println(visited[current] - 1);
             }
-            if(current + U <= F && visited[current +U] == 0) {
+            if (current + U <= F && visited[current + U] == 0) {
                 visited[current + U] = visited[current] + 1;
                 q.add(current + U);
             }
-            if(current - D >= 1 && visited[current - D] == 0){
+            if (current - D >= 1 && visited[current - D] == 0) {
                 visited[current - D] = visited[current] + 1;
                 q.add(current - D);
             }

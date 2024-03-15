@@ -3,9 +3,6 @@ package org.algorithm.맥주마시면서_걸어가기;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.SQLOutput;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
@@ -18,16 +15,11 @@ public class Main {
         int start[] = new int[2];
         int end[] = new int[2];
         int[][] convinent;
-        /**
-         * 첫번째, 편의점 갯수
-         * 2번째, start 좌표
-         * 3번째부터 3+n개, n개의 편의점 좌표
-         * 마지막, end 좌표
-         * */
+        /** 첫번째, 편의점 갯수 2번째, start 좌표 3번째부터 3+n개, n개의 편의점 좌표 마지막, end 좌표 */
         for (int i = 0; i < testCase; i++) {
 
             int convenientNumber = Integer.parseInt(br.readLine());
-            convinent = new int[convenientNumber+1][convenientNumber+1];
+            convinent = new int[convenientNumber + 1][convenientNumber + 1];
 
             StringTokenizer st = new StringTokenizer(br.readLine());
             start[0] = Integer.parseInt(st.nextToken());
@@ -67,8 +59,8 @@ public class Main {
         }
         System.out.println("sad");
     }
-
 }
+
 class Node {
     int i, j;
 
