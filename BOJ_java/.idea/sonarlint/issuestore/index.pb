@@ -22,3 +22,5 @@ c
 3src/main/java/org/algorithm/숨바꼭질3/Main.java,c/6/c6f67595c4482be3c524a94066aace777459d30d
 n
 >src/main/java/org/algorithm/외계인의기타연주/Main.java,7/8/78a5e88dbd2ba023f856d3ac17844d7eba0c0010
+e
+5src/main/java/org/algorithm/강의실배정/Main.java,f/3/f3c24efd7a709e593d5a3f02f2e7a5595dee05f1

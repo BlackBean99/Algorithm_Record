@@ -17,6 +17,7 @@ public class Main {
         int flat = Integer.parseInt(st.nextToken());
 
         Map<Integer, Stack<Integer>> map = new HashMap<>();
+
         for (int i = 1; i <= line; i++) {
             map.put(i, new Stack<>());
         }
