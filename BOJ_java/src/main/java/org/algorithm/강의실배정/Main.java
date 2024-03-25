@@ -31,6 +31,7 @@ public class Main {
                                 ? l1.getEnd() - l2.getEnd()
                                 : l1.getStart() - l2.getStart());
         q.offer(lecture[0].getEnd());
+
         for (int i = 1; i < classCnt; i++) {
             if (q.peek() <= lecture[i].getStart()) {
                 q.poll();

@@ -30,3 +30,7 @@ k
 ;src/main/java/org/algorithm/단지번호붙이기/Main.java,5/9/5931c780ce109d41edb883ef720af13947568cea
 h
 8src/main/java/org/algorithm/중간값구하기/Main.java,4/d/4d4a773f8ebcf74bb97994609c03e121cb2ab204
+\
+,src/main/java/org/algorithm/회문/Main.java,5/3/53d95fc57d9fc230226ad35f60ea6727434af2b1
+\
+,src/main/java/org/algorithm/퇴사/Main.java,9/9/99a3fe19b59a9b7e72f37f20c0b3db6a34bc44e0

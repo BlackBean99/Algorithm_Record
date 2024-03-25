@@ -37,6 +37,7 @@ public class Main {
 
             PriorityQueue<Integer> q = new PriorityQueue<>();
             PriorityQueue<Integer> temp = new PriorityQueue<>();
+
             midCount = 0;
             StringBuilder sb = new StringBuilder();
             for (int j = 0; j < size; j++) {
