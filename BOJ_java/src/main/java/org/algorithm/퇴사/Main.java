@@ -41,4 +41,3 @@ public class Main {
         dfs(idx + 1, pay);
     }
 }
-

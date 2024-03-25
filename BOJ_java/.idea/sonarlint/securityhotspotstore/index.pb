@@ -34,3 +34,7 @@ h
 ,src/main/java/org/algorithm/회문/Main.java,5/3/53d95fc57d9fc230226ad35f60ea6727434af2b1
 \
 ,src/main/java/org/algorithm/퇴사/Main.java,9/9/99a3fe19b59a9b7e72f37f20c0b3db6a34bc44e0
+h
+8src/main/java/org/algorithm/스타트와링크/Main.java,c/a/ca5eaf1be5d8eff4592e5c8a7ee9aee83353f038
+_
+/src/main/java/org/algorithm/블로그/Main.java,6/4/64658a610d16e2fb54c26ffcaca83fe271aa8da3
