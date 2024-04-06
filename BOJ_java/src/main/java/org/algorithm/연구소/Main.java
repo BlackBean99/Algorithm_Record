@@ -49,30 +49,28 @@ public class Main {
 
     private static void bfs() {
         Queue<int[]> q = new LinkedList<>();
+        int[][] copyMap = new int[n][m];
+        for (int i = 0; i < n; i++) {
+            copyMap[i] = map[i].clone();
+        }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if (map[i][j] == 2) {
+                if (copyMap[i][j] == 2) {
                     q.add(new int[] {i, j});
                 }
             }
-        }
-        int copyMap[][] = new int[n][m];
-
-        for (int i = 0; i < n; i++) {
-            copyMap[i] = map[i].clone();
         }
         while (!q.isEmpty()) {
             int[] now = q.poll();
             for (int i = 0; i < 4; i++) {
                 int nx = now[0] + dx[i];
                 int ny = now[1] + dy[i];
-                if (nx >= 0 && ny >= 0 && nx < n && ny < m && copyMap[nx][ny] == 0) {
+                if (nx >= 0 && nx < n && ny >= 0 && ny < m && copyMap[nx][ny] == 0) {
                     copyMap[nx][ny] = 2;
                     q.add(new int[] {nx, ny});
                 }
             }
         }
-
         getSafeZone(copyMap);
     }
 
@@ -85,6 +83,6 @@ public class Main {
                 }
             }
         }
-        answer = Math.max(sum, answer);
+        answer = Math.max(answer, sum);
     }
 }

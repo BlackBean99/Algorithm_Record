@@ -44,3 +44,5 @@ _
 /src/main/java/org/algorithm/연구소/Main.java,1/b/1b67c219cfd5703a7746cad329ed6ef40f1bcf01
 e
 5src/main/java/org/algorithm/행복유치원/Main.java,6/3/63102aa0cf03cde904f7891f9e39e127bd81f38a
+_
+/src/main/java/org/algorithm/경사로/Main.java,0/3/03bf5e09a15d9064e771e411935c7aaf6279d279
