@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Main {
 
     static int[] map;
-    static int k,n;
+    static int k, n;
     static int answer;
 
     public static void main(String[] args) throws IOException {

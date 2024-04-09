@@ -43,7 +43,6 @@ public class 중복순열 {
             } else {
                 sum += (map[startList[i + 1] - 1] - map[startList[i]]);
             }
-
         }
         if (startList[k - 1] == n - 1) {
 
