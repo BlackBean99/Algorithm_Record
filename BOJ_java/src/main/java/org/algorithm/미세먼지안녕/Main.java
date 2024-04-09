@@ -14,7 +14,6 @@ public class Main {
     static int[] downCycle;
     static int[] dx = new int[] {1, 0, -1, 0};
     static int[] dy = new int[] {0, 1, 0, -1};
-    static int[] ddy = new int[] {0, -1, 0, 1};
     static Queue<int[]> q;
 
     public static void main(String[] args) throws IOException {
@@ -44,7 +43,17 @@ public class Main {
                 }
             }
         }
-        bfs();
+        for (int i = 0; i < t; i++) {
+            map = bfs();
+            airSimulation();
+        }
+
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                System.out.print(map[i][j] + " ");
+            }
+            System.out.println();
+        }
         System.out.println(getTotalDust());
     }
 
@@ -60,81 +69,70 @@ public class Main {
         return sum;
     }
 
-    private static void bfs() {
-        while (t != 0) {
-            while (!q.isEmpty()) {
-                int[] now = q.poll();
-                int spreadCnt = 0;
-                for (int i = 0; i < 4; i++) {
-                    if (now[0] >= 0
-                            && now[0] < r
-                            && now[1] >= 0
-                            && now[1] < c
-                            && map[now[0]][now[1]] != 1) {
-                        spreadCnt++;
-                    }
+    private static int[][] bfs() {
+        int[][] tMap = new int[50][50];
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                if (map[i][j] == -1) {
+                    tMap[i][j] = -1;
+                    continue;
                 }
-                int add = (map[now[0]][now[1]] / 5);
+                tMap[i][j] += map[i][j];
+                for (int k = 0; k < 4; k++) {
+                    int nx = j + dx[k];
+                    int ny = i + dy[k];
 
-                for (int i = 0; i < 4; i++) {
-                    int nx = now[0] + dx[i];
-                    int ny = now[0] + dy[i];
-                    if (nx >= 0 && nx < r && ny >= 0 && ny < c && map[nx][ny] != 1) {
-                        map[nx][ny] += add;
-                        map[nx][ny] -= (add * spreadCnt);
-                    }
+                    if (ny < 0 || ny >= r || nx < 0 || nx >= c) continue;
+                    if (map[ny][nx] == -1) continue;
+
+                    tMap[ny][nx] += (map[i][j] / 5);
+                    tMap[i][j] -= (map[i][j] / 5);
                 }
             }
-            // 다시 큐 채우기
-            for (int i = 0; i < r; i++) {
-                for (int j = 0; j < c; j++) {
-                    if (map[i][j] > 0) {
-                        q.add(new int[] {i, j});
-                    }
-                }
-            }
-            // 환풍기로 한번 밀기
-            circular();
-            t -= 1;
         }
-        //        한번 확산이 다 끝나면?
-
+        return tMap;
     }
+    //        한번 확산이 다 끝나면?
 
-    private static void circular() {
-        // 상단 회전
-        int temp = 0;
-        int[] now = new int[] {upCycle[0] + dx[0], upCycle[1] + dy[0]};
+    public static void airSimulation() {
+        int top = upCycle[0]; // 공기청정기 윗 부분좌표며,  반시계 방향으로 진행
 
-        for (int i = 0; i < 4; i++) {
-            int nux = now[0] + dx[i];
-            int nuy = now[1] + dy[i];
-            while (nux >= 0 && nux < r && nuy >= 0 && nuy < c && map[nux][nuy] != 1) {
-
-                temp = map[nux][nuy];
-                map[nux][nuy] = map[now[0]][now[1]];
-                map[now[0]][now[1]] = temp;
-                nux = nux + dx[i];
-                nuy = nuy + dy[i];
-            }
-            now = new int[] {nux, nuy};
+        for (int x = top - 1; x > 0; x--) {
+            map[x][0] = map[x - 1][0];
         }
 
-        // 하단 회전
-        int[] downNow = new int[] {downCycle[0] + dx[2], downCycle[1] + ddy[2]}; // 하단의 시작점 설정
-
-        for (int i = 0; i < 4; i++) {
-            int ndx = downNow[0] + dx[i];
-            int ndy = downNow[1] + dy[i];
-            while (ndx >= 0 && ndx < r && ndy >= 0 && ndy < c && map[ndx][ndy] != 1) {
-
-                temp = map[ndx][ndy];
-                map[ndx][ndy] = map[downNow[0]][downNow[1]];
-                map[downNow[0]][downNow[1]] = temp;
-                ndx = ndx + dx[i];
-                ndy = ndy + dy[i];
-            }
-            downNow = new int[] {ndx, ndy};
+        for (int y = 0; y < c - 1; y++) {
+            map[0][y] = map[0][y + 1];
         }
+
+        for (int x = 0; x < top; x++) {
+            map[x][c - 1] = map[x + 1][c - 1];
+        }
+
+        for (int y = c - 1; y > 1; y--) {
+            map[top][y] = map[top][y - 1];
+        }
+
+        map[top][1] = 0; // 공기청정기로 나가는 곳이므로 먼지는 0이다.
+
+        int bottom = downCycle[0]; // 공기청정기 밑 부분좌표며, 시계방향으로 진행
+
+        for (int x = bottom + 1; x < r - 1; x++) {
+            map[x][0] = map[x + 1][0];
+        }
+
+        for (int y = 0; y < c - 1; y++) {
+            map[r - 1][y] = map[r - 1][y + 1];
+        }
+
+        for (int x = r - 1; x > bottom; x--) {
+            map[x][c - 1] = map[x - 1][c - 1];
+        }
+
+        for (int y = c - 1; y > 1; y--) {
+            map[bottom][y] = map[bottom][y - 1];
+        }
+
+        map[bottom][1] = 0;
     }
 }
