@@ -1,6 +1,6 @@
 
-œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷æçš8Ðä•³ã1J$af8d97a1-8134-4be3-bcc8-6e32070c6fcf
-r	java:S106"+Replace this use of System.out by a logger.(Ý˜½…ùÿÿÿÿ8ßš–³ã1J$7fe7badc-af60-48c9-8450-c7ccfb2ee8da
-m	java:S106!"+Replace this use of System.out by a logger.(ŸÏÍè8àš–³ã1J$e7156a49-f2a7-4077-9f91-e436f3f2687b
+œ	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷æçš8Ðä•³ã1J$24f9cbf5-71d8-4cab-8d15-723ef31c27ba
+r	java:S106"+Replace this use of System.out by a logger.(Ý˜½…ùÿÿÿÿ8ßš–³ã1J$024bf2a9-83a0-4371-80a3-e068920282d8
+m	java:S106!"+Replace this use of System.out by a logger.(ŸÏÍè8àš–³ã1J$d1892093-0ab4-495c-84cc-5bcdb174a3d4
 o
-java:S1125&"'Remove the unnecessary boolean literal.(£®¹«øÿÿÿÿ8àš–³ã1J$49f03fe2-f5d6-44ff-8dd2-50b73330783e
+java:S1125&"'Remove the unnecessary boolean literal.(£®¹«øÿÿÿÿ8àš–³ã1J$d9da211b-ddde-442e-b2c0-d6053fad32b1
