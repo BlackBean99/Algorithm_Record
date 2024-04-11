@@ -52,3 +52,5 @@ h
 8src/main/java/org/algorithm/미세먼지안녕/Main.java,d/2/d21a34da2208fc2b53396bf6a04837ec27a65688
 \
 ,src/main/java/org/algorithm/센서/Main.java,0/0/006ee17012d0cdd4297c2703faeca8b124a70393
+\
+,src/main/java/org/algorithm/치즈/Main.java,2/7/279df9fd0bdcbddabf90af8194466a08b548a063
