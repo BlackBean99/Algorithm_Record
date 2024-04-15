@@ -3,9 +3,7 @@ package org.algorithm.치즈;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
@@ -14,8 +12,8 @@ public class Main {
     static int n, m, czSize;
     static int[][] map;
     static boolean[][] visited;
-    static int[] dx = new int[]{1, 0, -1, 0};
-    static int[] dy = new int[]{0, 1, 0, -1};
+    static int[] dx = new int[] {1, 0, -1, 0};
+    static int[] dy = new int[] {0, 1, 0, -1};
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -48,20 +46,20 @@ public class Main {
 
     private static void bfs() {
         Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{0, 0});
+        q.offer(new int[] {0, 0});
         visited[0][0] = true;
         while (!q.isEmpty()) {
             int[] now = q.poll();
             for (int i = 0; i < 4; i++) {
                 int nx = now[0] + dx[i];
                 int ny = now[1] + dy[i];
-                if(nx >= 0 && ny >= 0 && nx < n && ny < m && visited[nx][ny] == false) {
+                if (nx >= 0 && ny >= 0 && nx < n && ny < m && visited[nx][ny] == false) {
                     visited[nx][ny] = true;
                     if (map[nx][ny] == 1) {
                         map[nx][ny] = 0;
                         czSize--;
                     } else {
-                        q.add(new int[]{nx, ny});
+                        q.add(new int[] {nx, ny});
                     }
                 }
             }

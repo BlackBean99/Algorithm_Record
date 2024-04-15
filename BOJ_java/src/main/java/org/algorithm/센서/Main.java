@@ -18,7 +18,7 @@ public class Main {
         int k = Integer.parseInt(s[1]);
 
         List<List<Integer>> bound = new LinkedList<>(); // 각 바운드에 해당하는 정수 리스트의 리스트
-        for (int i = 0; i <= k+1; i++) {
+        for (int i = 0; i <= k + 1; i++) {
             bound.add(new LinkedList<>()); // 각 바운드에 빈 리스트를 추가
         }
         int[] arr = new int[n]; // 입력으로 받은 정수 배열
