@@ -56,3 +56,5 @@ h
 ,src/main/java/org/algorithm/치즈/Main.java,2/7/279df9fd0bdcbddabf90af8194466a08b548a063
 e
 5src/main/java/org/algorithm/트리의지름/Main.java,0/5/05ffcb5e4f83a075140285e8cb0d1315bbe0bd53
+i
+9src/main/java/org/algorithm/트리의지름/NodeImpl.java,0/7/07f44a3d6a3bc694d46376d622146a8642c16d57
