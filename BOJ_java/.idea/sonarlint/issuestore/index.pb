@@ -60,3 +60,7 @@ t
 Dsrc/main/java/org/algorithm/교수님저는취업할래요/Main.java,a/b/ab2b95e7eb2639d46c1682b980b5bc083d02025e
 k
 ;src/main/java/org/algorithm/가장긴막대자석/Main.java,2/e/2eb1887603db18eee2dfc0f46eae1b694fa68563
+n
+>src/main/java/org/algorithm/이차원배열과연산/Main.java,5/9/595577c943322117968cebb52a6411a121afbca4
+e
+5src/main/java/org/algorithm/기상캐스터/Main.java,c/d/cd2e768d64ce816d9f0bf9f76c094fffbc7056bb

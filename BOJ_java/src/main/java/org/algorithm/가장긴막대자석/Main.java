@@ -12,19 +12,19 @@ public class Main {
         ArrayList<Integer> v = new ArrayList<>();
         boolean flag = false;
 
-        for(int i = 0; i < S.length(); i++) {
-            if(S.charAt(i) == 'N') {
+        for (int i = 0; i < S.length(); i++) {
+            if (S.charAt(i) == 'N') {
                 n.push(1);
                 // S를 만나면
-                if(!flag) {
+                if (!flag) {
                     v.add(s.size());
                     s.clear();
                 }
                 flag = true;
-            } else if(S.charAt(i) == 'S') {
+            } else if (S.charAt(i) == 'S') {
                 s.push(1);
                 // N을 만나면
-                if(flag) {
+                if (flag) {
                     v.add(n.size());
                     n.clear();
                 }
@@ -32,7 +32,7 @@ public class Main {
             }
         }
 
-        if(flag) {
+        if (flag) {
             v.add(n.size());
         } else {
             v.add(s.size());
@@ -42,7 +42,7 @@ public class Main {
 
         int res = 0;
 
-        for(int i = 1; i < v.size(); i++) {
+        for (int i = 1; i < v.size(); i++) {
             res = Math.max(res, 2 * Math.min(v.get(i - 1), v.get(i)));
         }
 
