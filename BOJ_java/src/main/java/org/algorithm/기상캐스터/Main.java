@@ -47,12 +47,15 @@ public class Main {
             }
             push();
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {
-                System.out.print(answer[i][j]);
+                sb.append(answer[i][j]);
+                sb.append(" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.print(sb);
     }
 
     private static void push() {
