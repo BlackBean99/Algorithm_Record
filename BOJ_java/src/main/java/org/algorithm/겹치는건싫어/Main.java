@@ -3,7 +3,6 @@ package org.algorithm.겹치는건싫어;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -21,21 +20,18 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
         int start = 0, end = 0;
-        HashMap<Integer, Integer> cnts = new HashMap<>();
-        while (end != n) {
-            if (cnts.getOrDefault(arr[Math.max(end - 1, 0)], 0) > k) {
-                cnts.put(
-                        arr[start],
-                        cnts.getOrDefault(arr[start], 0) == 0 ? 0 : cnts.get(arr[start]) - 1);
-                start++;
-                answer = Math.max(answer, end - start);
-            } else {
-                cnts.put(
-                        arr[end], cnts.getOrDefault(arr[end], 0) == 0 ? 1 : cnts.get(arr[end]) + 1);
+        int[] cnt = new int[100001];
+
+        while (end < arr.length) {
+            while (end < arr.length && cnt[arr[end]] + 1 <= k) {
+                cnt[arr[end]]++;
                 end++;
-                answer = Math.max(answer, end - start);
             }
+            int len = end - start;
+            answer = Math.max(answer, len);
+            cnt[arr[start]]--;
+            start++;
         }
-        System.out.println(Math.max(answer - 1, 0));
+        System.out.println(answer);
     }
 }
