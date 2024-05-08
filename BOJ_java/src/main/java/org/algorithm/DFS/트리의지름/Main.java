@@ -1,4 +1,4 @@
-package org.algorithm.트리의지름;
+package org.algorithm.DFS.트리의지름;
 
 import java.io.BufferedReader;
 import java.io.IOException;

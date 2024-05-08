@@ -1,4 +1,4 @@
-package org.algorithm.같이눈사람만들래;
+package org.algorithm.투포인터.같이눈사람만들래;
 
 import java.io.BufferedReader;
 import java.io.IOException;

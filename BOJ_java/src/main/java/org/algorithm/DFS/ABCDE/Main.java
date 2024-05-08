@@ -1,4 +1,4 @@
-package org.algorithm.ABCDE;
+package org.algorithm.DFS.ABCDE;
 
 import java.io.BufferedReader;
 import java.io.IOException;
