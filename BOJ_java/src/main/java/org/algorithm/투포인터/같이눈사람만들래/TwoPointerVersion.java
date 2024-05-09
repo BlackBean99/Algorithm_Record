@@ -18,7 +18,7 @@ public class TwoPointerVersion {
         Arrays.sort(arr);
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < n - 1; i++) {
-            for (int j = i+1; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 int x1 = arr[i] + arr[j];
                 int start = 0;
                 int end = n - 1;
@@ -38,7 +38,7 @@ public class TwoPointerVersion {
                         start++;
                     } else if (x1 < x2) {
                         end--;
-                    } else{
+                    } else {
                         System.out.println(0);
                         return;
                     }
@@ -46,5 +46,4 @@ public class TwoPointerVersion {
             }
         }
     }
-
 }
