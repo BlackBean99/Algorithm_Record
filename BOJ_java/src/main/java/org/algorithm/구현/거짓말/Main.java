@@ -1,4 +1,4 @@
-package org.algorithm.거짓말;
+package org.algorithm.구현.거짓말;
 
 import java.io.BufferedReader;
 import java.io.IOException;
