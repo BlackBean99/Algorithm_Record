@@ -80,3 +80,5 @@ f
 6src/main/java/org/algorithm/구현/거짓말/Main.java,e/8/e8a7cdaca9380e30a6098ea781ec77c6fc0c2254
 e
 5src/main/java/org/algorithm/기상캐스터/Main.java,c/d/cd2e768d64ce816d9f0bf9f76c094fffbc7056bb
+e
+5src/main/java/org/algorithm/이삿짐센터/Main.java,2/e/2e039d82edb13b2167a62e11ce6d7b956a91741b
