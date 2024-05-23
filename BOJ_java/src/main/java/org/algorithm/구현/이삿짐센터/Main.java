@@ -1,4 +1,4 @@
-package org.algorithm.이삿짐센터;
+package org.algorithm.구현.이삿짐센터;
 
 import static java.lang.System.in;
 
