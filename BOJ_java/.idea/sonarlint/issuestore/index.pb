@@ -74,14 +74,8 @@ l
 <src/main/java/org/algorithm/구현/행복유치원/Main.java,c/e/ce5fe885ead0dc49443f1ff5daaa865ad1bbce04
 c
 3src/main/java/org/algorithm/구현/회문/Main.java,d/f/dfe444a7e9570278ed6a582ff5eae3c1b2d12fc1
-_
-/src/main/java/org/algorithm/거짓말/Main.java,1/7/170db07599d612fd995338cb6d2687137d48aac6
 f
 6src/main/java/org/algorithm/구현/거짓말/Main.java,e/8/e8a7cdaca9380e30a6098ea781ec77c6fc0c2254
-e
-5src/main/java/org/algorithm/기상캐스터/Main.java,c/d/cd2e768d64ce816d9f0bf9f76c094fffbc7056bb
-e
-5src/main/java/org/algorithm/이삿짐센터/Main.java,2/e/2e039d82edb13b2167a62e11ce6d7b956a91741b
 l
 <src/main/java/org/algorithm/구현/이삿짐센터/Main.java,2/6/26ca9e8f849c20623a2bcf88f81600acd4c8af9d
 _
