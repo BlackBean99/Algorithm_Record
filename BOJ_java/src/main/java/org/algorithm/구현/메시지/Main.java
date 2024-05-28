@@ -1,4 +1,4 @@
-package org.algorithm.메시지;
+package org.algorithm.구현.메시지;
 
 import static java.lang.System.*;
 import java.io.BufferedReader;
