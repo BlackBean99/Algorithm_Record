@@ -1,8 +1,6 @@
 package org.algorithm.기본기;
 
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class 이진트리순회 {
     public static Node root; //초기 root는 null
