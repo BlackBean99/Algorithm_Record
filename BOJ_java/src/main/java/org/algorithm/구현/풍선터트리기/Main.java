@@ -1,4 +1,4 @@
-package org.algorithm.풍선터트리기;
+package org.algorithm.구현.풍선터트리기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
