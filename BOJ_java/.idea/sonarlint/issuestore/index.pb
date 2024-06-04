@@ -92,3 +92,5 @@ b
 2src/main/java/org/algorithm/폴더정리/Main.java,d/6/d6edadf944c592e51cc9845b39ff1ace99736907
 f
 6src/main/java/org/algorithm/DFS/폴더정리/Main.java,5/7/5778acf0049ed1335a6b920d6cb7261c76313f18
+b
+2src/main/java/org/algorithm/입국심사/Main.java,7/5/75d3c163ac3c1e9fa63351ff8662dcda398c7aa7
