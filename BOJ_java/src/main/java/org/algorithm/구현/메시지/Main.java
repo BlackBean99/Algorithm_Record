@@ -1,6 +1,7 @@
 package org.algorithm.구현.메시지;
 
 import static java.lang.System.*;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,8 +12,8 @@ public class Main {
         Integer cnt;
         BufferedReader br = new BufferedReader(new InputStreamReader(in));
         cnt = Integer.parseInt(br.readLine());
-        String[] mans = new String[cnt+1];
-        String[][] letter = new String[cnt+1][cnt+1];
+        String[] mans = new String[cnt + 1];
+        String[][] letter = new String[cnt + 1][cnt + 1];
         int round = 1;
         while (cnt != 0) {
             for (int i = 0; i < cnt; i++) {

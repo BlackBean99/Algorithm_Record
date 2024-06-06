@@ -14,21 +14,23 @@ public class 포트리스 {
         }
 
         // 비어있는 경우
-        if(heights.isEmpty()) return 0;
+        if (heights.isEmpty()) return 0;
 
-        heights.sort((a, b) -> a-b);
+        heights.sort((a, b) -> a - b);
         if (heights.size() >= 2) {
-            longest = Math.max(longest,
-                2 + heights.get(heights.size() - 2) + heights.get(heights.size() - 1));
+            longest =
+                    Math.max(
+                            longest,
+                            2 + heights.get(heights.size() - 2) + heights.get(heights.size() - 1));
         }
         return heights.get(heights.size() - 1) + 1;
     }
 
     public static void main(String[] args) {
-// 포트리스 문제
+        // 포트리스 문제
         longest = 0;
-        int h = height(root);
-        System.out.println(;Math.max(longest, h));
+        //        int h = height(root);
+        //        System.out.println(;Math.max(longest, h));
     }
 
     Tree getTree(int root) {
@@ -40,18 +42,20 @@ public class 포트리스 {
         }
         return ret;
     }
+
     static int n;
-    static int[] y,x,radius;
+    static int[] y, x, radius;
 
     public int sqrdist(int a, int b) {
-        return (x[a]-x[b])*(x[a]-x[b]) + (y[a] - y[b]) * (y[a] - y[b]);
+        return (x[a] - x[b]) * (x[a] - x[b]) + (y[a] - y[b]) * (y[a] - y[b]);
     }
 
     // a가 b를 포함하는지 확인한다.
     public boolean encloses(int a, int b) {
         return radius[a] > radius[b]
-            && sqrdist(a, b) < radius[a] * radius[a] - radius[b] * radius[b];
+                && sqrdist(a, b) < radius[a] * radius[a] - radius[b] * radius[b];
     }
+
     boolean isChild(int parent, int child) {
         if (!encloses(parent, child)) {
             return false;
@@ -65,6 +69,7 @@ public class 포트리스 {
         return true;
     }
 }
-class Tree{
+
+class Tree {
     List<Tree> children;
 }

@@ -1,7 +1,8 @@
 package org.algorithm.DFS.폴더정리;
 
-import java.util.*;
 import java.io.*;
+import java.util.*;
+
 public class Main {
 
     static int N;
@@ -15,9 +16,7 @@ public class Main {
         ArrayList<Folder> child = new ArrayList<>();
         ArrayList<String> file = new ArrayList<>();
 
-        Folder() {
-
-        }
+        Folder() {}
 
         Folder(String name) {
             this.name = name;
@@ -87,7 +86,7 @@ public class Main {
     }
 
     private static void print(HashMap<String, Integer> indexFolder, ArrayList<Folder> folder)
-        throws IOException {
+            throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         String[] strs;

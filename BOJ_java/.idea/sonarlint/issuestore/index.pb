@@ -96,3 +96,5 @@ g
 7src/main/java/org/algorithm/기본기/일반트리.java,a/b/ab57686901110f86f61b1fb97db4b9b1cc9b4ad9
 g
 7src/main/java/org/algorithm/기본기/포트리스.java,c/b/cb60ff80a6e9e6661cc7ad4109b28f33c5693940
+e
+5src/main/java/org/algorithm/트리의지름/Main.java,0/5/05ffcb5e4f83a075140285e8cb0d1315bbe0bd53

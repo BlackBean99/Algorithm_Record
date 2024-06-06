@@ -3,18 +3,17 @@ package org.algorithm.DFS.트리순회;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 import org.w3c.dom.Node;
 
 public class Main {
     public static Node root;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         for (int i = 0; i < n; i++) {
             String[] s = br.readLine().split(" ");
-            createNode(Integer.parseInt(s[0]),  Integer.parseInt(s[1]), Integer.parseInt(s[2]));
+            createNode(Integer.parseInt(s[0]), Integer.parseInt(s[1]), Integer.parseInt(s[2]));
         }
         inOrder(root);
     }
@@ -22,11 +21,11 @@ public class Main {
     private static void inOrder(Node node) {
         if (node != null) {
             System.out.println(node.data);
-            if(node.left != null) {
+            if (node.left != null) {
                 System.out.println(node.left.data);
                 inOrder(node.left);
             }
-            if(node.left != null){
+            if (node.left != null) {
                 System.out.println(node.right.data);
                 inOrder(node.left);
             }
@@ -62,7 +61,8 @@ public class Main {
             searchNode(node.right, data, leftData, rightData);
         }
     }
-    static class Node{
+
+    static class Node {
         public Node(int data) {
             this.data = data;
         }

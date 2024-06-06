@@ -3,7 +3,8 @@ package org.algorithm.기본기;
 import java.util.Scanner;
 
 public class 이진트리순회 {
-    public static Node root; //초기 root는 null
+    public static Node root; // 초기 root는 null
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -25,7 +26,6 @@ public class 이진트리순회 {
         System.out.println("\n후위 순회");
         t.postOrder(t.root);
     }
-
 
     public static void createNode(int data, int leftData, int rightData) {
         if (root == null) {
@@ -61,24 +61,23 @@ public class 이진트리순회 {
     public void preOrder(Node node) {
         if (node != null) {
             System.out.print(node.data + "");
-            if(node.left != null) preOrder(node.left);
-            if(node.right != null) preOrder(node.right);
+            if (node.left != null) preOrder(node.left);
+            if (node.right != null) preOrder(node.right);
         }
     }
 
-
     public void inOrder(Node node) {
         if (node != null) {
-            if(node.left != null) preOrder(node.left);
+            if (node.left != null) preOrder(node.left);
             System.out.print(node.data + "");
-            if(node.right != null) preOrder(node.right);
+            if (node.right != null) preOrder(node.right);
         }
     }
 
     public void postOrder(Node node) {
         if (node != null) {
-            if(node.left != null) preOrder(node.left);
-            if(node.right != null) preOrder(node.right);
+            if (node.left != null) preOrder(node.left);
+            if (node.right != null) preOrder(node.right);
             System.out.print(node.data + "");
         }
     }
@@ -87,9 +86,9 @@ public class 이진트리순회 {
         int data;
         Node left;
         Node right;
-        Node(int data){
+
+        Node(int data) {
             this.data = data;
         }
     }
-
 }

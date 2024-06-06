@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
-import java.util.ArrayList;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
@@ -31,17 +30,16 @@ public class Main {
             if (moveValue > 0) {
                 // 앞의 요소를 뒤로 보낸다.
                 for (int i = 1; i < moveValue; i++) {
-//                    <<
+                    //                    <<
                     queue.add(queue.poll());
-//                    queue.addLast(queue.pollFirst());
+                    //                    queue.addLast(queue.pollFirst());
                 }
                 Balloon next = queue.poll();
                 moveValue = next.numValue;
                 sb.append(next.index + " ");
-            }
-            else {
+            } else {
                 for (int i = 1; i < -moveValue; i++) {
-//                    >>
+                    //                    >>
                     queue.addFirst(queue.pollLast());
                 }
                 Balloon next = queue.pollLast();
@@ -51,10 +49,10 @@ public class Main {
         }
         System.out.println(sb);
     }
+
     static class Balloon {
         int index;
         int numValue;
-
 
         public Balloon(int index, int numValue) {
             this.index = index;
