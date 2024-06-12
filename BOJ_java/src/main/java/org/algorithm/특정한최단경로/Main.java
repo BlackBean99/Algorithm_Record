@@ -66,7 +66,6 @@ public class Main {
         br.close();
     }
 
-//    딱 2개의 정점을 거쳐서 가는 방법
     public static int dijkstra(int start, int end) {
         Arrays.fill(dist, INF);
         Arrays.fill(check, false);
