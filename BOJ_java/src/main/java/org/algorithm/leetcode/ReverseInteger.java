@@ -8,13 +8,14 @@ public class ReverseInteger {
         long input = 9646324351L;
         System.out.println(reverse(input));
     }
+
     public static int reverse(long x) {
         // 123 -> 321
         Stack<String> stack = new Stack<>();
         String s = String.valueOf(x);
         char[] charArray = s.toCharArray();
         for (char a : charArray) {
-            if(a == '-') continue;
+            if (a == '-') continue;
             stack.add(String.valueOf(a));
         }
 
@@ -24,7 +25,7 @@ public class ReverseInteger {
             sb.append(reverse);
         }
         int i = Integer.parseInt(sb.toString());
-        if(x < 0){
+        if (x < 0) {
             i *= -1;
         }
         return i;
@@ -33,14 +34,14 @@ public class ReverseInteger {
     public int reverse(int x) {
         long num = 0;
         int y = Math.abs(x);
+
         while (y > 0) {
             int rem = y % 10;
             num = num * 10 + rem;
             y = y / 10;
         }
-        if(Integer.MAX_VALUE<num)return 0;
-        if(x<0)return -1*(int)num;
-        else
-            return (int) num;
+        if (Integer.MAX_VALUE < num) return 0;
+        if (x < 0) return -1 * (int) num;
+        else return (int) num;
     }
 }

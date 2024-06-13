@@ -53,7 +53,6 @@ public class Main {
         res1 += dijkstra(v1, v2);
         res1 += dijkstra(v2, N);
 
-
         int res2 = 0;
         res2 += dijkstra(1, v2);
         res2 += dijkstra(v2, v1);
