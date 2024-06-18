@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 public class 징검다리건너기 {
 
     static int n, m;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] s = br.readLine().split(" ");

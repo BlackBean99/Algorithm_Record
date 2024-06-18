@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     static long n, k;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] a = br.readLine().split(" ");
@@ -13,11 +14,11 @@ public class Main {
         k = Long.parseLong(a[1]);
 
         boolean answer = false;
-        long left = 0;  // 수정: 경계 조건을 0으로 설정
+        long left = 0; // 수정: 경계 조건을 0으로 설정
         long right = n; // 수정: 경계 조건을 n으로 설정
 
-        while (left <= right) {  // 수정: 종료 조건을 left <= right로 설정
-            long mid = (left + right) / 2;  // 수정: 반복문 내부에서 mid 값 계산
+        while (left <= right) { // 수정: 종료 조건을 left <= right로 설정
+            long mid = (left + right) / 2; // 수정: 반복문 내부에서 mid 값 계산
 
             long aVal = mid;
             long bVal = n - mid;

@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 public class IF문좀대신써줘 {
 
     static int n, m;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] s = br.readLine().split(" ");
