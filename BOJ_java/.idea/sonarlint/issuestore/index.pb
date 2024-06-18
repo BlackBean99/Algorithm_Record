@@ -110,3 +110,5 @@ u
 Esrc/main/java/org/algorithm/이분탐색/색종이와가위/Main.java,2/0/20a4646182ab748714678c4b12d274e2036f959d
 r
 Bsrc/main/java/org/algorithm/이분탐색/공유기설치/Main.java,a/5/a59fcf14e278a4be4991349ae211ce0e59bf2ddb
+p
+@src/main/java/org/algorithm/이분탐색/숫자카드2/Main.java,2/5/256b36d2e3444ab43d4919836b2cf21d9b14afb0
