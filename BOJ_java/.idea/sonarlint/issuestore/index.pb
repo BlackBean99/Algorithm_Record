@@ -128,3 +128,5 @@ n
 >src/main/java/org/algorithm/KB과제/Array/ARRAY2/ArrayQ3.java,8/3/833bdab54734d7eb06362e9424966027032ef844
 n
 >src/main/java/org/algorithm/KB과제/Array/ARRAY2/ArrayQ4.java,1/a/1af6cebda7fefbe3960df33fad79791ecfca917d
+s
+Csrc/main/java/org/algorithm/이분탐색/구간나누기2/Main.java,2/b/2ba7d80020fce604a3fde7bbdce82b40332a006a
