@@ -4,34 +4,31 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
 
-    static int n, m;
-    static int[] arr;
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] input = br.readLine().split(" ");
-        n = Integer.parseInt(input[0]);
-        m = Integer.parseInt(input[1]);
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        arr = new int[n];
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
-            max = Math.max(arr[i], max);
-            min = Math.max(arr[i], min);
+        int n = scan.nextInt();
+        int m = scan.nextInt();
+
+        int[] nums = new int[n];
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i < n; i++) {
+            nums[i] = scan.nextInt();
+            min = Math.min(nums[i], min);
+            max = Math.max(nums[i], max);
         }
 
         int left = 0;
-        // 최댓값이 right로 초기화
         int right = max - min;
-        while (left <= right) {
-            int mid = (left + right) /2;
-            if (canDivideByMid(mid)) {
+        while(left <= right) {
+            int mid = (left + right) / 2;
+            if(canDvideByMid(mid, m, nums)) {
                 right = mid - 1;
             } else {
                 left = mid + 1;
@@ -40,24 +37,21 @@ public class Main {
         System.out.println(left);
     }
 
-    private static boolean canDivideByMid(int mid) {
-        int count = 1;
-        int min = arr[0];
-        int max = arr[0];
-        for (int i = 1; i < arr.length; i++) {
-            min = Math.min(min, arr[i]);
-            max = Math.max(max, arr[i]);
-            if (max - min > mid) {
-                min = arr[i];
-                max = arr[i];
-                // 새로운 구간을 찾으려는 초기화 행위이다.
-                count++;
-                if (count > m) {
-                    return false;
-                }
+    public static boolean canDvideByMid(int mid, int m, int[] nums) {
+        int countSet = 1;
+
+        int min = nums[0];
+        int max = nums[0];
+        for(int i = 1; i < nums.length; i++) {
+            min = Math.min(min, nums[i]);
+            max = Math.max(max, nums[i]);
+            if((max - min) > mid) {
+                min = nums[i];
+                max = nums[i];
+                countSet++;
+                if(countSet > m) return false;
             }
         }
         return true;
     }
-
 }
