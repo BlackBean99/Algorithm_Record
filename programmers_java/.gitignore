@@ -35,6 +35,9 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+**/*.cph
+**/*.org
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
