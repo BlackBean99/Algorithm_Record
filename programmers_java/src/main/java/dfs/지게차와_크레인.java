@@ -3,11 +3,16 @@ package dfs;
 import java.util.*;
 
 public class 지게차와_크레인 {
+
+
     private static int n, m;
     private static char[][] storage;
     private static boolean[][] visited;
     private static final int[] dx = {1, -1, 0, 0};
     private static final int[] dy = {0, 0, 1, -1};
+
+    // 4면중 1면이라도 연결된 컨테이너는 꺼낼 수 있는 컨테이너다.
+    
 
     public static int solution(String[] storageInput, String[] requests) {
         n = storageInput.length;

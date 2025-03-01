@@ -42,6 +42,34 @@ public class Main {
     }
 }
 
+
+class Class implements Comparable<Class> {
+    private int start;
+    private int end;
+
+    public Class(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    @override
+    public int compareTo(Class c){
+        if(this.end < c.getEnd()) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
+
+    public int getStart() {
+        return start;
+    }
+
+    public int getend() {
+        return end;
+    }
+}
+
 class Class implements Comparable<Class> {
     private int start;
     private int end;

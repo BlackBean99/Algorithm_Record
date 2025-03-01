@@ -53,7 +53,6 @@ public class Main {
             System.out.println(sb.toString());
         }
     }
-
     // n번째 큰 수
     private static void getIndex(PriorityQueue<Integer> q, int n, StringBuilder sb) {
         int index = 0;
