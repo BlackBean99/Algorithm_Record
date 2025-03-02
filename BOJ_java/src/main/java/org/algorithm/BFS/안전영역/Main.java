@@ -51,8 +51,10 @@ public class Main {
     }
                 
     private static int bfs(int startX, int startY, int height) {
+        visited[startX][startY] = true;
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{startX, startY});
+        
         while(!queue.isEmpty()){
             int[] cur = queue.poll();
             for(int i = 0; i < 4; i++){
