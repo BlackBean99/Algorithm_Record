@@ -1,6 +1,5 @@
 package org.algorithm.백트래킹.N과M4;
 
-
 import java.util.*;
 import java.io.*;
 public class Main {
