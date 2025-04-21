@@ -11,6 +11,152 @@ var m = 0 // max color value
 var map = Array(0) { IntArray(0) }
 var visited = Array(0) { BooleanArray(0) }
 
+
+fun main() = with(BufferedReader(InputStreamReader(Ststem.`in`))) {
+    val (nInput, mInput) = readLine().split(" ").map{ it.toInt() }
+    n = nInput
+    m = mInput
+    map = Array(n) { IntArray(n) }
+    visited = Array(n) { BooleanArray(n) {false} }
+
+    for(i in 0 until n){
+        map[i] = readLine().split(" ").map {it.toInt()}.toIntArray()
+    }
+    whlie(true) {
+        resetVisited()
+        var maxSize = 0
+        var maxRainbowCount = 0
+        var maxGroup = mutableListOf<Pair<Int,Int>>()
+        var maxStandardBlockPos = Pair(n,m)
+
+        for(i in 0 until n){
+            for(j in 0 until n){
+                // 일반 블록만 탐ㅐ 시작
+                if(!visited[i][j] && map[i][j] > 0){
+                    val group = findBlockGroup(i,j)
+                    if(group.size < 2) continue
+
+                    val rainbowCount = countRainbowBlocks(group)
+                    val standardBlock = findStandardBlock(group)
+
+                    if(group.size > maxSize){
+                        maxSize = group.size
+                        maxRainbowCount = rainbowCount
+                        maxStandardBlockPos = standardBlock
+                        maxGroup = group
+                    } 
+                    // 그룹의 크기가 같은 경우
+                    else if (group.size == maxSize){
+                        // 무지개 블록의 크기비교
+                        if(rainbowCount > maxRainbowCount){
+                            maxRainbowCount = rainbowCount
+                            maxGroup = group
+                            maxStandardBlockPos = standardBlock
+                        }
+                        // 무지개 블록이 같은 경우
+                        else if(rainbowCount == maxRainbowCount){
+                            // 행이 더 큰 블록
+                            if(standardBlock.first > maxStandardBlockPos.first){
+                                maxStandardBlockPos = standardBlock
+                                maxGroup = group
+                            } // 행이 같으면? 열이 더 큰 블록
+                            else if(standardBlock.first == maxStandardBlockPos.first && standardBlock.second >  maxStandardBlockPos.second){
+                                maxStandardBlockPos = standardBlock
+                                maxGroup = group
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if(maxSize <= 1) break
+
+        score += maxSize * maxSize
+        clearBlocks(group)
+
+        applyGravity()
+        rotateAnticlockwise()
+
+        applyGravity()
+    }
+    print(score)
+}
+
+fun countRainbowBlocks(blocks: List<Pair<Int,Int>>): Int{
+    return blocks.count{ (x,y) -> map[x][y] == 0 }
+}
+
+// group에서 0 보다 큰 블럭중에서 
+fun findStandardBlock(blocks: List<Pair<Int,Int>>): Pair<Int,Int>{
+    blocks.filter{ (x,y) -> map[x][y] > 0 }
+        .minWith(compareBy({it.first}, {it.second}))
+}
+
+
+fun applyGravity(){
+    for(j in 0 until n){
+        for(i  in 0 until n){
+            // 여기서 i마다 n까지 가야한다.
+            var r = i
+            while(r + 1 < n && map[r+1][j] == -2){
+                map[r+1][j] = map[r][j]
+                map[r][j] = -2
+                r++
+            }
+        }
+    }
+}
+
+fun clearBlocks(group: List<Pair<Int,Int>>){
+    for((x,y) in group){
+        map[x][y] = -2
+    }
+}
+
+fun rotateAnticlockwise(){
+
+}
+
+fun findBlockGroup(startX: Int, startY: Int): List<Pair<Int,Int>> {
+    // startX,startY부터 시작하는 컬러가 일치하거나 무지개 블럭(-2)인 애들의 BFS
+    val queue: Queue<Pair<Int,Int>> = LinkedList()
+    val group = MutableListOf<Pair<Int,Int>>()
+    val color = map[startX][startY]
+
+    queue.add(Pair(startX,startY))
+    group.add(Pair(startX,startY))
+    visited[startX][startY] = true
+
+    while(queue.isNotEmpty()){
+        val (x,y) = queue.poll()
+        for(i in 0 until 4){
+            val nx = x + dx[i]
+            val ny = y + dy[i]
+            if(isBound(nx,ny) && !visited[nx][ny]){
+                if(color == map[nx][ny] || map[nx][ny] == 0)
+                queue.add(Pair(nx,ny))
+                group.add(Pair(nx,ny))
+                visited[nx][ny] = true
+            }
+        }
+    }
+
+    // 무지개 블럭은 재사용이 가능하니 방문처리 초기화
+    for((x,y) in group){
+        if(map[x][y] == 0) visited[x][y] = false
+    }
+    return group
+}
+
+fun isBound(x: Int, y: Int): Boolean{
+    if(x in 0 until n && y in 0 until n){
+        visited[x][y] = true
+    }
+}
+
+
+
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val (nInput, mInput) = readLine().split(" ").map { it.toInt() }
     n = nInput
