@@ -39,7 +39,6 @@ fun main() {
     }
     println(trees.size)
 }
-
 fun winter() {
     for (i in ground.indices) {
         for (j in ground.indices) {
