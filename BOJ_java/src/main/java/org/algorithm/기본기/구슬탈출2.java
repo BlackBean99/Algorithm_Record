@@ -53,6 +53,70 @@ public class Main {
         System.out.println(bfs(redX, redY, blueX, blueY));
     }
 
+
+    static int bfs(int rX, int rY, int bX, int bY){
+        Queue<Location> queue = new LinkedList<>();
+        queue.add(new Location(rX, rY, bX, bY, 0));
+        visited[rX][rY][bX][bY] = true;
+        while(!queue.isEmpty()){
+            Location cur = queue.poll();
+            int curCount = cur.count;
+            // 종료조건
+            if(curCount >= 10){
+                return -1;
+            }
+
+            for(int i=0;i<4;i++){
+                int newRx = cur.rx + dx[i]; 라고 생각했겠지만, 계속 밀어야 한다.
+                
+                // 빨간 구슬 이동
+                while(map[newRx + dx[i]][newRy + dy[i]] != '#' && (newRx != holeX || newRy != holeY)){
+                    newRx += dx[i];
+                    newRy += dy[i];
+                }
+                // 파란 구슬 이동
+                while(map[newBx + dx[i]][newBy + dy[i]] != '#' && (newBx != holeX || newBy != holeY)){
+                    newBx += dx[i];
+                    newBy += dy[i];
+                }
+                // 파란 구슬 도착 / 빨간 구슬 안도착
+                if(newBx == holeX && newBy == holeY){
+                    continue;   
+                }
+                // 빨간 구슬 도착 / 파란구슬 안도착
+                if(newRx == holeX && newRy == holeY){
+                    return curCount + 1;
+                }
+                // 둘 다 도착
+                if(newRx == newBx && newRy == newBy){
+                    switch(i){
+                        case 0: // 위
+                            if (cur.rx < cur.bx) newBx -= dx[i]; // 파란 구슬이 더 아래에 있었으면 파란 구슬 되돌리기
+                            else newRx -= dx[i];
+                            break;
+                        case 1: // 오른쪽
+                            if (cur.ry > cur.by) newBy -= dy[i];
+                            else newRy -= dy[i];
+                            break;
+                        case 2: // 아래
+                            if (cur.rx > cur.bx) newBx -= dx[i];
+                            else newRx -= dx[i];
+                            break;
+                        case 3: // 왼쪽
+                            if (cur.ry < cur.by) newBy -= dy[i];
+                            else newRy -= dy[i];
+                            break;
+                    }
+                }
+
+                if(!visited[newRx][newRy][newBx][newBy]) {
+                    visited[newRx][newRy][newBx][newBy] = true;
+                    queue.add(new Location(newRx, newRy, newBx, newBy));
+                }
+            }
+            return -1;
+        }
+    }
     static int bfs(int redX, int redY, int blueX, int blueY) {
         Queue<Location> queue = new LinkedList<>();
         queue.add(new Location(redX, redY, blueX, blueY, 0));
@@ -89,9 +153,9 @@ public class Main {
                 }
 
 
-                if (newRx == cur.rx && newRy == cur.ry && newBx == cur.bx && newBy == cur.by) {
-                    continue;
-                }
+                // if (newRx == cur.rx && newRy == cur.ry && newBx == cur.bx && newBy == cur.by) {
+                //     continue;
+                // }
 
                 if (newBx == holeX && newBy == holeY) {
                     continue; // 파란 구슬이 구멍에 빠지면 실패이므로, 이 경우는 건너뜀
