@@ -10,7 +10,7 @@ public class NavigationProblem {
         }
     }
 
-    static Map<Integer, List<Edge>> graph = new HashMap<>();
+    static Map<Integer, List<Edge>>  graph = new HashMap<>();
     static int N; // 최대 노드 번호
     static int[][] shortestDist; // 최단 거리
     static Map<String, Boolean> isOnShortestPath = new HashMap<>();
@@ -68,6 +68,35 @@ public class NavigationProblem {
     }
 
     static void dfs(int start, int current, int idx, int[] routeColor, Set<List<Integer>> result) {
+        if(idx == routeColor.length) {
+            if(start != current) {
+                result.add(Arrays.asList(start, current));
+            }
+            return;
+        }
+        int color = Math.abs(routeColor[idx]);
+        boolean mustBeShortest = routeColor[idx] > 0;
+
+        for(Edge e : graph.getOrDefault(current, new ArrayList<>())) {
+            if(e.color == color) {
+                boolean onShortest = false;
+                for(int target = 1; target <= N; target++) {
+                    String key = current + "-" + e.to + "-" + target;
+                    if(isOnShortestPath.getOrDefault(key, false)) {
+                        onShortest = true;
+                        break;
+                    }
+                }
+                
+                if(mustBeShortest && !onShortest) continue;
+                if(!mustBeShortest && onShortest) continue;
+
+                dfs(start, e.to, idx+1, routeColor, result);
+            }
+        }
+    }
+
+    static void dfs(int start, int current, int idx, int[] routeColor, Set<List<Integer>> result) {
         if (idx == routeColor.length) {
             if (start != current) {
                 result.add(Arrays.asList(start, current));
@@ -94,6 +123,23 @@ public class NavigationProblem {
                 if (!mustBeShortest && onShortest) continue;
 
                 dfs(start, e.to, idx + 1, routeColor, result);
+            }
+        }
+    }
+
+
+    static void dijkstra(int start, int[] dist){
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        dist[start] = 0;
+        pq.offer(new int[]{start, 0});
+        while(!pq.isEmpty()){
+            int[] cur = pq.poll();
+            int u = cur[0], cost = cur[1];
+            for(Edge e: graph.getOrDefault(u,new ArrayList<>())){
+                if(dist[e.to] > dist[u] + e.dist) {
+                    dist[e.to] = dist[u] + e.dist;
+                    pq.offer(new int[]{e.to, dist[e.to]});
+                }
             }
         }
     }
