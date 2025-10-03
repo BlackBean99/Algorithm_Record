@@ -31,7 +31,7 @@ class Solution {
 
             List<Integer> list = db.get(key);
             // lower bound (score 이상인 첫 위치 찾기)
-            int idx = Collections.binarySearch(list, score);
+            int idx = Collections.binarySearch(li st, score);
             if (idx < 0) idx = -idx - 1;
             else {
                 // 같은 점수 여러 개 있을 때 처리

@@ -26,6 +26,40 @@ class Main{
         System.out.print(answer);
     }
 
+    // chickens중에 M개를 골라서 거리 계산해서 최적화
+    static int dfs(){
+        // chickens
+        Stack<State> stack = new Stack<>();
+        stack.push(new Stack(new ArrayList<>(), 0));
+        
+        while(!stack.isEmpty()){
+            State cur = stack.pop();
+            
+            if(cur.selected.size() == m){
+                answer = Math.min(ansewr, getDistance());
+                continue;
+            }
+
+            for(int i = cur.start; chickens.size(); i++){
+                List<Integer> list = new ArrayList<>(cur.selected);
+                list.add(i);
+                stack.push(new State(list, i + 1));
+            }
+        }
+    }
+
+    static int getDistance(List<int[]> selected) {
+        int sum = 0;
+        for(int[] house : houses) {
+            int minDist = Integer.MAX_VALUE;
+            for(int[] chick : selected){
+                int dist = Math.abs(house[0] - chick[0]) + Math.abs(house[1] - chick[1]);
+                minDist = Math.min(minDist, dist);
+            }
+            sum += minDist;
+        }
+        return sum;
+    }
     static int dfs(){
         // 스택에는 현재 고른 치킨집 인덱스 리스트를 넣음
         Stack<State> stack = new Stack<>();
@@ -48,6 +82,7 @@ class Main{
             }
         }
     }
+
     // 도시 치킨 거리 계산
     static int getDistance(List<int[]> selected) {
         int sum = 0;

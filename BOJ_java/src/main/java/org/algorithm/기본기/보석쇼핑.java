@@ -1,59 +1,29 @@
 import java.util.*;
 class Solution {
 public int[] solution(String[] gems) {
-    Set<String> uniqueGems = new HashSet<>(Arrays.asList(gems));
-    int totalTypes = uniqueGems.size();
-    
-    Map<String, Integer> window = new HashMap<>();
+    // 1. 전체 개수를 평가해야해
+    int count =(int)Arrays.stream(gems).distinct().count();
+    Map<String, Integer> map = new HashMap<>();
     int left = 0, right = 0;
-    int minLen = Integer.MAX_VALUE;
     int[] answer = new int[2];
-    
-    int left = 0, right = 0;
     int minLen = Integer.MAX_VALUE;
-    int[] answer = new int[2];
-    
-    while(right < gems.length) {
-        // 윈도우 확장
-        window.put(gems[right], window.getOrDefault(gems[right], 0) + 1);
-        while(window() == totalTypes) {
-            if(right - left + 1 < minLen){
-                minLen = right - left + 1;
+    //확장
+    while(right < gems.length){
+        map.put(gems[right], map.getOrDefault(gems[right],0) + 1);
+        // 축소
+        while(count == map.size()){
+            if(right - left + 1  < minLen){
                 answer[0] = left + 1;
                 answer[1] = right + 1;
-            }
-            
-            window.put(gems[left], window.get(gems[left]) -1);
-            if(window.get(gems[left]) == 0){
-                window.remove(gems[left]);
-            }
-            left++;
-        }
-        right++;
-        // 윈도우 축소
-    }
-    
-    while(right < gems.length) {
-        // 윈도우 확장
-        window.put(gems[right], window.getOrDefault(gems[right], 0) + 1);
-        
-        // 윈도우 축소 (모든 보석을 포함하면서 최소화)
-        while(window.size() == totalTypes) {
-            if(right - left + 1 < minLen) {
                 minLen = right - left + 1;
-                answer[0] = left + 1;  // 1-based index
-                answer[1] = right + 1;
             }
+            map.put(gems[left], map.get(gems[left]) - 1);
+            if(map.get(gems[left]) == 0) map.remove(gems[left]);
             
-            window.put(gems[left], window.get(gems[left]) - 1);
-            if(window.get(gems[left]) == 0) {
-                window.remove(gems[left]);
-            }
             left++;
         }
-        right++;
+        right++;        
     }
-    
     return answer;
     }
 }
