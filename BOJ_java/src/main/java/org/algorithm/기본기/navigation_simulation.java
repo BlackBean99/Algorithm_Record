@@ -126,24 +126,6 @@ public class NavigationProblem {
             }
         }
     }
-
-
-    static void dijkstra(int start, int[] dist){
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
-        dist[start] = 0;
-        pq.offer(new int[]{start, 0});
-        while(!pq.isEmpty()){
-            int[] cur = pq.poll();
-            int u = cur[0], cost = cur[1];
-            for(Edge e: graph.getOrDefault(u,new ArrayList<>())){
-                if(dist[e.to] > dist[u] + e.dist) {
-                    dist[e.to] = dist[u] + e.dist;
-                    pq.offer(new int[]{e.to, dist[e.to]});
-                }
-            }
-        }
-    }
-
     static void dijkstra(int start, int[] dist) {
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
         dist[start] = 0;
