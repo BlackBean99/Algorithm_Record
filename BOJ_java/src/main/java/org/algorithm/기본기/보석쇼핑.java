@@ -8,6 +8,7 @@ public int[] solution(String[] gems) {
     int[] answer = new int[2];
     int minLen = Integer.MAX_VALUE;
     //확장
+
     while(right < gems.length){
         map.put(gems[right], map.getOrDefault(gems[right],0) + 1);
         // 축소

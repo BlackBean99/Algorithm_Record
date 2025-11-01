@@ -24,11 +24,12 @@ public class Main {
             max = Math.max(nums[i], max);
         }
 
-        int left = 0;
-        int right = max - min;
-        while(left <= right) {
+
+        int lo = 0;
+        int hi = max - min;
+        while(left <=right){
             int mid = (left + right) / 2;
-            if(canDvideByMid(mid, m, nums)) {
+            if(canDevidedByMid(mid, m, nums)){
                 right = mid - 1;
             } else {
                 left = mid + 1;
@@ -37,19 +38,18 @@ public class Main {
         System.out.println(left);
     }
 
-    public static boolean canDvideByMid(int mid, int m, int[] nums) {
-        int countSet = 1;
-
+    public static boolean canDevidedByMid(int mid, int m, int[] nums){
+        int count = 0;
         int min = nums[0];
         int max = nums[0];
-        for(int i = 1; i < nums.length; i++) {
-            min = Math.min(min, nums[i]);
+        for(int i = 0; i < nums.length; i++){
             max = Math.max(max, nums[i]);
-            if((max - min) > mid) {
+            min = Math.min(min, nums[i]);
+            if(max - min > mid){
+                count++;
                 min = nums[i];
                 max = nums[i];
-                countSet++;
-                if(countSet > m) return false;
+                if(count > m) return false;
             }
         }
         return true;
