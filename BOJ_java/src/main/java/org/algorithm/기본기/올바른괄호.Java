@@ -19,6 +19,7 @@ class Solution {
             }
         }
         
+        
         if (!stack.isEmpty()) {
             return false;
         } else {

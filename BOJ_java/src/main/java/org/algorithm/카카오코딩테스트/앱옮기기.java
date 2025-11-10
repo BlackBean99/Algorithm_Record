@@ -74,3 +74,35 @@ public class Solution {
         System.out.println("테스트 " + board.length + "x" + board[0].length + " 실행 완료");
     }
 }
+
+class Dijkstra {
+    class Edge {
+        int to;
+        int w;
+        Edge(int t, int w) {
+            this.to = to;
+            this.w = w;
+        }
+    }
+    public static void main(){
+        List<List<Edge>> graph, int src;
+        int[] dist = new int[n];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        pq.offer(new int[]{0,src});
+        while(!pq.isEmpty()){
+            int[] cur = pq.poll();
+            int d = cur[0]; int u = cur[1];
+            if(d > dist[u]) continue;
+            for(Edge e : graph.get(u)){
+                if(dist[e.to] > d + e.w){
+                    dist[e.to] = d + e.w;
+                    pq.offer(dist[e.to], e.to);
+                }
+            }
+        }
+        return dist;
+        
+    }
+}    

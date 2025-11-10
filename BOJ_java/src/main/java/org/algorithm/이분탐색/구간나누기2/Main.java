@@ -25,8 +25,8 @@ public class Main {
         }
 
 
-        int lo = 0;
-        int hi = max - min;
+        int left = 0;
+        int right = max - min;
         while(left <=right){
             int mid = (left + right) / 2;
             if(canDevidedByMid(mid, m, nums)){

@@ -15,7 +15,29 @@ class Solution {
         return requestCount;
     }
     
-    
+    //             "2016-09-15 20:59:57.421 0.351s",
+
+    public static int solution(String[] lines){
+        double[] data = new double[lines.length];
+        for(int i =0; i< lines.length; i++){
+            String[] arr = lines[i].split(" ");
+            String time = arr[1];
+            String duration = arr[2];
+
+            String[] timeParts = time.split(":");
+            double durationMs = Double.parseDouble(duration.replace("s","")) * 1000;
+            double end = (Integer.parseInt(timeParts[0]) * 3600, Integer.parseInt(timeParts[1])*60 + Double.parseDouble(timeParts[2])) * 1000;
+            double start = end  - durationMs + 1;
+            data.add(new double[]{start, end});
+        }
+
+        for(double[] startAndEndTime : startAndEndTimes){
+            answer = Math.max(answer, Math.max(
+                getRequestCountingOneSeconds
+
+            ))
+        }
+    }
     public static int solution(String[] lines) {
         int answer = 0;
         List<double[]> startAndEndTimes = new ArrayList<>();
