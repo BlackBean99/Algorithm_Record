@@ -25,8 +25,8 @@ public class Main {
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= n; j++) {
                 int connected = Integer.parseInt(st.nextToken());
-                if (connected == 1) {
-                    union(i, j);
+                if(connected == 1){
+                    union(i,j);
                 }
             }
         }
@@ -49,14 +49,20 @@ public class Main {
         System.out.println("YES");
     }
 
-    static int find(int x) {
-        if (parent[x] == x) return x;
-        return parent[x] = find(parent[x]); // path compression
+
+    static int find(int node){
+        if(parent[node] == node){
+            return node;
+        }
+        return parent[node] = find(parent[node]);
     }
 
-    static void union(int a, int b) {
+
+    static void union(int a, int b){
         a = find(a);
         b = find(b);
-        if (a != b) parent[b] = a;
+        if(a != b){
+            parent[b] = a;
+        }
     }
 }
