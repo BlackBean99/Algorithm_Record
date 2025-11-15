@@ -39,6 +39,7 @@ public class Main {
         System.out.println(sb.toString());
 
     }
+
     static void dijkstra(int start){
         PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o[1]));
         pq.add(new int[]{start, dist[start]});
