@@ -38,41 +38,23 @@ public class Main{
             List<int[]> locations = findSpreadable();
             spread(locations);
             // Moving 시계 반시계
-
-            rotate(refresh[0],0);
-            rotate(refresh[1],1);
+            rotate();
         }
         System.out.println(sumDust());
         
     }
 
-    static void rotate(int[] refresh, int dir){
-        int cx = refresh[0];
-        int cy = refresh[1];
-        int nx = refresh[0];
-        int ny = refresh[1];
-        // 한칸씩 땅겨오는 것이다.
-        for(int i = 0; i < 4; i++){
-            while(nx >= 0 && nx < r && ny >= 0 && ny < c){
-                if(dir == 0){
-                    nx = cx + dx1[i];
-                    ny = cy + dy1[i];
-                } else {
-                    nx = cx + dx2[i];
-                    ny = cy + dy2[i];
-                }
-                if(dust[cx][cy] == -1){
-                    continue;
-                } else {
-                    if(nx >= 0 && nx < r && ny >= 0 && ny < c){
-                        dust[cx][cy] = dust[nx][ny];
-                        cx = nx;
-                        cy = ny;
-                    }
-                }
-                
-            }
+    static void rotate(){
+        // 공기청정기 윗부분 반시계 방향 밀기
+        int top = refresh[0][0];
+        for(int i = top-2; i >= 0; i--){
+            dust[i][0] = dust[i+1][0];
         }
+        for(int i = 1; i < r; i++){
+            dust[0][i-1] = dust[0][i];
+        }
+
+        int bottom = refresh[1][0];
     }
 
     static int sumDust(){
@@ -88,6 +70,11 @@ public class Main{
     }
 
     static void spread(List<int[]> locations){
+        int[][] tmp = new int[r][c];
+        for(int i = 0; i < r; i++){
+            Arrays.fill(tmp[i].0);
+        }
+
         for(int[] location: locations){
             int spreadCnt = 0;
             for(int i = 0; i < 4; i++){
@@ -95,10 +82,17 @@ public class Main{
                 int ny = location[1] + dy1[i];
                 if(nx >= 0 && nx < r&& ny >= 0 && ny < c){
                     spreadCnt++;
-                    dust[nx][ny] = dust[location[0]][location[1]] / 5;
+                    tmp[nx][ny] += dust[location[0]][location[1]] / 5;
                 }
             }
-            dust[location[0]][location[1]] -= dust[location[0]][location[1]]/5*spreadCnt;
+            tmp[location[0]][location[1]] -= dust[location[0]][location[1]]/5*spreadCnt;
+            for(int i = 0; i < r; i++){
+                for(int j = 0; j < c; j++){
+                    if(dust[i][j] != -1){
+                        dust[i][j] += tmp[i][j];
+                    }
+                }
+            }
         }
     }
 
