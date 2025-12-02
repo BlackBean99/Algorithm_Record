@@ -35,6 +35,22 @@ public class Main {
         System.out.println(sb);
     }
 
+<<<<<<< HEAD
+=======
+    static int getLowerBound(int target) {
+        int lo = 0;
+        int hi = arr.length;
+        while(lo < hi) {
+            int mid = (lo + hi) / 2;
+            if(target < arr[mid]){
+                hi = mid;
+            } else {
+                lo = mid + 1;
+            }
+        }
+        return lo;
+    }
+>>>>>>> main
     private static int getLowerBound(int target) {
         int lo = 0;
         int hi = arr.length;
@@ -48,6 +64,7 @@ public class Main {
         }
         return lo;
     }
+<<<<<<< HEAD
     private static int getUpperBound(int target) {
         int lo = 0;
         int hi = arr.length;
@@ -61,4 +78,6 @@ public class Main {
         }
         return lo;
     }
+=======
+>>>>>>> main
 }

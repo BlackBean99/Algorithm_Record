@@ -19,6 +19,10 @@ class Solution {
             }
         }
         
+<<<<<<< HEAD
+=======
+        
+>>>>>>> main
         if (!stack.isEmpty()) {
             return false;
         } else {

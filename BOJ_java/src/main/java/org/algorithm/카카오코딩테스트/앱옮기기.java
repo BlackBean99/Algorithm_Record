@@ -1,0 +1,108 @@
+public class Solution {
+    public static void main(String[] args) {
+        int[][][] boards = {
+            {
+                {0,2,2,0,0,0,0,0},
+                {0,2,2,0,0,4,4,0},
+                {0,3,3,3,1,4,4,4},
+                {0,3,3,0,0,0,0,0},
+                {0,3,3,3,5,5,6,0},
+                {0,0,0,0,5,5,0,0}
+            },
+            {
+                {0,9,1,1,6,0,0,0},
+                {2,2,1,1,0,0,0,0},
+                {2,2,3,4,4,4,0,0},
+                {5,0,0,4,4,4,7,0},
+                {0,0,0,4,4,4,8,8},
+                {0,0,0,0,0,0,8,8}
+            },
+            {
+                {1,1,0},
+                {1,1,0}
+            }
+        };
+
+        int[][][] commands = {
+            {
+                {3,1},
+                {3,1}
+            },
+            {
+                {2,1},
+                {3,1},
+                {9,2},
+                {4,1}
+            },
+            {
+                {1,4},
+                {1,3},
+                {1,2}
+            }
+        };
+
+        int[][][] results = {
+            {
+                {0,0,2,2,0,0,0,0},
+                {4,4,2,2,0,0,0,0},
+                {4,4,0,3,3,3,1,0},
+                {0,0,0,3,3,3,0,0},
+                {6,0,0,3,3,3,5,5},
+                {0,0,0,0,0,0,5,5}
+            },
+            {
+                {8,8,0,1,1,6,0,0},
+                {8,8,0,1,1,0,0,0},
+                {4,4,4,9,3,0,0,0},
+                {4,4,4,7,2,2,0,0},
+                {4,4,4,0,2,2,0,0},
+                {0,5,0,0,0,0,0,0}
+            },
+            {
+                {0,1,1},
+                {0,1,1}
+            }
+        };
+
+        for (int i = 0; i < boards.length; i++) {
+            validate(boards[i], commands[i], results[i]);
+        }
+    }
+
+    private static void validate(int[][] board, int[][] command, int[][] expected) {
+        // TODO: 실제 solution() 함수 호출 및 결과 비교 로직 추가
+        System.out.println("테스트 " + board.length + "x" + board[0].length + " 실행 완료");
+    }
+}
+
+class Dijkstra {
+    class Edge {
+        int to;
+        int w;
+        Edge(int t, int w) {
+            this.to = to;
+            this.w = w;
+        }
+    }
+    public static void main(){
+        List<List<Edge>> graph, int src;
+        int[] dist = new int[n];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        pq.offer(new int[]{0,src});
+        while(!pq.isEmpty()){
+            int[] cur = pq.poll();
+            int d = cur[0]; int u = cur[1];
+            if(d > dist[u]) continue;
+            for(Edge e : graph.get(u)){
+                if(dist[e.to] > d + e.w){
+                    dist[e.to] = d + e.w;
+                    pq.offer(dist[e.to], e.to);
+                }
+            }
+        }
+        return dist;
+        
+    }
+}    
