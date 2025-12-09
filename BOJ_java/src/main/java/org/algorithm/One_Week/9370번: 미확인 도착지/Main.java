@@ -52,7 +52,7 @@ public class Main {
             for (int x : candidates) {
 
                 long path1 = (long)distS[g] + distG[h] + distH[x];
-                long path2 = (long)distS[h] + distH[g] + distG[x];
+                long path2 = (long)distS[h] + distH[g] + distG[x    ];
 
                 if (distS[x] == path1 || distS[x] == path2)
                     answer.add(x);

@@ -42,7 +42,7 @@ public class Main {
         parent = new int[n + 1];
         for (int i = 1; i <= n; i++) parent[i] = i;
 
-        int totalCost = 0;
+        int totalCost = 0;  
         int maxEdge = 0;
 
         for (Edge e : edges) {
