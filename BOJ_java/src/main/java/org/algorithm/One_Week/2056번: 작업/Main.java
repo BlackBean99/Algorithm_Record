@@ -3,30 +3,20 @@ import java.util.*;
 
 public class Main {
     static int n;
-    static int[] time;
-    static int[] indegree;
-    static int[] dp;
     static List<Integer>[] graph;
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
         n = Integer.parseInt(br.readLine());
+        int[] time = new int[n+1];
+        int[] indegree = new int[n+1];
+        int[] dp = new int[n+1];
 
-        time = new int[n + 1];
-        indegree = new int[n + 1];
-        dp = new int[n + 1];
-        graph = new ArrayList[n + 1];
-
-        for (int i = 1; i <= n; i++) {
+        graph = new ArrayList[n+1];
+        for (int i = 0; i <= n; i++) {
             graph[i] = new ArrayList<>();
         }
-
-        // 목표 싸이클 전체중에 가장 긴 path를 골라주면 됩니다.
-
-        // 입력 파싱
         for (int i = 1; i <= n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
+            StringTokenizer st = new StringTokenizer(br .readLine());
             time[i] = Integer.parseInt(st.nextToken());
             int cnt = Integer.parseInt(st.nextToken());
             for (int j = 0; j < cnt; j++) {
@@ -36,8 +26,6 @@ public class Main {
             }
             
         }
-        
-
         Queue<Integer> q = new LinkedList<>();
 
         for (int i = 1; i <= n; i++) {
